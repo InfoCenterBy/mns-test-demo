@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="602.76" height="520.1" viewBox="0 0 602.76 520.1">
+  <defs>
+    <clipPath id="clip-path">
+      <circle cx="196.68" cy="89.55" r="42.91" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <circle cx="269.38" cy="476.38" r="42.91" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+    </clipPath>
+    <clipPath id="clip-path-3">
+      <path d="M31.61,332.53H191.85V228.21H31.25S32.33,332.53,31.61,332.53Z" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+    </clipPath>
+    <clipPath id="clip-path-4">
+      <polygon points="194.45 226.56 30.31 226.56 39.45 192.95 185.31 192.95 194.45 226.56" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+    </clipPath>
+  </defs>
+  <title>Ресурс 11</title>
+  <g id="Слой_2" data-name="Слой 2">
+    <g id="Слой_1-2" data-name="Слой 1">
+      <g>
+        <path d="M166.45,97.39c10.36-19.78,48-84,111.18-95.75,21.09-3.91,36.68-.43,64.86,6.18C395.9,20.36,452.42,33.62,500,83.49c7.72,8.09,70.35,75.87,64.85,174.49-1,18.59-5,89-54,131.26-18.52,15.94-23.35,10.56-58.68,34-53.26,35.29-56.94,57.22-89.57,74.12-34.35,17.81-67.44,12.75-120.45,4.64-73.81-11.29-133.92-20.49-180.67-69.49C2.84,371.05-19.67,262.86,19.75,220.92c30.27-32.2,80.61-7.87,117.36-51C156.32,147.44,145.49,137.36,166.45,97.39Z" style="fill: #c5c5c5"/>
+        <g>
+          <g>
+            <circle cx="196.68" cy="89.55" r="42.91" style="fill: #fff"/>
+            <g style="clip-path: url(#clip-path)">
+              <line x1="153.02" y1="72.92" x2="166.38" y2="63.85" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="150.85" y1="79.98" x2="158.67" y2="74.66" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="148.65" y1="85.38" x2="156.1" y2="80.32" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="148.09" y1="93.57" x2="155.53" y2="88.51" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="152.51" y1="100.89" x2="158.8" y2="96.61" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="154.75" y1="108.29" x2="159.71" y2="104.92" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="164.1" y1="123.69" x2="169.82" y2="119.8" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="175.84" y1="141.37" x2="191.68" y2="130.61" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="177.67" y1="144.88" x2="197.7" y2="131.26" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+            </g>
+            <circle cx="196.68" cy="89.55" r="42.91" style="fill: none;stroke: #262626;stroke-miterlimit: 10"/>
+          </g>
+          <circle cx="201.9" cy="86.56" r="42.91" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <circle cx="200.62" cy="86.31" r="35.06" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <circle cx="199.98" cy="86.75" r="31.6" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+        </g>
+        <g>
+          <g>
+            <circle cx="269.38" cy="476.38" r="42.91" style="fill: #fff"/>
+            <g style="clip-path: url(#clip-path-2)">
+              <line x1="241.65" y1="438.78" x2="257.79" y2="438.37" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="236" y1="443.54" x2="245.46" y2="443.3" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="231.24" y1="446.89" x2="240.24" y2="446.66" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="226.33" y1="453.48" x2="235.33" y2="453.25" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="226.09" y1="462.02" x2="233.7" y2="461.83" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="223.97" y1="469.46" x2="229.97" y2="469.31" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="223.51" y1="487.47" x2="230.43" y2="487.3" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="223.82" y1="508.7" x2="242.96" y2="508.21" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              <line x1="223.46" y1="512.63" x2="247.68" y2="512.01" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+            </g>
+            <circle cx="269.38" cy="476.38" r="42.91" style="fill: none;stroke: #262626;stroke-miterlimit: 10"/>
+          </g>
+          <circle cx="275.39" cy="476.69" r="42.91" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <circle cx="274.44" cy="475.79" r="35.06" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <circle cx="273.67" cy="475.81" r="31.6" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+        </g>
+        <g>
+          <path d="M543.25,410.79v47.88a16.7,16.7,0,0,1-16.56,16.7L342.15,478" style="fill: none;stroke: #262626;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 12,12"/>
+          <polygon points="343.54 472.99 334.98 478.1 343.69 482.96 343.54 472.99" style="fill: #262626"/>
+        </g>
+        <g>
+          <path d="M212.48,477.53H94.7c-9.3,0-16.06-7.54-16.06-16.84V358.91" style="fill: none;stroke: #262626;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 12,12"/>
+          <polygon points="83.63 360.37 78.64 351.73 73.66 360.37 83.63 360.37" style="fill: #262626"/>
+        </g>
+        <path d="M77.26,167.18V105.43A16.84,16.84,0,0,1,94.1,88.59h47.29" style="fill: none;stroke: #262626;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 12"/>
+        <g>
+          <line x1="259.5" y1="88.13" x2="286.93" y2="88.13" style="fill: none;stroke: #262626;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 12,12"/>
+          <polygon points="285.47 93.12 294.1 88.13 285.47 83.15 285.47 93.12" style="fill: #262626"/>
+        </g>
+        <line x1="541.86" y1="202.09" x2="541.86" y2="272.84" style="fill: none;stroke: #262626;stroke-linecap: round;stroke-linejoin: round;stroke-dasharray: 12"/>
+        <g>
+          <g>
+            <g>
+              <path d="M31.61,332.53H191.85V228.21H31.25S32.33,332.53,31.61,332.53Z" style="fill: #fff"/>
+              <g style="clip-path: url(#clip-path-3)">
+                <line x1="25.07" y1="297.67" x2="198.48" y2="297.67" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="25.07" y1="310.04" x2="198.48" y2="310.04" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="25.07" y1="321.87" x2="198.48" y2="321.87" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="44.43" y1="297.67" x2="44.43" y2="310.04" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="69.7" y1="297.67" x2="69.7" y2="310.04" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="154.66" y1="297.67" x2="154.66" y2="310.04" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="179.93" y1="297.67" x2="179.93" y2="310.04" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="167.83" y1="309.77" x2="167.83" y2="322.13" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="140.68" y1="309.77" x2="140.68" y2="322.13" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="83.54" y1="309.77" x2="83.54" y2="322.13" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="56.39" y1="309.77" x2="56.39" y2="322.13" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="44.16" y1="321.6" x2="44.16" y2="332.74" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="69.7" y1="321.6" x2="69.7" y2="332.74" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="154.66" y1="321.6" x2="154.66" y2="332.74" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+                <line x1="179.93" y1="321.6" x2="179.93" y2="332.74" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+              </g>
+              <path d="M31.61,332.53H191.85V228.21H31.25S32.33,332.53,31.61,332.53Z" style="fill: none;stroke: #262626;stroke-miterlimit: 10"/>
+            </g>
+            <rect x="88.61" y="230.37" width="46.24" height="102.52" style="fill: #00654d;stroke: #262626;stroke-miterlimit: 10"/>
+            <polygon points="131.98 262.81 93.27 280.37 93.27 230.58 131.98 230.58 131.98 262.81" style="fill: #262626"/>
+            <polygon points="86.56 258.95 34.66 280.37 34.66 228.75 86.56 228.75 86.56 258.95" style="fill: #262626"/>
+            <polygon points="189.34 258.95 136.82 280.37 136.82 228.75 189.34 228.75 189.34 258.95" style="fill: #262626"/>
+            <circle cx="128.58" cy="279.48" r="3.05" style="fill: #262626"/>
+          </g>
+          <g>
+            <circle cx="39.14" cy="227.86" r="8.6" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+            <circle cx="57.47" cy="227.86" r="8.6" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+            <circle cx="75.79" cy="227.86" r="8.6" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+            <circle cx="94.12" cy="227.86" r="8.6" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+            <circle cx="112.45" cy="227.86" r="8.6" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+            <circle cx="130.77" cy="227.86" r="8.6" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+            <circle cx="149.1" cy="227.86" r="8.6" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+            <circle cx="167.43" cy="227.86" r="8.6" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+            <circle cx="185.75" cy="227.86" r="8.6" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          </g>
+          <g>
+            <polygon points="194.45 226.56 30.31 226.56 39.45 192.95 185.31 192.95 194.45 226.56" style="fill: #fff"/>
+            <g style="clip-path: url(#clip-path-4)">
+              <polygon points="54.91 191.47 47.65 231.8 66.07 231.8 70.64 189.86 54.91 191.47" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+              <polygon points="86.91 191.07 85.16 231.8 103.44 231.4 104.11 189.32 86.91 191.07" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+              <polygon points="120.92 190.93 122.12 233.55 140.14 230.59 136.91 191.07 120.92 190.93" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+              <polygon points="153.31 190.66 159.23 232.34 177.24 231.53 169.31 187.71 153.31 190.66" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+            </g>
+            <polygon points="194.45 226.56 30.31 226.56 39.45 192.95 185.31 192.95 194.45 226.56" style="fill: none;stroke: #262626;stroke-miterlimit: 10"/>
+          </g>
+          <path d="M42.76,180.18H182.13a3.44,3.44,0,0,1,3.44,3.44v9.19a0,0,0,0,1,0,0H39.32a0,0,0,0,1,0,0v-9.19A3.44,3.44,0,0,1,42.76,180.18Z" style="fill: #00654d;stroke: #262626;stroke-miterlimit: 10"/>
+        </g>
+        <g>
+          <rect x="390.99" y="276.24" width="163.06" height="119.63" style="fill: #00654d;stroke: #262626;stroke-miterlimit: 10"/>
+          <polygon points="376.04 316.59 362.27 316.59 390.99 276.24 373.19 323.71 492.82 323.71 512.76 275.29 536.02 324.19 577.79 324.19 554.06 276.24 390.85 276.24 376.04 316.59" style="fill: #00654d;stroke: #262626;stroke-linejoin: round"/>
+          <line x1="512.4" y1="395.87" x2="512.4" y2="275.29" style="fill: #00654d;stroke: #262626;stroke-linejoin: round"/>
+          <rect x="468.61" y="350.65" width="30.97" height="22.79" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+        </g>
+        <g>
+          <rect x="316.86" y="95.97" width="180.24" height="94.74" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <path d="M307.64,95.67l100.27-48,97.5,47.68S307.33,95.36,307.64,95.67Z" style="fill: #fff;stroke: #262626;stroke-linejoin: round"/>
+          <polyline points="321.79 95.31 407.91 54.1 494.34 95.62" style="fill: none;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="340.93" y="105.66" width="26.07" height="16.38" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="393.76" y="105.66" width="26.07" height="16.38" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="390.99" y="131.5" width="30.68" height="59.29" style="fill: #262626"/>
+          <rect x="338.16" y="131.5" width="30.68" height="59.29" style="fill: #262626"/>
+          <rect x="444.74" y="131.5" width="30.68" height="59.29" style="fill: #262626"/>
+          <rect x="424.9" y="105.2" width="15.23" height="85.59" style="fill: #00654d;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="370.69" y="105.2" width="15.23" height="85.59" style="fill: #00654d;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="316.71" y="105.2" width="15.23" height="85.59" style="fill: #00654d;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="477.04" y="105.2" width="15.23" height="85.59" style="fill: #00654d;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="448.2" y="105.66" width="26.07" height="16.38" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <polygon points="497.11 190.71 602.76 190.71 602.76 128.27 597.92 128.27 597.92 120.43 574.85 120.43 574.85 96.9 585.69 96.9 483.96 47.99 407.91 47.99 505.41 95.36 497.11 95.97 497.11 190.71" style="fill: #262626"/>
+          <rect x="506.11" y="107.28" width="15.92" height="13.61" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="528.48" y="107.28" width="15.92" height="13.61" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="550.63" y="107.28" width="15.92" height="13.61" style="fill: #fff;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="510.03" y="128.27" width="52.6" height="62.75" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="569.08" y="136.35" width="7.84" height="41.06" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="579.93" y="136.35" width="7.84" height="41.06" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="591.92" y="136.35" width="7.84" height="41.06" style="fill: #fbc469;stroke: #262626;stroke-miterlimit: 10"/>
+          <rect x="527.87" y="166.87" width="17.22" height="24.3" style="fill: #262626"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>
