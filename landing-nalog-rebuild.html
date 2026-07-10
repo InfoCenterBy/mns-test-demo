@@ -1,3334 +1,3507 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<title>Налог на&nbsp;профессиональный доход</title>
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-		<style>
-			/* Slider */
-			.slick-slider {
-				position: relative;
 
-				display: block;
-				box-sizing: border-box;
+<head>
+	<title>Налог на&nbsp;профессиональный доход</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+	<style>
+		/* Slider */
+		.slick-slider {
+			position: relative;
 
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
+			display: block;
+			box-sizing: border-box;
 
-				-webkit-touch-callout: none;
-				-khtml-user-select: none;
-				-ms-touch-action: pan-y;
-				touch-action: pan-y;
-				-webkit-tap-highlight-color: transparent;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+
+			-webkit-touch-callout: none;
+			-khtml-user-select: none;
+			-ms-touch-action: pan-y;
+			touch-action: pan-y;
+			-webkit-tap-highlight-color: transparent;
+		}
+
+		.slick-list {
+			position: relative;
+
+			display: block;
+			overflow: hidden;
+
+			margin: 0;
+			padding: 0;
+		}
+
+		.slick-list:focus {
+			outline: none;
+		}
+
+		.slick-list.dragging {
+			cursor: pointer;
+			cursor: hand;
+		}
+
+		.slick-slider .slick-track,
+		.slick-slider .slick-list {
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			-o-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+
+		.slick-track {
+			position: relative;
+			top: 0;
+			left: 0;
+
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.slick-track:before,
+		.slick-track:after {
+			display: table;
+
+			content: '';
+		}
+
+		.slick-track:after {
+			clear: both;
+		}
+
+		.slick-loading .slick-track {
+			visibility: hidden;
+		}
+
+		.slick-slide {
+			display: none;
+			float: left;
+
+			height: 100%;
+			min-height: 1px;
+		}
+
+		[dir='rtl'] .slick-slide {
+			float: right;
+		}
+
+		.slick-slide img {
+			display: block;
+		}
+
+		.slick-slide.slick-loading img {
+			display: none;
+		}
+
+		.slick-slide.dragging img {
+			pointer-events: none;
+		}
+
+		.slick-initialized .slick-slide {
+			display: block;
+		}
+
+		.slick-loading .slick-slide {
+			visibility: hidden;
+		}
+
+		.slick-vertical .slick-slide {
+			display: block;
+
+			height: auto;
+
+			border: 1px solid transparent;
+		}
+
+		.slick-arrow.slick-hidden {
+			display: none;
+		}
+	</style>
+	<style>
+		.bi::before,
+		[class^='bi-']::before,
+		[class*=' bi-']::before {
+			display: inline-block;
+			font-family: bootstrap-icons !important;
+			font-style: normal;
+			font-weight: normal !important;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			vertical-align: -0.125em;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.bi-chevron-left::before {
+			content: '\f284';
+		}
+
+		.bi-check2-circle::before {
+			content: '\f270';
+		}
+
+		.bi-info-circle-fill::before {
+			content: '\f430';
+		}
+
+		.bi-exclamation-lg::before {
+			content: '\f63c';
+		}
+
+		.bi-quote::before {
+			content: '\f6b0';
+		}
+
+		.bi-bell::before {
+			content: '\f18a';
+		}
+
+		.bi-calendar::before {
+			content: '\f1f6';
+		}
+
+		.bi-file-earmark-text-fill::before {
+			content: '\f38a';
+		}
+
+		.bi-download::before {
+			content: '\f30a';
+		}
+
+		.bi-question-circle::before {
+			content: '\f505';
+		}
+
+		.bi-chevron-down::before {
+			content: '\f282';
+		}
+
+		.bi-exclamation-circle::before {
+			content: '\f333';
+		}
+
+		.bi-question-circle::before {
+			content: '\f505';
+		}
+	</style>
+	<style>
+		.mt-5 {
+			margin-top: 3rem !important;
+		}
+
+		.container,
+		.container-fluid,
+		.container-xxl,
+		.container-xl,
+		.container-lg,
+		.container-md,
+		.container-sm {
+			--bs-gutter-x: 1.5rem;
+			--bs-gutter-y: 0;
+			width: 100%;
+			padding-right: calc(var(--bs-gutter-x) * 0.5);
+			padding-left: calc(var(--bs-gutter-x) * 0.5);
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		@media (min-width: 576px) {
+
+			.container-sm,
+			.container {
+				max-width: 540px;
 			}
+		}
 
-			.slick-list {
-				position: relative;
+		@media (min-width: 768px) {
 
-				display: block;
-				overflow: hidden;
-
-				margin: 0;
-				padding: 0;
+			.container-md,
+			.container-sm,
+			.container {
+				max-width: 720px;
 			}
+		}
 
-			.slick-list:focus {
-				outline: none;
+		@media (min-width: 992px) {
+
+			.container-lg,
+			.container-md,
+			.container-sm,
+			.container {
+				max-width: 960px;
 			}
+		}
 
-			.slick-list.dragging {
-				cursor: pointer;
-				cursor: hand;
+		@media (min-width: 1200px) {
+
+			.container-xl,
+			.container-lg,
+			.container-md,
+			.container-sm,
+			.container {
+				max-width: 1140px;
 			}
+		}
 
-			.slick-slider .slick-track,
-			.slick-slider .slick-list {
-				-webkit-transform: translate3d(0, 0, 0);
-				-moz-transform: translate3d(0, 0, 0);
-				-ms-transform: translate3d(0, 0, 0);
-				-o-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
+		@media (min-width: 1400px) {
 
-			.slick-track {
-				position: relative;
-				top: 0;
-				left: 0;
-
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-			}
-
-			.slick-track:before,
-			.slick-track:after {
-				display: table;
-
-				content: '';
-			}
-
-			.slick-track:after {
-				clear: both;
-			}
-
-			.slick-loading .slick-track {
-				visibility: hidden;
-			}
-
-			.slick-slide {
-				display: none;
-				float: left;
-
-				height: 100%;
-				min-height: 1px;
-			}
-
-			[dir='rtl'] .slick-slide {
-				float: right;
-			}
-
-			.slick-slide img {
-				display: block;
-			}
-
-			.slick-slide.slick-loading img {
-				display: none;
-			}
-
-			.slick-slide.dragging img {
-				pointer-events: none;
-			}
-
-			.slick-initialized .slick-slide {
-				display: block;
-			}
-
-			.slick-loading .slick-slide {
-				visibility: hidden;
-			}
-
-			.slick-vertical .slick-slide {
-				display: block;
-
-				height: auto;
-
-				border: 1px solid transparent;
-			}
-
-			.slick-arrow.slick-hidden {
-				display: none;
-			}
-		</style>
-		<style>
-			.bi::before,
-			[class^='bi-']::before,
-			[class*=' bi-']::before {
-				display: inline-block;
-				font-family: bootstrap-icons !important;
-				font-style: normal;
-				font-weight: normal !important;
-				font-variant: normal;
-				text-transform: none;
-				line-height: 1;
-				vertical-align: -0.125em;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-			}
-
-			.bi-chevron-left::before {
-				content: '\f284';
-			}
-
-			.bi-check2-circle::before {
-				content: '\f270';
-			}
-
-			.bi-info-circle-fill::before {
-				content: '\f430';
-			}
-
-			.bi-exclamation-lg::before {
-				content: '\f63c';
-			}
-
-			.bi-quote::before {
-				content: '\f6b0';
-			}
-
-			.bi-bell::before {
-				content: '\f18a';
-			}
-
-			.bi-calendar::before {
-				content: '\f1f6';
-			}
-
-			.bi-file-earmark-text-fill::before {
-				content: '\f38a';
-			}
-
-			.bi-download::before {
-				content: '\f30a';
-			}
-
-			.bi-question-circle::before {
-				content: '\f505';
-			}
-
-			.bi-chevron-down::before {
-				content: '\f282';
-			}
-
-			.bi-exclamation-circle::before {
-				content: '\f333';
-			}
-
-			.bi-question-circle::before {
-				content: '\f505';
-			}
-		</style>
-		<style>
-			.mt-5 {
-				margin-top: 3rem !important;
-			}
-
-			.container,
-			.container-fluid,
 			.container-xxl,
 			.container-xl,
 			.container-lg,
 			.container-md,
-			.container-sm {
-				--bs-gutter-x: 1.5rem;
-				--bs-gutter-y: 0;
-				width: 100%;
-				padding-right: calc(var(--bs-gutter-x) * 0.5);
-				padding-left: calc(var(--bs-gutter-x) * 0.5);
-				margin-right: auto;
-				margin-left: auto;
+			.container-sm,
+			.container {
+				max-width: 1320px;
+			}
+		}
+
+		.row {
+			--bs-gutter-x: 1.5rem;
+			--bs-gutter-y: 0;
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: calc(-1 * var(--bs-gutter-y));
+			margin-right: calc(-0.5 * var(--bs-gutter-x));
+			margin-left: calc(-0.5 * var(--bs-gutter-x));
+		}
+
+		.row>* {
+			flex-shrink: 0;
+			width: 100%;
+			max-width: 100%;
+			padding-right: calc(var(--bs-gutter-x) * 0.5);
+			padding-left: calc(var(--bs-gutter-x) * 0.5);
+			margin-top: var(--bs-gutter-y);
+		}
+
+		/* lg */
+		@media (min-width: 992px) {
+			.order-lg-2 {
+				order: 2 !important;
 			}
 
-			@media (min-width: 576px) {
-				.container-sm,
-				.container {
-					max-width: 540px;
-				}
+			.col-lg-4 {
+				flex: 0 0 auto;
+				width: 33.33333333%;
 			}
 
-			@media (min-width: 768px) {
-				.container-md,
-				.container-sm,
-				.container {
-					max-width: 720px;
-				}
-			}
-
-			@media (min-width: 992px) {
-				.container-lg,
-				.container-md,
-				.container-sm,
-				.container {
-					max-width: 960px;
-				}
-			}
-
-			@media (min-width: 1200px) {
-				.container-xl,
-				.container-lg,
-				.container-md,
-				.container-sm,
-				.container {
-					max-width: 1140px;
-				}
-			}
-
-			@media (min-width: 1400px) {
-				.container-xxl,
-				.container-xl,
-				.container-lg,
-				.container-md,
-				.container-sm,
-				.container {
-					max-width: 1320px;
-				}
-			}
-
-			.row {
-				--bs-gutter-x: 1.5rem;
-				--bs-gutter-y: 0;
-				display: flex;
-				flex-wrap: wrap;
-				margin-top: calc(-1 * var(--bs-gutter-y));
-				margin-right: calc(-0.5 * var(--bs-gutter-x));
-				margin-left: calc(-0.5 * var(--bs-gutter-x));
-			}
-
-			.row > * {
-				flex-shrink: 0;
-				width: 100%;
-				max-width: 100%;
-				padding-right: calc(var(--bs-gutter-x) * 0.5);
-				padding-left: calc(var(--bs-gutter-x) * 0.5);
-				margin-top: var(--bs-gutter-y);
-			}
-
-			/* lg */
-			@media (min-width: 992px) {
-				.order-lg-2 {
-					order: 2 !important;
-				}
-
-				.col-lg-4 {
-					flex: 0 0 auto;
-					width: 33.33333333%;
-				}
-
-				.mb-lg-4 {
-					margin-bottom: 1.5rem !important;
-				}
-
-				.col-lg-8 {
-					flex: 0 0 auto;
-					width: 66.66666667%;
-				}
-			}
-
-			/* md */
-			@media (min-width: 768px) {
-				.px-md-3 {
-					padding-right: 1rem !important;
-					padding-left: 1rem !important;
-				}
-
-				.py-md-4 {
-					padding-top: 1.5rem !important;
-					padding-bottom: 1.5rem !important;
-				}
-
-				.px-md-4 {
-					padding-right: 1.5rem !important;
-					padding-left: 1.5rem !important;
-				}
-
-				.col-md-6 {
-					flex: 0 0 auto;
-					width: 50%;
-				}
-
-				.mx-md-5 {
-					margin-right: 3rem !important;
-					margin-left: 3rem !important;
-				}
-
-				.mb-md-5 {
-					margin-bottom: 3rem !important;
-				}
-
-				.col-md-4 {
-					flex: 0 0 auto;
-					width: 33.33333333%;
-				}
-			}
-
-			.top-0 {
-				top: 0 !important;
-			}
-
-			.position-sticky {
-				position: -webkit-sticky !important;
-				position: sticky !important;
-			}
-
-			.mb-4 {
+			.mb-lg-4 {
 				margin-bottom: 1.5rem !important;
 			}
 
-			.px-2 {
-				padding-right: 0.5rem !important;
-				padding-left: 0.5rem !important;
+			.col-lg-8 {
+				flex: 0 0 auto;
+				width: 66.66666667%;
 			}
+		}
 
-			.py-3 {
-				padding-top: 1rem !important;
-				padding-bottom: 1rem !important;
-			}
-
-			.d-flex {
-				display: flex !important;
-			}
-
-			.mt-1 {
-				margin-top: 0.25rem !important;
-			}
-
-			.mr-0 {
-				margin-right: 0 !important;
-			}
-
-			.mr-1 {
-				margin-right: 0.25rem !important;
-			}
-
-			.mr-2 {
-				margin-right: 0.5rem !important;
-			}
-
-			.mr-3 {
-				margin-right: 1rem !important;
-			}
-
-			.mr-4 {
-				margin-right: 1.5rem !important;
-			}
-
-			.mr-5 {
-				margin-right: 3rem !important;
-			}
-
-			.mr-auto {
-				margin-right: auto !important;
-			}
-
-			/* Margin left (ml-*) */
-			.ml-0 {
-				margin-left: 0 !important;
-			}
-
-			.ml-1 {
-				margin-left: 0.25rem !important;
-			}
-
-			.ml-2 {
-				margin-left: 0.5rem !important;
-			}
-
-			.ml-3 {
-				margin-left: 1rem !important;
-			}
-
-			.ml-4 {
-				margin-left: 1.5rem !important;
-			}
-
-			.ml-5 {
-				margin-left: 3rem !important;
-			}
-
-			.ml-auto {
-				margin-left: auto !important;
-			}
-
-			/* Padding right (pr-*) */
-			.pr-0 {
-				padding-right: 0 !important;
-			}
-
-			.pr-1 {
-				padding-right: 0.25rem !important;
-			}
-
-			.pr-2 {
-				padding-right: 0.5rem !important;
-			}
-
-			.pr-3 {
+		/* md */
+		@media (min-width: 768px) {
+			.px-md-3 {
 				padding-right: 1rem !important;
-			}
-
-			.pr-4 {
-				padding-right: 1.5rem !important;
-			}
-
-			.pr-5 {
-				padding-right: 3rem !important;
-			}
-
-			.pl-0 {
-				padding-left: 0 !important;
-			}
-
-			.pl-1 {
-				padding-left: 0.25rem !important;
-			}
-
-			.pl-2 {
-				padding-left: 0.5rem !important;
-			}
-
-			.pl-3 {
 				padding-left: 1rem !important;
 			}
 
-			.pl-4 {
+			.py-md-4 {
+				padding-top: 1.5rem !important;
+				padding-bottom: 1.5rem !important;
+			}
+
+			.px-md-4 {
+				padding-right: 1.5rem !important;
 				padding-left: 1.5rem !important;
 			}
 
-			.pl-5 {
-				padding-left: 3rem !important;
+			.col-md-6 {
+				flex: 0 0 auto;
+				width: 50%;
 			}
 
-			.px-3 {
-				padding-right: 1rem !important;
-				padding-left: 1rem !important;
+			.mx-md-5 {
+				margin-right: 3rem !important;
+				margin-left: 3rem !important;
 			}
 
-			.align-items-center {
-				align-items: center !important;
-			}
-
-			.justify-content-between {
-				justify-content: space-between !important;
-			}
-
-			.mb-5 {
+			.mb-md-5 {
 				margin-bottom: 3rem !important;
 			}
 
-			h6,
-			.h6,
-			h5,
-			.h5,
-			h4,
-			.h4,
-			h3,
-			.h3,
-			h2,
-			.h2,
-			h1,
-			.h1 {
-				margin-top: 0;
-				margin-bottom: 0.5rem;
-				font-weight: 500;
-				line-height: 1.2;
+			.col-md-4 {
+				flex: 0 0 auto;
+				width: 33.33333333%;
 			}
+		}
+
+		.top-0 {
+			top: 0 !important;
+		}
+
+		.position-sticky {
+			position: -webkit-sticky !important;
+			position: sticky !important;
+		}
+
+		.mb-4 {
+			margin-bottom: 1.5rem !important;
+		}
+
+		.px-2 {
+			padding-right: 0.5rem !important;
+			padding-left: 0.5rem !important;
+		}
+
+		.py-3 {
+			padding-top: 1rem !important;
+			padding-bottom: 1rem !important;
+		}
+
+		.d-flex {
+			display: flex !important;
+		}
+
+		.mt-1 {
+			margin-top: 0.25rem !important;
+		}
+
+		.mr-0 {
+			margin-right: 0 !important;
+		}
+
+		.mr-1 {
+			margin-right: 0.25rem !important;
+		}
+
+		.mr-2 {
+			margin-right: 0.5rem !important;
+		}
+
+		.mr-3 {
+			margin-right: 1rem !important;
+		}
+
+		.mr-4 {
+			margin-right: 1.5rem !important;
+		}
+
+		.mr-5 {
+			margin-right: 3rem !important;
+		}
+
+		.mr-auto {
+			margin-right: auto !important;
+		}
+
+		/* Margin left (ml-*) */
+		.ml-0 {
+			margin-left: 0 !important;
+		}
+
+		.ml-1 {
+			margin-left: 0.25rem !important;
+		}
+
+		.ml-2 {
+			margin-left: 0.5rem !important;
+		}
+
+		.ml-3 {
+			margin-left: 1rem !important;
+		}
+
+		.ml-4 {
+			margin-left: 1.5rem !important;
+		}
+
+		.ml-5 {
+			margin-left: 3rem !important;
+		}
+
+		.ml-auto {
+			margin-left: auto !important;
+		}
+
+		/* Padding right (pr-*) */
+		.pr-0 {
+			padding-right: 0 !important;
+		}
+
+		.pr-1 {
+			padding-right: 0.25rem !important;
+		}
+
+		.pr-2 {
+			padding-right: 0.5rem !important;
+		}
+
+		.pr-3 {
+			padding-right: 1rem !important;
+		}
+
+		.pr-4 {
+			padding-right: 1.5rem !important;
+		}
+
+		.pr-5 {
+			padding-right: 3rem !important;
+		}
+
+		.pl-0 {
+			padding-left: 0 !important;
+		}
+
+		.pl-1 {
+			padding-left: 0.25rem !important;
+		}
+
+		.pl-2 {
+			padding-left: 0.5rem !important;
+		}
+
+		.pl-3 {
+			padding-left: 1rem !important;
+		}
+
+		.pl-4 {
+			padding-left: 1.5rem !important;
+		}
+
+		.pl-5 {
+			padding-left: 3rem !important;
+		}
+
+		.px-3 {
+			padding-right: 1rem !important;
+			padding-left: 1rem !important;
+		}
+
+		.align-items-center {
+			align-items: center !important;
+		}
+
+		.justify-content-between {
+			justify-content: space-between !important;
+		}
+
+		.mb-5 {
+			margin-bottom: 3rem !important;
+		}
+
+		h6,
+		.h6,
+		h5,
+		.h5,
+		h4,
+		.h4,
+		h3,
+		.h3,
+		h2,
+		.h2,
+		h1,
+		.h1 {
+			margin-top: 0;
+			margin-bottom: 0.5rem;
+			font-weight: 500;
+			line-height: 1.2;
+		}
+
+		h1,
+		.h1 {
+			font-size: calc(1.375rem + 1.5vw);
+		}
+
+		@media (min-width: 1200px) {
 
 			h1,
 			.h1 {
-				font-size: calc(1.375rem + 1.5vw);
+				font-size: 2.5rem;
 			}
+		}
 
-			@media (min-width: 1200px) {
-				h1,
-				.h1 {
-					font-size: 2.5rem;
-				}
-			}
+		h2,
+		.h2 {
+			font-size: calc(1.325rem + 0.9vw);
+		}
+
+		@media (min-width: 1200px) {
 
 			h2,
 			.h2 {
-				font-size: calc(1.325rem + 0.9vw);
+				font-size: 2rem;
 			}
+		}
 
-			@media (min-width: 1200px) {
-				h2,
-				.h2 {
-					font-size: 2rem;
-				}
-			}
+		h3,
+		.h3 {
+			font-size: calc(1.3rem + 0.6vw);
+		}
+
+		@media (min-width: 1200px) {
 
 			h3,
 			.h3 {
-				font-size: calc(1.3rem + 0.6vw);
+				font-size: 1.75rem;
 			}
+		}
 
-			@media (min-width: 1200px) {
-				h3,
-				.h3 {
-					font-size: 1.75rem;
-				}
-			}
+		h4,
+		.h4 {
+			font-size: calc(1.275rem + 0.3vw);
+		}
+
+		@media (min-width: 1200px) {
 
 			h4,
 			.h4 {
-				font-size: calc(1.275rem + 0.3vw);
+				font-size: 1.5rem;
 			}
+		}
 
-			@media (min-width: 1200px) {
-				h4,
-				.h4 {
-					font-size: 1.5rem;
-				}
-			}
+		h5,
+		.h5 {
+			font-size: 1.25rem;
+		}
 
-			h5,
-			.h5 {
-				font-size: 1.25rem;
-			}
+		h6,
+		.h6 {
+			font-size: 1rem;
+		}
 
-			h6,
-			.h6 {
-				font-size: 1rem;
-			}
+		p {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
 
-			p {
-				margin-top: 0;
-				margin-bottom: 1rem;
-			}
+		.mb-3 {
+			margin-bottom: 1rem !important;
+		}
 
-			.mb-3 {
-				margin-bottom: 1rem !important;
-			}
+		.img-fluid {
+			max-width: 100%;
+			height: auto;
+		}
 
-			.img-fluid {
-				max-width: 100%;
-				height: auto;
-			}
+		.p-3 {
+			padding: 1rem !important;
+		}
 
-			.p-3 {
-				padding: 1rem !important;
-			}
+		.pt-2 {
+			padding-top: 0.5rem !important;
+		}
 
-			.pt-2 {
-				padding-top: 0.5rem !important;
-			}
+		.pt-3 {
+			padding-top: 1rem !important;
+		}
 
-			.pt-3 {
-				padding-top: 1rem !important;
-			}
+		.pt-4 {
+			padding-top: 1.5rem !important;
+		}
 
-			.pt-4 {
-				padding-top: 1.5rem !important;
-			}
+		.text-center {
+			text-align: center !important;
+		}
 
-			.text-center {
-				text-align: center !important;
-			}
+		.mb-2 {
+			margin-bottom: 0.5rem !important;
+		}
 
-			.mb-2 {
-				margin-bottom: 0.5rem !important;
-			}
+		.flex-column {
+			flex-direction: column !important;
+		}
 
-			.flex-column {
-				flex-direction: column !important;
-			}
+		.h-100 {
+			height: 100% !important;
+		}
 
-			.h-100 {
-				height: 100% !important;
-			}
+		.justify-content-start {
+			justify-content: flex-start !important;
+		}
 
-			.justify-content-start {
-				justify-content: flex-start !important;
-			}
+		.flex-grow-1 {
+			flex-grow: 1 !important;
+		}
 
-			.flex-grow-1 {
-				flex-grow: 1 !important;
-			}
+		.p-4 {
+			padding: 1.5rem !important;
+		}
 
-			.p-4 {
-				padding: 1.5rem !important;
-			}
+		.mb-0 {
+			margin-bottom: 0 !important;
+		}
 
-			.mb-0 {
-				margin-bottom: 0 !important;
-			}
+		.accordion {
+			--bs-accordion-color: #212529;
+			--bs-accordion-bg: #fff;
+			--bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+				border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+			--bs-accordion-border-color: var(--bs-border-color);
+			--bs-accordion-border-width: 1px;
+			--bs-accordion-border-radius: 0.375rem;
+			--bs-accordion-inner-border-radius: calc(0.375rem - 1px);
+			--bs-accordion-btn-padding-x: 1.25rem;
+			--bs-accordion-btn-padding-y: 1rem;
+			--bs-accordion-btn-color: #212529;
+			--bs-accordion-btn-bg: var(--bs-accordion-bg);
+			--bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+			--bs-accordion-btn-icon-width: 1.25rem;
+			--bs-accordion-btn-icon-transform: rotate(-180deg);
+			--bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+			--bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+			--bs-accordion-btn-focus-border-color: #86b7fe;
+			--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+			--bs-accordion-body-padding-x: 1.25rem;
+			--bs-accordion-body-padding-y: 1rem;
+			--bs-accordion-active-color: #0c63e4;
+			--bs-accordion-active-bg: #e7f1ff;
+		}
 
-			.accordion {
-				--bs-accordion-color: #212529;
-				--bs-accordion-bg: #fff;
-				--bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-					border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-				--bs-accordion-border-color: var(--bs-border-color);
-				--bs-accordion-border-width: 1px;
-				--bs-accordion-border-radius: 0.375rem;
-				--bs-accordion-inner-border-radius: calc(0.375rem - 1px);
-				--bs-accordion-btn-padding-x: 1.25rem;
-				--bs-accordion-btn-padding-y: 1rem;
-				--bs-accordion-btn-color: #212529;
-				--bs-accordion-btn-bg: var(--bs-accordion-bg);
-				--bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-				--bs-accordion-btn-icon-width: 1.25rem;
-				--bs-accordion-btn-icon-transform: rotate(-180deg);
-				--bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-				--bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-				--bs-accordion-btn-focus-border-color: #86b7fe;
-				--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-				--bs-accordion-body-padding-x: 1.25rem;
-				--bs-accordion-body-padding-y: 1rem;
-				--bs-accordion-active-color: #0c63e4;
-				--bs-accordion-active-bg: #e7f1ff;
-			}
+		.accordion-button {
+			position: relative;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+			font-size: 1rem;
+			color: var(--bs-accordion-btn-color);
+			text-align: left;
+			background-color: var(--bs-accordion-btn-bg);
+			border: 0;
+			border-radius: 0;
+			overflow-anchor: none;
+			transition: var(--bs-accordion-transition);
+		}
 
+		@media (prefers-reduced-motion: reduce) {
 			.accordion-button {
-				position: relative;
-				display: flex;
-				align-items: center;
-				width: 100%;
-				padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-				font-size: 1rem;
-				color: var(--bs-accordion-btn-color);
-				text-align: left;
-				background-color: var(--bs-accordion-btn-bg);
-				border: 0;
-				border-radius: 0;
-				overflow-anchor: none;
-				transition: var(--bs-accordion-transition);
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.accordion-button {
-					transition: none;
-				}
-			}
+		.accordion-button:not(.collapsed) {
+			color: var(--bs-accordion-active-color);
+			background-color: var(--bs-accordion-active-bg);
+			box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+		}
 
-			.accordion-button:not(.collapsed) {
-				color: var(--bs-accordion-active-color);
-				background-color: var(--bs-accordion-active-bg);
-				box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
-			}
+		.accordion-button:not(.collapsed)::after {
+			background-image: var(--bs-accordion-btn-active-icon);
+			transform: var(--bs-accordion-btn-icon-transform);
+		}
 
-			.accordion-button:not(.collapsed)::after {
-				background-image: var(--bs-accordion-btn-active-icon);
-				transform: var(--bs-accordion-btn-icon-transform);
-			}
+		.accordion-button::after {
+			flex-shrink: 0;
+			width: var(--bs-accordion-btn-icon-width);
+			height: var(--bs-accordion-btn-icon-width);
+			margin-left: auto;
+			content: '';
+			background-image: var(--bs-accordion-btn-icon);
+			background-repeat: no-repeat;
+			background-size: var(--bs-accordion-btn-icon-width);
+			transition: var(--bs-accordion-btn-icon-transition);
+		}
 
+		@media (prefers-reduced-motion: reduce) {
 			.accordion-button::after {
-				flex-shrink: 0;
-				width: var(--bs-accordion-btn-icon-width);
-				height: var(--bs-accordion-btn-icon-width);
-				margin-left: auto;
-				content: '';
-				background-image: var(--bs-accordion-btn-icon);
-				background-repeat: no-repeat;
-				background-size: var(--bs-accordion-btn-icon-width);
-				transition: var(--bs-accordion-btn-icon-transition);
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.accordion-button::after {
-					transition: none;
-				}
-			}
+		.accordion-button:hover {
+			z-index: 2;
+		}
 
-			.accordion-button:hover {
-				z-index: 2;
-			}
+		.accordion-button:focus {
+			z-index: 3;
+			border-color: var(--bs-accordion-btn-focus-border-color);
+			outline: 0;
+			box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+		}
 
-			.accordion-button:focus {
-				z-index: 3;
-				border-color: var(--bs-accordion-btn-focus-border-color);
-				outline: 0;
-				box-shadow: var(--bs-accordion-btn-focus-box-shadow);
-			}
+		.accordion-header {
+			margin-bottom: 0;
+		}
 
-			.accordion-header {
-				margin-bottom: 0;
-			}
+		.accordion-item {
+			color: var(--bs-accordion-color);
+			background-color: var(--bs-accordion-bg);
+			border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+		}
 
-			.accordion-item {
-				color: var(--bs-accordion-color);
-				background-color: var(--bs-accordion-bg);
-				border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
-			}
+		.accordion-item:first-of-type {
+			border-top-left-radius: var(--bs-accordion-border-radius);
+			border-top-right-radius: var(--bs-accordion-border-radius);
+		}
 
-			.accordion-item:first-of-type {
-				border-top-left-radius: var(--bs-accordion-border-radius);
-				border-top-right-radius: var(--bs-accordion-border-radius);
-			}
+		.accordion-item:first-of-type .accordion-button {
+			border-top-left-radius: var(--bs-accordion-inner-border-radius);
+			border-top-right-radius: var(--bs-accordion-inner-border-radius);
+		}
 
-			.accordion-item:first-of-type .accordion-button {
-				border-top-left-radius: var(--bs-accordion-inner-border-radius);
-				border-top-right-radius: var(--bs-accordion-inner-border-radius);
-			}
+		.accordion-item:not(:first-of-type) {
+			border-top: 0;
+		}
 
-			.accordion-item:not(:first-of-type) {
-				border-top: 0;
-			}
+		.accordion-item:last-of-type {
+			border-bottom-right-radius: var(--bs-accordion-border-radius);
+			border-bottom-left-radius: var(--bs-accordion-border-radius);
+		}
 
-			.accordion-item:last-of-type {
-				border-bottom-right-radius: var(--bs-accordion-border-radius);
-				border-bottom-left-radius: var(--bs-accordion-border-radius);
-			}
+		.accordion-item:last-of-type .accordion-button.collapsed {
+			border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
+			border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+		}
 
-			.accordion-item:last-of-type .accordion-button.collapsed {
-				border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
-				border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
-			}
+		.accordion-item:last-of-type .accordion-collapse {
+			border-bottom-right-radius: var(--bs-accordion-border-radius);
+			border-bottom-left-radius: var(--bs-accordion-border-radius);
+		}
 
-			.accordion-item:last-of-type .accordion-collapse {
-				border-bottom-right-radius: var(--bs-accordion-border-radius);
-				border-bottom-left-radius: var(--bs-accordion-border-radius);
-			}
+		.btn-check:checked+.btn,
+		:not(.btn-check)+.btn:active,
+		.btn:first-child:active,
+		.btn.active,
+		.btn.show {
+			color: var(--bs-btn-active-color);
+			background-color: var(--bs-btn-active-bg);
+			border-color: var(--bs-btn-active-border-color);
+		}
 
-			.btn-check:checked + .btn,
-			:not(.btn-check) + .btn:active,
-			.btn:first-child:active,
-			.btn.active,
-			.btn.show {
-				color: var(--bs-btn-active-color);
-				background-color: var(--bs-btn-active-bg);
-				border-color: var(--bs-btn-active-border-color);
-			}
+		.btn-check:checked+.btn:focus-visible,
+		:not(.btn-check)+.btn:active:focus-visible,
+		.btn:first-child:active:focus-visible,
+		.btn.active:focus-visible,
+		.btn.show:focus-visible {
+			box-shadow: var(--bs-btn-focus-box-shadow);
+		}
 
-			.btn-check:checked + .btn:focus-visible,
-			:not(.btn-check) + .btn:active:focus-visible,
-			.btn:first-child:active:focus-visible,
-			.btn.active:focus-visible,
-			.btn.show:focus-visible {
-				box-shadow: var(--bs-btn-focus-box-shadow);
-			}
+		.fade {
+			transition: opacity 0.15s linear;
+		}
 
+		@media (prefers-reduced-motion: reduce) {
 			.fade {
-				transition: opacity 0.15s linear;
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.fade {
-					transition: none;
-				}
-			}
+		.fade:not(.show) {
+			opacity: 0;
+		}
 
-			.fade:not(.show) {
-				opacity: 0;
-			}
+		.collapse:not(.show) {
+			display: none;
+		}
 
-			.collapse:not(.show) {
-				display: none;
-			}
+		.collapsing {
+			height: 0;
+			overflow: hidden;
+			transition: height 0.35s ease;
+		}
 
+		@media (prefers-reduced-motion: reduce) {
 			.collapsing {
-				height: 0;
-				overflow: hidden;
-				transition: height 0.35s ease;
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.collapsing {
-					transition: none;
-				}
-			}
+		.collapsing.collapse-horizontal {
+			width: 0;
+			height: auto;
+			transition: width 0.35s ease;
+		}
 
+		@media (prefers-reduced-motion: reduce) {
 			.collapsing.collapse-horizontal {
-				width: 0;
-				height: auto;
-				transition: width 0.35s ease;
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.collapsing.collapse-horizontal {
-					transition: none;
-				}
+		.justify-content-center {
+			justify-content: center !important;
+		}
+	</style>
+	<!-- <link rel="stylesheet" href="css/style.min.css" /> -->
+	<style>
+		/* Стили для страницы landing-nalog-rebuild.html */
+		/* Извлечены только кастомные стили, Bootstrap стили исключены */
+
+		/* Шрифты */
+		@font-face {
+			font-family: 'icons';
+			font-display: swap;
+			src: url('../fonts/icons.woff2') format('woff2'), url('../fonts/icons.woff') format('woff');
+			font-weight: 400;
+			font-style: normal;
+		}
+
+		@font-face {
+			font-display: block;
+			font-family: 'bootstrap-icons';
+			src: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/fonts/bootstrap-icons.woff2') format('woff2'),
+				url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/fonts/bootstrap-icons.woff') format('woff');
+		}
+
+		/* Базовые стили */
+		* {
+			box-sizing: border-box;
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		body {
+			font-family: 'Open Sans', sans-serif;
+			-ms-text-size-adjust: 100%;
+			-moz-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%;
+		}
+
+		/* Bootstrap Icons */
+		.bi::before,
+		[class^='bi-']::before,
+		[class*=' bi-']::before {
+			display: inline-block;
+			font-family: bootstrap-icons !important;
+			font-style: normal;
+			font-weight: normal !important;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			vertical-align: -0.125em;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		.bi-chevron-left::before {
+			content: '\f284';
+		}
+
+		.bi-check2-circle::before {
+			content: '\f270';
+		}
+
+		.bi-info-circle-fill::before {
+			content: '\f430';
+		}
+
+		.bi-exclamation-lg::before {
+			content: '\f63c';
+		}
+
+		.bi-quote::before {
+			content: '\f6b0';
+		}
+
+		.bi-bell::before {
+			content: '\f18a';
+		}
+
+		.bi-calendar::before {
+			content: '\f1f6';
+		}
+
+		.bi-file-earmark-text-fill::before {
+			content: '\f38a';
+		}
+
+		.bi-download::before {
+			content: '\f30a';
+		}
+
+		.bi-question-circle::before {
+			content: '\f505';
+		}
+
+		.bi-chevron-down::before {
+			content: '\f282';
+		}
+
+		.bi-exclamation-circle::before {
+			content: '\f333';
+		}
+
+		/* Иконки */
+		[class^='_icon-']:before,
+		[class*=' _icon-']:before {
+			font-family: 'icons';
+			font-style: normal;
+			font-weight: normal;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+		._icon-chevron-down-circle:before {
+			content: '\e900';
+		}
+
+		/* Bootstrap Grid System (необходимые стили) */
+		.container,
+		.container-fluid,
+		.container-xxl,
+		.container-xl,
+		.container-lg,
+		.container-md,
+		.container-sm {
+			--bs-gutter-x: 1.5rem;
+			--bs-gutter-y: 0;
+			width: 100%;
+			padding-right: calc(var(--bs-gutter-x) * 0.5);
+			padding-left: calc(var(--bs-gutter-x) * 0.5);
+			margin-right: auto;
+			margin-left: auto;
+		}
+
+		@media (min-width: 576px) {
+
+			.container-sm,
+			.container {
+				max-width: 540px;
 			}
+		}
 
-			.justify-content-center {
-				justify-content: center !important;
+		@media (min-width: 768px) {
+
+			.container-md,
+			.container-sm,
+			.container {
+				max-width: 720px;
 			}
-		</style>
-		<!-- <link rel="stylesheet" href="css/style.min.css" /> -->
-		<style>
-			/* Стили для страницы landing-nalog-rebuild.html */
-			/* Извлечены только кастомные стили, Bootstrap стили исключены */
+		}
 
-			/* Шрифты */
-			@font-face {
-				font-family: 'icons';
-				font-display: swap;
-				src: url('../fonts/icons.woff2') format('woff2'), url('../fonts/icons.woff') format('woff');
-				font-weight: 400;
-				font-style: normal;
+		@media (min-width: 992px) {
+
+			.container-lg,
+			.container-md,
+			.container-sm,
+			.container {
+				max-width: 960px;
 			}
+		}
 
-			@font-face {
-				font-display: block;
-				font-family: 'bootstrap-icons';
-				src: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/fonts/bootstrap-icons.woff2')
-						format('woff2'),
-					url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/fonts/bootstrap-icons.woff')
-						format('woff');
+		@media (min-width: 1200px) {
+
+			.container-xl,
+			.container-lg,
+			.container-md,
+			.container-sm,
+			.container {
+				max-width: 1140px;
 			}
+		}
 
-			/* Базовые стили */
-			* {
-				box-sizing: border-box;
-			}
+		@media (min-width: 1400px) {
 
-			html {
-				scroll-behavior: smooth;
-			}
-
-			body {
-				font-family: 'Open Sans', sans-serif;
-				-ms-text-size-adjust: 100%;
-				-moz-text-size-adjust: 100%;
-				-webkit-text-size-adjust: 100%;
-			}
-
-			/* Bootstrap Icons */
-			.bi::before,
-			[class^='bi-']::before,
-			[class*=' bi-']::before {
-				display: inline-block;
-				font-family: bootstrap-icons !important;
-				font-style: normal;
-				font-weight: normal !important;
-				font-variant: normal;
-				text-transform: none;
-				line-height: 1;
-				vertical-align: -0.125em;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-			}
-
-			.bi-chevron-left::before {
-				content: '\f284';
-			}
-
-			.bi-check2-circle::before {
-				content: '\f270';
-			}
-
-			.bi-info-circle-fill::before {
-				content: '\f430';
-			}
-
-			.bi-exclamation-lg::before {
-				content: '\f63c';
-			}
-
-			.bi-quote::before {
-				content: '\f6b0';
-			}
-
-			.bi-bell::before {
-				content: '\f18a';
-			}
-
-			.bi-calendar::before {
-				content: '\f1f6';
-			}
-
-			.bi-file-earmark-text-fill::before {
-				content: '\f38a';
-			}
-
-			.bi-download::before {
-				content: '\f30a';
-			}
-
-			.bi-question-circle::before {
-				content: '\f505';
-			}
-
-			.bi-chevron-down::before {
-				content: '\f282';
-			}
-
-			.bi-exclamation-circle::before {
-				content: '\f333';
-			}
-
-			/* Иконки */
-			[class^='_icon-']:before,
-			[class*=' _icon-']:before {
-				font-family: 'icons';
-				font-style: normal;
-				font-weight: normal;
-				font-variant: normal;
-				text-transform: none;
-				line-height: 1;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-			}
-
-			._icon-chevron-down-circle:before {
-				content: '\e900';
-			}
-
-			/* Bootstrap Grid System (необходимые стили) */
-			.container,
-			.container-fluid,
 			.container-xxl,
 			.container-xl,
 			.container-lg,
 			.container-md,
-			.container-sm {
-				--bs-gutter-x: 1.5rem;
-				--bs-gutter-y: 0;
-				width: 100%;
-				padding-right: calc(var(--bs-gutter-x) * 0.5);
-				padding-left: calc(var(--bs-gutter-x) * 0.5);
-				margin-right: auto;
-				margin-left: auto;
+			.container-sm,
+			.container {
+				max-width: 1320px;
+			}
+		}
+
+		.row {
+			--bs-gutter-x: 1.5rem;
+			--bs-gutter-y: 0;
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: calc(-1 * var(--bs-gutter-y));
+			margin-right: calc(-0.5 * var(--bs-gutter-x));
+			margin-left: calc(-0.5 * var(--bs-gutter-x));
+		}
+
+		.row>* {
+			flex-shrink: 0;
+			width: 100%;
+			max-width: 100%;
+			padding-right: calc(var(--bs-gutter-x) * 0.5);
+			padding-left: calc(var(--bs-gutter-x) * 0.5);
+			margin-top: var(--bs-gutter-y);
+		}
+
+		/* Grid columns */
+		@media (min-width: 992px) {
+			.order-lg-2 {
+				order: 2 !important;
 			}
 
-			@media (min-width: 576px) {
-				.container-sm,
-				.container {
-					max-width: 540px;
-				}
+			.col-lg-4 {
+				flex: 0 0 auto;
+				width: 33.33333333%;
 			}
 
-			@media (min-width: 768px) {
-				.container-md,
-				.container-sm,
-				.container {
-					max-width: 720px;
-				}
+			.col-lg-8 {
+				flex: 0 0 auto;
+				width: 66.66666667%;
+			}
+		}
+
+		@media (min-width: 768px) {
+			.col-md-4 {
+				flex: 0 0 auto;
+				width: 33.33333333%;
 			}
 
-			@media (min-width: 992px) {
-				.container-lg,
-				.container-md,
-				.container-sm,
-				.container {
-					max-width: 960px;
-				}
+			.col-md-6 {
+				flex: 0 0 auto;
+				width: 50%;
 			}
+		}
 
-			@media (min-width: 1200px) {
-				.container-xl,
-				.container-lg,
-				.container-md,
-				.container-sm,
-				.container {
-					max-width: 1140px;
-				}
-			}
+		/* Slick Slider */
+		.slick-slider {
+			position: relative;
+			display: block;
+			box-sizing: border-box;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			-webkit-touch-callout: none;
+			-khtml-user-select: none;
+			-ms-touch-action: pan-y;
+			touch-action: pan-y;
+			-webkit-tap-highlight-color: transparent;
+		}
 
-			@media (min-width: 1400px) {
-				.container-xxl,
-				.container-xl,
-				.container-lg,
-				.container-md,
-				.container-sm,
-				.container {
-					max-width: 1320px;
-				}
-			}
+		.slick-list {
+			position: relative;
+			display: block;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+		}
 
-			.row {
-				--bs-gutter-x: 1.5rem;
-				--bs-gutter-y: 0;
-				display: flex;
-				flex-wrap: wrap;
-				margin-top: calc(-1 * var(--bs-gutter-y));
-				margin-right: calc(-0.5 * var(--bs-gutter-x));
-				margin-left: calc(-0.5 * var(--bs-gutter-x));
-			}
+		.slick-list:focus {
+			outline: none;
+		}
 
-			.row > * {
-				flex-shrink: 0;
-				width: 100%;
-				max-width: 100%;
-				padding-right: calc(var(--bs-gutter-x) * 0.5);
-				padding-left: calc(var(--bs-gutter-x) * 0.5);
-				margin-top: var(--bs-gutter-y);
-			}
+		.slick-list.dragging {
+			cursor: pointer;
+			cursor: hand;
+		}
 
-			/* Grid columns */
-			@media (min-width: 992px) {
-				.order-lg-2 {
-					order: 2 !important;
-				}
+		.slick-slider .slick-track,
+		.slick-slider .slick-list {
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			-ms-transform: translate3d(0, 0, 0);
+			-o-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
 
-				.col-lg-4 {
-					flex: 0 0 auto;
-					width: 33.33333333%;
-				}
+		.slick-track {
+			position: relative;
+			top: 0;
+			left: 0;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 
-				.col-lg-8 {
-					flex: 0 0 auto;
-					width: 66.66666667%;
-				}
-			}
+		.slick-track:before,
+		.slick-track:after {
+			display: table;
+			content: '';
+		}
 
-			@media (min-width: 768px) {
-				.col-md-4 {
-					flex: 0 0 auto;
-					width: 33.33333333%;
-				}
+		.slick-track:after {
+			clear: both;
+		}
 
-				.col-md-6 {
-					flex: 0 0 auto;
-					width: 50%;
-				}
-			}
+		.slick-loading .slick-track {
+			visibility: hidden;
+		}
 
-			/* Slick Slider */
-			.slick-slider {
-				position: relative;
-				display: block;
-				box-sizing: border-box;
-				-webkit-user-select: none;
-				-moz-user-select: none;
-				-ms-user-select: none;
-				user-select: none;
-				-webkit-touch-callout: none;
-				-khtml-user-select: none;
-				-ms-touch-action: pan-y;
-				touch-action: pan-y;
-				-webkit-tap-highlight-color: transparent;
-			}
+		.slick-slide {
+			display: none;
+			float: left;
+			height: 100%;
+			min-height: 1px;
+		}
 
-			.slick-list {
-				position: relative;
-				display: block;
-				overflow: hidden;
-				margin: 0;
-				padding: 0;
-			}
+		[dir='rtl'] .slick-slide {
+			float: right;
+		}
 
-			.slick-list:focus {
-				outline: none;
-			}
+		.slick-slide img {
+			display: block;
+		}
 
-			.slick-list.dragging {
-				cursor: pointer;
-				cursor: hand;
-			}
+		.slick-slide.slick-loading img {
+			display: none;
+		}
 
-			.slick-slider .slick-track,
-			.slick-slider .slick-list {
-				-webkit-transform: translate3d(0, 0, 0);
-				-moz-transform: translate3d(0, 0, 0);
-				-ms-transform: translate3d(0, 0, 0);
-				-o-transform: translate3d(0, 0, 0);
-				transform: translate3d(0, 0, 0);
-			}
+		.slick-slide.dragging img {
+			pointer-events: none;
+		}
 
-			.slick-track {
-				position: relative;
-				top: 0;
-				left: 0;
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-			}
+		.slick-initialized .slick-slide {
+			display: block;
+		}
 
-			.slick-track:before,
-			.slick-track:after {
-				display: table;
-				content: '';
-			}
+		.slick-loading .slick-slide {
+			visibility: hidden;
+		}
 
-			.slick-track:after {
-				clear: both;
-			}
+		.slick-vertical .slick-slide {
+			display: block;
+			height: auto;
+			border: 1px solid transparent;
+		}
 
-			.slick-loading .slick-track {
-				visibility: hidden;
-			}
+		.slick-arrow.slick-hidden {
+			display: none;
+		}
 
-			.slick-slide {
-				display: none;
-				float: left;
-				height: 100%;
-				min-height: 1px;
-			}
+		/* Bootstrap Accordion */
+		.accordion {
+			--bs-accordion-color: #212529;
+			--bs-accordion-bg: #fff;
+			--bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+				border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
+			--bs-accordion-border-color: var(--bs-border-color);
+			--bs-accordion-border-width: 1px;
+			--bs-accordion-border-radius: 0.375rem;
+			--bs-accordion-inner-border-radius: calc(0.375rem - 1px);
+			--bs-accordion-btn-padding-x: 1.25rem;
+			--bs-accordion-btn-padding-y: 1rem;
+			--bs-accordion-btn-color: #212529;
+			--bs-accordion-btn-bg: var(--bs-accordion-bg);
+			--bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+			--bs-accordion-btn-icon-width: 1.25rem;
+			--bs-accordion-btn-icon-transform: rotate(-180deg);
+			--bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
+			--bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+			--bs-accordion-btn-focus-border-color: #86b7fe;
+			--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+			--bs-accordion-body-padding-x: 1.25rem;
+			--bs-accordion-body-padding-y: 1rem;
+			--bs-accordion-active-color: #0c63e4;
+			--bs-accordion-active-bg: #e7f1ff;
+		}
 
-			[dir='rtl'] .slick-slide {
-				float: right;
-			}
+		.accordion-button {
+			position: relative;
+			display: flex;
+			align-items: center;
+			width: 100%;
+			padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
+			font-size: 1rem;
+			color: var(--bs-accordion-btn-color);
+			text-align: left;
+			background-color: var(--bs-accordion-btn-bg);
+			border: 0;
+			border-radius: 0;
+			overflow-anchor: none;
+			transition: var(--bs-accordion-transition);
+		}
 
-			.slick-slide img {
-				display: block;
-			}
-
-			.slick-slide.slick-loading img {
-				display: none;
-			}
-
-			.slick-slide.dragging img {
-				pointer-events: none;
-			}
-
-			.slick-initialized .slick-slide {
-				display: block;
-			}
-
-			.slick-loading .slick-slide {
-				visibility: hidden;
-			}
-
-			.slick-vertical .slick-slide {
-				display: block;
-				height: auto;
-				border: 1px solid transparent;
-			}
-
-			.slick-arrow.slick-hidden {
-				display: none;
-			}
-
-			/* Bootstrap Accordion */
-			.accordion {
-				--bs-accordion-color: #212529;
-				--bs-accordion-bg: #fff;
-				--bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-					border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
-				--bs-accordion-border-color: var(--bs-border-color);
-				--bs-accordion-border-width: 1px;
-				--bs-accordion-border-radius: 0.375rem;
-				--bs-accordion-inner-border-radius: calc(0.375rem - 1px);
-				--bs-accordion-btn-padding-x: 1.25rem;
-				--bs-accordion-btn-padding-y: 1rem;
-				--bs-accordion-btn-color: #212529;
-				--bs-accordion-btn-bg: var(--bs-accordion-bg);
-				--bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-				--bs-accordion-btn-icon-width: 1.25rem;
-				--bs-accordion-btn-icon-transform: rotate(-180deg);
-				--bs-accordion-btn-icon-transition: transform 0.2s ease-in-out;
-				--bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230c63e4'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
-				--bs-accordion-btn-focus-border-color: #86b7fe;
-				--bs-accordion-btn-focus-box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-				--bs-accordion-body-padding-x: 1.25rem;
-				--bs-accordion-body-padding-y: 1rem;
-				--bs-accordion-active-color: #0c63e4;
-				--bs-accordion-active-bg: #e7f1ff;
-			}
-
+		@media (prefers-reduced-motion: reduce) {
 			.accordion-button {
-				position: relative;
-				display: flex;
-				align-items: center;
-				width: 100%;
-				padding: var(--bs-accordion-btn-padding-y) var(--bs-accordion-btn-padding-x);
-				font-size: 1rem;
-				color: var(--bs-accordion-btn-color);
-				text-align: left;
-				background-color: var(--bs-accordion-btn-bg);
-				border: 0;
-				border-radius: 0;
-				overflow-anchor: none;
-				transition: var(--bs-accordion-transition);
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.accordion-button {
-					transition: none;
-				}
-			}
+		.accordion-button:not(.collapsed) {
+			color: var(--bs-accordion-active-color);
+			background-color: var(--bs-accordion-active-bg);
+			box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
+		}
 
-			.accordion-button:not(.collapsed) {
-				color: var(--bs-accordion-active-color);
-				background-color: var(--bs-accordion-active-bg);
-				box-shadow: inset 0 calc(-1 * var(--bs-accordion-border-width)) 0 var(--bs-accordion-border-color);
-			}
+		.accordion-button:not(.collapsed)::after {
+			background-image: var(--bs-accordion-btn-active-icon);
+			transform: var(--bs-accordion-btn-icon-transform);
+		}
 
-			.accordion-button:not(.collapsed)::after {
-				background-image: var(--bs-accordion-btn-active-icon);
-				transform: var(--bs-accordion-btn-icon-transform);
-			}
+		.accordion-button::after {
+			flex-shrink: 0;
+			width: var(--bs-accordion-btn-icon-width);
+			height: var(--bs-accordion-btn-icon-width);
+			margin-left: auto;
+			content: '';
+			background-image: var(--bs-accordion-btn-icon);
+			background-repeat: no-repeat;
+			background-size: var(--bs-accordion-btn-icon-width);
+			transition: var(--bs-accordion-btn-icon-transition);
+		}
 
+		@media (prefers-reduced-motion: reduce) {
 			.accordion-button::after {
-				flex-shrink: 0;
-				width: var(--bs-accordion-btn-icon-width);
-				height: var(--bs-accordion-btn-icon-width);
-				margin-left: auto;
-				content: '';
-				background-image: var(--bs-accordion-btn-icon);
-				background-repeat: no-repeat;
-				background-size: var(--bs-accordion-btn-icon-width);
-				transition: var(--bs-accordion-btn-icon-transition);
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.accordion-button::after {
-					transition: none;
-				}
-			}
+		.accordion-button:hover {
+			z-index: 2;
+		}
 
-			.accordion-button:hover {
-				z-index: 2;
-			}
+		.accordion-button:focus {
+			z-index: 3;
+			border-color: var(--bs-accordion-btn-focus-border-color);
+			outline: 0;
+			box-shadow: var(--bs-accordion-btn-focus-box-shadow);
+		}
 
-			.accordion-button:focus {
-				z-index: 3;
-				border-color: var(--bs-accordion-btn-focus-border-color);
-				outline: 0;
-				box-shadow: var(--bs-accordion-btn-focus-box-shadow);
-			}
+		.accordion-header {
+			margin-bottom: 0;
+		}
 
-			.accordion-header {
-				margin-bottom: 0;
-			}
+		.accordion-item {
+			color: var(--bs-accordion-color);
+			background-color: var(--bs-accordion-bg);
+			border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
+		}
 
-			.accordion-item {
-				color: var(--bs-accordion-color);
-				background-color: var(--bs-accordion-bg);
-				border: var(--bs-accordion-border-width) solid var(--bs-accordion-border-color);
-			}
+		.accordion-item:first-of-type {
+			border-top-left-radius: var(--bs-accordion-border-radius);
+			border-top-right-radius: var(--bs-accordion-border-radius);
+		}
 
-			.accordion-item:first-of-type {
-				border-top-left-radius: var(--bs-accordion-border-radius);
-				border-top-right-radius: var(--bs-accordion-border-radius);
-			}
+		.accordion-item:first-of-type .accordion-button {
+			border-top-left-radius: var(--bs-accordion-inner-border-radius);
+			border-top-right-radius: var(--bs-accordion-inner-border-radius);
+		}
 
-			.accordion-item:first-of-type .accordion-button {
-				border-top-left-radius: var(--bs-accordion-inner-border-radius);
-				border-top-right-radius: var(--bs-accordion-inner-border-radius);
-			}
+		.accordion-item:not(:first-of-type) {
+			border-top: 0;
+		}
 
-			.accordion-item:not(:first-of-type) {
-				border-top: 0;
-			}
+		.accordion-item:last-of-type {
+			border-bottom-right-radius: var(--bs-accordion-border-radius);
+			border-bottom-left-radius: var(--bs-accordion-border-radius);
+		}
 
-			.accordion-item:last-of-type {
-				border-bottom-right-radius: var(--bs-accordion-border-radius);
-				border-bottom-left-radius: var(--bs-accordion-border-radius);
-			}
+		.accordion-item:last-of-type .accordion-button.collapsed {
+			border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
+			border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
+		}
 
-			.accordion-item:last-of-type .accordion-button.collapsed {
-				border-bottom-right-radius: var(--bs-accordion-inner-border-radius);
-				border-bottom-left-radius: var(--bs-accordion-inner-border-radius);
-			}
+		.accordion-item:last-of-type .accordion-collapse {
+			border-bottom-right-radius: var(--bs-accordion-border-radius);
+			border-bottom-left-radius: var(--bs-accordion-border-radius);
+		}
 
-			.accordion-item:last-of-type .accordion-collapse {
-				border-bottom-right-radius: var(--bs-accordion-border-radius);
-				border-bottom-left-radius: var(--bs-accordion-border-radius);
-			}
+		.fade {
+			transition: opacity 0.15s linear;
+		}
 
+		@media (prefers-reduced-motion: reduce) {
 			.fade {
-				transition: opacity 0.15s linear;
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.fade {
-					transition: none;
-				}
-			}
+		.fade:not(.show) {
+			opacity: 0;
+		}
 
-			.fade:not(.show) {
-				opacity: 0;
-			}
+		.collapse:not(.show) {
+			display: none;
+		}
 
-			.collapse:not(.show) {
-				display: none;
-			}
+		.collapsing {
+			height: 0;
+			overflow: hidden;
+			transition: height 0.35s ease;
+		}
 
+		@media (prefers-reduced-motion: reduce) {
 			.collapsing {
-				height: 0;
-				overflow: hidden;
-				transition: height 0.35s ease;
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.collapsing {
-					transition: none;
-				}
-			}
+		.collapsing.collapse-horizontal {
+			width: 0;
+			height: auto;
+			transition: width 0.35s ease;
+		}
 
+		@media (prefers-reduced-motion: reduce) {
 			.collapsing.collapse-horizontal {
-				width: 0;
-				height: auto;
-				transition: width 0.35s ease;
+				transition: none;
 			}
+		}
 
-			@media (prefers-reduced-motion: reduce) {
-				.collapsing.collapse-horizontal {
-					transition: none;
-				}
-			}
+		/* Bootstrap Utility Classes */
+		.d-flex {
+			display: flex !important;
+		}
 
-			/* Bootstrap Utility Classes */
-			.d-flex {
-				display: flex !important;
-			}
+		.align-items-center {
+			align-items: center !important;
+		}
 
-			.align-items-center {
-				align-items: center !important;
-			}
+		.justify-content-between {
+			justify-content: space-between !important;
+		}
 
-			.justify-content-between {
-				justify-content: space-between !important;
-			}
+		.justify-content-center {
+			justify-content: center !important;
+		}
 
-			.justify-content-center {
-				justify-content: center !important;
-			}
+		.text-center {
+			text-align: center !important;
+		}
 
-			.text-center {
-				text-align: center !important;
-			}
+		.flex-column {
+			flex-direction: column !important;
+		}
 
-			.flex-column {
-				flex-direction: column !important;
-			}
+		.h-100 {
+			height: 100% !important;
+		}
 
-			.h-100 {
-				height: 100% !important;
-			}
+		.flex-grow-1 {
+			flex-grow: 1 !important;
+		}
 
-			.flex-grow-1 {
-				flex-grow: 1 !important;
-			}
+		.position-sticky {
+			position: -webkit-sticky !important;
+			position: sticky !important;
+		}
 
-			.position-sticky {
-				position: -webkit-sticky !important;
-				position: sticky !important;
-			}
+		.top-0 {
+			top: 0 !important;
+		}
 
-			.top-0 {
-				top: 0 !important;
-			}
+		.img-fluid {
+			max-width: 100%;
+			height: auto;
+		}
 
-			.img-fluid {
-				max-width: 100%;
-				height: auto;
-			}
+		.font-weight-bold {
+			font-weight: 700 !important;
+		}
 
-			.font-weight-bold {
-				font-weight: 700 !important;
-			}
+		/* Margin and Padding */
+		.mt-1 {
+			margin-top: 0.25rem !important;
+		}
 
-			/* Margin and Padding */
-			.mt-1 {
-				margin-top: 0.25rem !important;
-			}
+		.mt-5 {
+			margin-top: 3rem !important;
+		}
 
-			.mt-5 {
-				margin-top: 3rem !important;
-			}
+		.mb-0 {
+			margin-bottom: 0 !important;
+		}
 
-			.mb-0 {
-				margin-bottom: 0 !important;
-			}
+		.mb-2 {
+			margin-bottom: 0.5rem !important;
+		}
 
-			.mb-2 {
-				margin-bottom: 0.5rem !important;
-			}
+		.mb-3 {
+			margin-bottom: 1rem !important;
+		}
 
-			.mb-3 {
-				margin-bottom: 1rem !important;
-			}
+		.mb-4 {
+			margin-bottom: 1.5rem !important;
+		}
 
-			.mb-4 {
-				margin-bottom: 1.5rem !important;
-			}
+		.mb-5 {
+			margin-bottom: 3rem !important;
+		}
 
-			.mb-5 {
-				margin-bottom: 3rem !important;
-			}
+		.mr-0 {
+			margin-right: 0 !important;
+		}
 
-			.mr-0 {
-				margin-right: 0 !important;
-			}
+		.mr-1 {
+			margin-right: 0.25rem !important;
+		}
 
-			.mr-1 {
-				margin-right: 0.25rem !important;
-			}
+		.mr-2 {
+			margin-right: 0.5rem !important;
+		}
 
-			.mr-2 {
-				margin-right: 0.5rem !important;
-			}
+		.mr-3 {
+			margin-right: 1rem !important;
+		}
 
-			.mr-3 {
-				margin-right: 1rem !important;
-			}
+		.mr-4 {
+			margin-right: 1.5rem !important;
+		}
 
-			.mr-4 {
-				margin-right: 1.5rem !important;
-			}
+		.mr-5 {
+			margin-right: 3rem !important;
+		}
 
-			.mr-5 {
-				margin-right: 3rem !important;
-			}
+		.mr-auto {
+			margin-right: auto !important;
+		}
 
-			.mr-auto {
-				margin-right: auto !important;
-			}
+		.ml-0 {
+			margin-left: 0 !important;
+		}
 
-			.ml-0 {
-				margin-left: 0 !important;
-			}
+		.ml-1 {
+			margin-left: 0.25rem !important;
+		}
 
-			.ml-1 {
-				margin-left: 0.25rem !important;
-			}
+		.ml-2 {
+			margin-left: 0.5rem !important;
+		}
 
-			.ml-2 {
-				margin-left: 0.5rem !important;
-			}
+		.ml-3 {
+			margin-left: 1rem !important;
+		}
 
-			.ml-3 {
-				margin-left: 1rem !important;
-			}
+		.ml-4 {
+			margin-left: 1.5rem !important;
+		}
 
-			.ml-4 {
-				margin-left: 1.5rem !important;
-			}
+		.ml-5 {
+			margin-left: 3rem !important;
+		}
 
-			.ml-5 {
-				margin-left: 3rem !important;
-			}
+		.ml-auto {
+			margin-left: auto !important;
+		}
 
-			.ml-auto {
-				margin-left: auto !important;
-			}
+		.pr-0 {
+			padding-right: 0 !important;
+		}
 
-			.pr-0 {
-				padding-right: 0 !important;
-			}
+		.pr-1 {
+			padding-right: 0.25rem !important;
+		}
 
-			.pr-1 {
-				padding-right: 0.25rem !important;
-			}
+		.pr-2 {
+			padding-right: 0.5rem !important;
+		}
 
-			.pr-2 {
-				padding-right: 0.5rem !important;
-			}
+		.pr-3 {
+			padding-right: 1rem !important;
+		}
 
-			.pr-3 {
+		.pr-4 {
+			padding-right: 1.5rem !important;
+		}
+
+		.pr-5 {
+			padding-right: 3rem !important;
+		}
+
+		.pl-0 {
+			padding-left: 0 !important;
+		}
+
+		.pl-1 {
+			padding-left: 0.25rem !important;
+		}
+
+		.pl-2 {
+			padding-left: 0.5rem !important;
+		}
+
+		.pl-3 {
+			padding-left: 1rem !important;
+		}
+
+		.pl-4 {
+			padding-left: 1.5rem !important;
+		}
+
+		.pl-5 {
+			padding-left: 3rem !important;
+		}
+
+		.px-2 {
+			padding-right: 0.5rem !important;
+			padding-left: 0.5rem !important;
+		}
+
+		.px-3 {
+			padding-right: 1rem !important;
+			padding-left: 1rem !important;
+		}
+
+		.px-4 {
+			padding: 1.5rem !important;
+		}
+
+		.py-3 {
+			padding-top: 1rem !important;
+			padding-bottom: 1rem !important;
+		}
+
+		.pt-2 {
+			padding-top: 0.5rem !important;
+		}
+
+		.pt-3 {
+			padding-top: 1rem !important;
+		}
+
+		.pt-4 {
+			padding-top: 1.5rem !important;
+		}
+
+		.p-3 {
+			padding: 1rem !important;
+		}
+
+		.p-4 {
+			padding: 1.5rem !important;
+		}
+
+		@media (min-width: 768px) {
+			.px-md-3 {
 				padding-right: 1rem !important;
-			}
-
-			.pr-4 {
-				padding-right: 1.5rem !important;
-			}
-
-			.pr-5 {
-				padding-right: 3rem !important;
-			}
-
-			.pl-0 {
-				padding-left: 0 !important;
-			}
-
-			.pl-1 {
-				padding-left: 0.25rem !important;
-			}
-
-			.pl-2 {
-				padding-left: 0.5rem !important;
-			}
-
-			.pl-3 {
 				padding-left: 1rem !important;
 			}
 
-			.pl-4 {
+			.px-md-4 {
+				padding-right: 1.5rem !important;
 				padding-left: 1.5rem !important;
 			}
 
-			.pl-5 {
-				padding-left: 3rem !important;
-			}
-
-			.px-2 {
-				padding-right: 0.5rem !important;
-				padding-left: 0.5rem !important;
-			}
-
-			.px-3 {
-				padding-right: 1rem !important;
-				padding-left: 1rem !important;
-			}
-
-			.px-4 {
-				padding: 1.5rem !important;
-			}
-
-			.py-3 {
-				padding-top: 1rem !important;
-				padding-bottom: 1rem !important;
-			}
-
-			.pt-2 {
-				padding-top: 0.5rem !important;
-			}
-
-			.pt-3 {
-				padding-top: 1rem !important;
-			}
-
-			.pt-4 {
+			.py-md-4 {
 				padding-top: 1.5rem !important;
+				padding-bottom: 1.5rem !important;
 			}
 
-			.p-3 {
-				padding: 1rem !important;
+			.mx-md-5 {
+				margin-right: 3rem !important;
+				margin-left: 3rem !important;
 			}
 
-			.p-4 {
-				padding: 1.5rem !important;
+			.mb-md-5 {
+				margin-bottom: 3rem !important;
 			}
+		}
 
-			@media (min-width: 768px) {
-				.px-md-3 {
-					padding-right: 1rem !important;
-					padding-left: 1rem !important;
-				}
-
-				.px-md-4 {
-					padding-right: 1.5rem !important;
-					padding-left: 1.5rem !important;
-				}
-
-				.py-md-4 {
-					padding-top: 1.5rem !important;
-					padding-bottom: 1.5rem !important;
-				}
-
-				.mx-md-5 {
-					margin-right: 3rem !important;
-					margin-left: 3rem !important;
-				}
-
-				.mb-md-5 {
-					margin-bottom: 3rem !important;
-				}
+		@media (min-width: 992px) {
+			.mb-lg-4 {
+				margin-bottom: 1.5rem !important;
 			}
+		}
 
-			@media (min-width: 992px) {
-				.mb-lg-4 {
-					margin-bottom: 1.5rem !important;
-				}
-			}
+		/* Typography */
+		h1,
+		.h1,
+		h2,
+		.h2,
+		h3,
+		.h3,
+		h4,
+		.h4,
+		h5,
+		.h5,
+		h6,
+		.h6 {
+			margin-top: 0;
+			margin-bottom: 0.5rem;
+			font-weight: 500;
+			line-height: 1.2;
+		}
 
-			/* Typography */
-			h1,
-			.h1,
-			h2,
-			.h2,
-			h3,
-			.h3,
-			h4,
-			.h4,
-			h5,
-			.h5,
-			h6,
-			.h6 {
-				margin-top: 0;
-				margin-bottom: 0.5rem;
-				font-weight: 500;
-				line-height: 1.2;
-			}
+		h1,
+		.h1 {
+			font-size: calc(1.375rem + 1.5vw);
+		}
+
+		h2,
+		.h2 {
+			font-size: calc(1.325rem + 0.9vw);
+		}
+
+		h3,
+		.h3 {
+			font-size: calc(1.3rem + 0.6vw);
+		}
+
+		h4,
+		.h4 {
+			font-size: calc(1.275rem + 0.3vw);
+		}
+
+		h5,
+		.h5 {
+			font-size: 1.25rem;
+		}
+
+		h6,
+		.h6 {
+			font-size: 1rem;
+		}
+
+		@media (min-width: 1200px) {
 
 			h1,
 			.h1 {
-				font-size: calc(1.375rem + 1.5vw);
+				font-size: 2.5rem;
 			}
 
 			h2,
 			.h2 {
-				font-size: calc(1.325rem + 0.9vw);
+				font-size: 2rem;
 			}
 
 			h3,
 			.h3 {
-				font-size: calc(1.3rem + 0.6vw);
+				font-size: 1.75rem;
 			}
 
 			h4,
 			.h4 {
-				font-size: calc(1.275rem + 0.3vw);
+				font-size: 1.5rem;
 			}
+		}
 
-			h5,
-			.h5 {
-				font-size: 1.25rem;
-			}
+		p {
+			margin-top: 0;
+			margin-bottom: 1rem;
+		}
 
-			h6,
-			.h6 {
-				font-size: 1rem;
-			}
+		/* Цветовые классы */
+		.color-white {
+			color: #fafafa;
+		}
 
-			@media (min-width: 1200px) {
-				h1,
-				.h1 {
-					font-size: 2.5rem;
-				}
+		.color-green {
+			color: #007a65;
+		}
 
-				h2,
-				.h2 {
-					font-size: 2rem;
-				}
+		.color-yellow {
+			color: #fbc469;
+		}
 
-				h3,
-				.h3 {
-					font-size: 1.75rem;
-				}
+		.bg-yellow {
+			background-color: #fbc469;
+		}
 
-				h4,
-				.h4 {
-					font-size: 1.5rem;
-				}
-			}
+		/* Заголовки */
+		.h5_white,
+		.h6_white {
+			color: #fafafa;
+		}
 
-			p {
-				margin-top: 0;
-				margin-bottom: 1rem;
-			}
+		/* Блоки */
+		.item-block {
+			border-radius: 10px;
+			background-color: #fafafa;
+		}
 
-			/* Цветовые классы */
-			.color-white {
-				color: #fafafa;
-			}
+		.item-block__title {
+			padding: 0px 0px 16px 0px;
+			margin: 0px 0px 24px 0px;
+			border-bottom: 7px solid #007a65;
+		}
 
-			.color-green {
-				color: #007a65;
-			}
+		.item-block__title_accordion {
+			color: #007a65;
+		}
 
-			.color-yellow {
-				color: #fbc469;
-			}
+		.item-block__title_accordion.collapsed {
+			margin: 0;
+			color: #1a1a1a;
+		}
 
-			.bg-yellow {
-				background-color: #fbc469;
-			}
+		.item-block__title_accordion.collapsed i:before {
+			transform: rotate(-90deg);
+		}
 
-			/* Заголовки */
-			.h5_white,
-			.h6_white {
-				color: #fafafa;
-			}
+		.item-block__title_accordion:hover {
+			color: #007a65;
+		}
 
-			/* Блоки */
-			.item-block {
-				border-radius: 10px;
-				background-color: #fafafa;
-			}
+		.item-block__title_link {
+			margin: 0;
+		}
 
-			.item-block__title {
-				padding: 0px 0px 16px 0px;
-				margin: 0px 0px 24px 0px;
-				border-bottom: 7px solid #007a65;
-			}
+		.item-block__title_link:hover {
+			color: #007a65;
+		}
 
-			.item-block__title_accordion {
-				color: #007a65;
-			}
+		.item-block__link {
+			color: #1a1a1a;
+			font-weight: 600;
+		}
 
-			.item-block__title_accordion.collapsed {
-				margin: 0;
-				color: #1a1a1a;
-			}
+		.item-block__link:hover {
+			color: #007a65;
+		}
 
-			.item-block__title_accordion.collapsed i:before {
-				transform: rotate(-90deg);
-			}
+		/* Ссылки для скачивания */
+		.link-download {
+			padding: 24px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			flex-wrap: nowrap;
+			background-color: #ebebeb;
+			border-radius: 10px;
+			box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff,
+				inset 8px 0px 0px #007a65;
+			transition: all 0.3s ease 0s;
+			text-decoration: none;
+			color: #1a1a1a;
+		}
 
-			.item-block__title_accordion:hover {
-				color: #007a65;
-			}
+		.link-download__text {
+			margin: 0px 16px 0px 0px;
+			display: flex;
+			align-items: center;
+		}
 
-			.item-block__title_link {
-				margin: 0;
-			}
+		.link-download__date {
+			margin: 0px 0px 8px 0px;
+			font-size: 12px;
+			color: #9d9f9e;
+		}
 
-			.item-block__title_link:hover {
-				color: #007a65;
-			}
+		.link-download__icon {
+			display: flex;
+			align-items: center;
+			color: #00654d;
+		}
 
-			.item-block__link {
-				color: #1a1a1a;
-				font-weight: 600;
-			}
+		.link-download .bi-download {
+			color: #007a65;
+			transition: all 0.3s ease 0s;
+		}
 
-			.item-block__link:hover {
-				color: #007a65;
-			}
+		.link-download:hover {
+			box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff,
+				inset 8px 0px 0px #007a65;
+			text-decoration: none;
+			color: #1a1a1a;
+		}
 
-			/* Ссылки для скачивания */
+		.link-download:hover .bi-download {
+			transform: translateY(3px);
+		}
+
+		@media (max-width: 564.98px) {
 			.link-download {
-				padding: 24px;
-				display: flex;
-				justify-content: space-between;
-				align-items: center;
-				flex-wrap: nowrap;
-				background-color: #ebebeb;
-				border-radius: 10px;
-				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff,
-					inset 8px 0px 0px #007a65;
-				transition: all 0.3s ease 0s;
-				text-decoration: none;
-				color: #1a1a1a;
+				padding: 16px;
+				justify-content: center;
+				flex-wrap: wrap;
 			}
 
 			.link-download__text {
-				margin: 0px 16px 0px 0px;
+				margin: 0px 0px 16px 0px;
 				display: flex;
 				align-items: center;
 			}
+		}
 
-			.link-download__date {
-				margin: 0px 0px 8px 0px;
-				font-size: 12px;
-				color: #9d9f9e;
-			}
+		/* Подсказки */
+		.tooltips-btn i {
+			color: #007a65;
+			cursor: pointer;
+		}
 
-			.link-download__icon {
-				display: flex;
-				align-items: center;
-				color: #00654d;
-			}
+		.tooltip.show {
+			opacity: 1;
+		}
 
-			.link-download .bi-download {
-				color: #007a65;
-				transition: all 0.3s ease 0s;
-			}
+		/* Аккордеон вопросов */
+		.accordion-question {
+			background-color: #ebebeb;
+			border-radius: 10px;
+			margin: 0px 0px 24px 0px;
+		}
 
-			.link-download:hover {
-				box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.05), inset 0px 0px 0px 4px #ffffff,
-					inset 8px 0px 0px #007a65;
-				text-decoration: none;
-				color: #1a1a1a;
-			}
+		.accordion-question:last-child {
+			margin: 0px 0px 0px 0px;
+		}
 
-			.link-download:hover .bi-download {
-				transform: translateY(3px);
-			}
+		.accordion-question__btn {
+			width: 100%;
+			font-size: 16px;
+			color: #007a65;
+			display: flex;
+			align-items: center;
+			padding: 24px 36px;
+		}
 
-			@media (max-width: 564.98px) {
-				.link-download {
-					padding: 16px;
-					justify-content: center;
-					flex-wrap: wrap;
-				}
+		.accordion-question__btn i {
+			font-size: 20px;
+			transition: all 0.3s ease 0s;
+		}
 
-				.link-download__text {
-					margin: 0px 0px 16px 0px;
-					display: flex;
-					align-items: center;
-				}
-			}
+		.accordion-question__btn.collapsed {
+			margin: 0;
+		}
 
-			/* Подсказки */
-			.tooltips-btn i {
-				color: #007a65;
-				cursor: pointer;
-			}
+		.accordion-question__btn.collapsed i.bi-chevron-down {
+			transform: rotate(-90deg);
+		}
 
-			.tooltip.show {
-				opacity: 1;
-			}
-
-			/* Аккордеон вопросов */
-			.accordion-question {
-				background-color: #ebebeb;
-				border-radius: 10px;
-				margin: 0px 0px 24px 0px;
-			}
-
-			.accordion-question:last-child {
-				margin: 0px 0px 0px 0px;
-			}
-
+		@media (max-width: 564.98px) {
 			.accordion-question__btn {
-				width: 100%;
-				font-size: 16px;
-				color: #007a65;
-				display: flex;
-				align-items: center;
-				padding: 24px 36px;
+				padding: 16px;
 			}
+		}
 
-			.accordion-question__btn i {
-				font-size: 20px;
-				transition: all 0.3s ease 0s;
-			}
+		.accordion-question__wrapper {
+			padding: 0 16px 16px;
+		}
 
-			.accordion-question__btn.collapsed {
-				margin: 0;
-			}
+		.accordion-question__body {
+			padding: 24px;
+			background-color: #fafafa;
+			border-radius: 10px;
+			position: relative;
+		}
 
-			.accordion-question__btn.collapsed i.bi-chevron-down {
-				transform: rotate(-90deg);
-			}
+		.accordion-question__body:before {
+			content: '';
+			width: 0;
+			height: 0;
+			border-left: 9px solid transparent;
+			border-right: 9px solid transparent;
+			border-bottom: 9px solid #fafafa;
+			position: absolute;
+			top: -9px;
+			left: 40px;
+		}
 
-			@media (max-width: 564.98px) {
-				.accordion-question__btn {
-					padding: 16px;
-				}
-			}
-
-			.accordion-question__wrapper {
-				padding: 0 16px 16px;
-			}
-
+		@media (max-width: 564.98px) {
 			.accordion-question__body {
-				padding: 24px;
-				background-color: #fafafa;
-				border-radius: 10px;
-				position: relative;
+				padding: 16px;
 			}
 
 			.accordion-question__body:before {
-				content: '';
-				width: 0;
-				height: 0;
-				border-left: 9px solid transparent;
-				border-right: 9px solid transparent;
-				border-bottom: 9px solid #fafafa;
-				position: absolute;
-				top: -9px;
-				left: 40px;
+				left: 25px;
 			}
+		}
 
-			@media (max-width: 564.98px) {
-				.accordion-question__body {
-					padding: 16px;
-				}
+		.accordion-question__row {
+			flex: 1 1 auto;
+			display: flex;
+			align-items: center;
+		}
 
-				.accordion-question__body:before {
-					left: 25px;
-				}
-			}
+		.accordion-question__row i {
+			color: #007a65;
+			font-size: 30px;
+		}
 
-			.accordion-question__row {
-				flex: 1 1 auto;
-				display: flex;
-				align-items: center;
-			}
+		.accordion-question__row img {
+			max-width: 60px;
+			height: auto;
+			margin-right: 24px;
+		}
 
-			.accordion-question__row i {
-				color: #007a65;
-				font-size: 30px;
-			}
-
+		@media (max-width: 480px) {
 			.accordion-question__row img {
-				max-width: 60px;
-				height: auto;
-				margin-right: 24px;
+				max-width: 45px;
+				margin-right: 12px;
 			}
+		}
 
-			@media (max-width: 480px) {
-				.accordion-question__row img {
-					max-width: 45px;
-					margin-right: 12px;
-				}
-			}
+		/* Сайдбар */
+		.sidebar__list {
+			border-radius: 10px;
+			background-color: #ebebeb;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
 
-			/* Сайдбар */
-			.sidebar__list {
-				border-radius: 10px;
-				background-color: #ebebeb;
-				list-style: none;
-				padding: 0;
-				margin: 0;
-			}
+		.sidebar__list li {
+			list-style: none;
+		}
 
-			.sidebar__list li {
-				list-style: none;
-			}
+		.sidebar__list li:not(:last-child) {
+			margin: 0px 0px 30px 0px;
+		}
 
+		@media (max-width: 767.98px) {
 			.sidebar__list li:not(:last-child) {
-				margin: 0px 0px 30px 0px;
+				margin: 0px 0px 15px 0px;
 			}
+		}
 
-			@media (max-width: 767.98px) {
-				.sidebar__list li:not(:last-child) {
-					margin: 0px 0px 15px 0px;
-				}
+		.sidebar__list li a {
+			color: #1a1a1a;
+			text-decoration: none;
+			transition: color 0.3s ease 0s;
+		}
+
+		.sidebar__list li a:hover {
+			color: #007a65;
+		}
+
+		.sidebar__list li a.active {
+			color: #007a65;
+			pointer-events: none;
+		}
+
+		@media (max-width: 767.98px) {
+			.sidebar__list {
+				min-height: 125px;
 			}
+		}
 
-			.sidebar__list li a {
-				color: #1a1a1a;
-				text-decoration: none;
-				transition: color 0.3s ease 0s;
-			}
+		.sidebar__link-block {
+			border-radius: 10px;
+		}
 
-			.sidebar__list li a:hover {
-				color: #007a65;
-			}
+		/* Списки с иконками */
+		.list-check-icon li {
+			list-style-type: none;
+		}
 
-			.sidebar__list li a.active {
-				color: #007a65;
-				pointer-events: none;
-			}
+		.list-check-icon li i {
+			font-size: 30px;
+			color: #007a65;
+		}
 
-			@media (max-width: 767.98px) {
-				.sidebar__list {
-					min-height: 125px;
-				}
-			}
+		.list-check-icon .tooltips-btn i {
+			font-size: 16px;
+		}
 
-			.sidebar__link-block {
-				border-radius: 10px;
-			}
+		/* Секции лендинга */
+		.section-landing {
+			margin: 0px 0px 70px 0px;
+		}
 
-			/* Списки с иконками */
-			.list-check-icon li {
-				list-style-type: none;
-			}
-
-			.list-check-icon li i {
-				font-size: 30px;
-				color: #007a65;
-			}
-
-			.list-check-icon .tooltips-btn i {
-				font-size: 16px;
-			}
-
-			/* Секции лендинга */
+		@media (max-width: 564.98px) {
 			.section-landing {
-				margin: 0px 0px 70px 0px;
+				margin: 0px 0px 50px 0px;
 			}
+		}
 
-			@media (max-width: 564.98px) {
-				.section-landing {
-					margin: 0px 0px 50px 0px;
-				}
-			}
+		/* Превью секция */
+		.preview {
+			padding-top: 80px;
+		}
 
-			/* Превью секция */
+		.preview__info {
+			width: 100%;
+			max-width: 825px;
+		}
+
+		.preview__text {
+			font-size: 18px;
+		}
+
+		.preview__img {
+			max-width: 335px;
+		}
+
+		@media (max-width: 767.98px) {
 			.preview {
-				padding-top: 80px;
-			}
-
-			.preview__info {
-				width: 100%;
-				max-width: 825px;
-			}
-
-			.preview__text {
-				font-size: 18px;
+				padding-top: 40px;
 			}
 
 			.preview__img {
-				max-width: 335px;
+				display: none;
 			}
 
-			@media (max-width: 767.98px) {
-				.preview {
-					padding-top: 40px;
-				}
-
-				.preview__img {
-					display: none;
-				}
-
-				.preview .h1 {
-					font-size: 22px;
-				}
+			.preview .h1 {
+				font-size: 22px;
 			}
+		}
 
-			/* Слайдер преимуществ */
-			.advantages-slider {
-				margin: 0 -15px;
+		/* Слайдер преимуществ */
+		.advantages-slider {
+			margin: 0 -15px;
+		}
+
+		.advantages-slider__slide {
+			padding: 0 15px;
+		}
+
+		.advantages-slider .slick-arrow {
+			font-size: 0;
+			width: 54px;
+			height: 54px;
+			border-radius: 50%;
+			background-color: #ffffff;
+			box-shadow: 8px 8px 24px 0px rgba(136, 136, 136, 0.4);
+			position: absolute;
+			top: calc(50% - 27px);
+			z-index: 2;
+		}
+
+		.advantages-slider .slick-arrow:before {
+			content: '';
+			width: 14px;
+			height: 14px;
+			border-top: 3px solid #fbc469;
+			border-left: 3px solid #fbc469;
+			position: absolute;
+		}
+
+		.advantages-slider .slick-arrow:hover {
+			background-color: #fbc469;
+		}
+
+		.advantages-slider .slick-arrow:hover:before {
+			border-top: 3px solid #fafafa;
+			border-left: 3px solid #fafafa;
+		}
+
+		.advantages-slider .slick-prev {
+			left: -10px;
+		}
+
+		.advantages-slider .slick-prev:before {
+			top: calc(50% - 7px);
+			left: calc(50% - 5px);
+			transform: rotate(-45deg);
+		}
+
+		.advantages-slider .slick-next {
+			right: -10px;
+		}
+
+		.advantages-slider .slick-next:before {
+			top: calc(50% - 7px);
+			left: calc(50% - 9px);
+			transform: rotate(135deg);
+		}
+
+		/* Элементы преимуществ */
+		.item-advantage {
+			height: 100%;
+			border-radius: 10px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		@media (min-width: 768px) {
+			.item-advantage:hover .item-advantage__back {
+				transform: translateY(0%);
 			}
+		}
 
-			.advantages-slider__slide {
-				padding: 0 15px;
-			}
+		.item-advantage__front {
+			display: flex;
+			justify-content: center;
+			padding: 45px 0px;
+			background-color: #ffffff;
+		}
 
-			.advantages-slider .slick-arrow {
-				font-size: 0;
-				width: 54px;
-				height: 54px;
-				border-radius: 50%;
-				background-color: #ffffff;
-				box-shadow: 8px 8px 24px 0px rgba(136, 136, 136, 0.4);
-				position: absolute;
-				top: calc(50% - 27px);
-				z-index: 2;
-			}
-
-			.advantages-slider .slick-arrow:before {
-				content: '';
-				width: 14px;
-				height: 14px;
-				border-top: 3px solid #fbc469;
-				border-left: 3px solid #fbc469;
-				position: absolute;
-			}
-
-			.advantages-slider .slick-arrow:hover {
-				background-color: #fbc469;
-			}
-
-			.advantages-slider .slick-arrow:hover:before {
-				border-top: 3px solid #fafafa;
-				border-left: 3px solid #fafafa;
-			}
-
-			.advantages-slider .slick-prev {
-				left: -10px;
-			}
-
-			.advantages-slider .slick-prev:before {
-				top: calc(50% - 7px);
-				left: calc(50% - 5px);
-				transform: rotate(-45deg);
-			}
-
-			.advantages-slider .slick-next {
-				right: -10px;
-			}
-
-			.advantages-slider .slick-next:before {
-				top: calc(50% - 7px);
-				left: calc(50% - 9px);
-				transform: rotate(135deg);
-			}
-
-			/* Элементы преимуществ */
-			.item-advantage {
-				height: 100%;
-				border-radius: 10px;
-				position: relative;
-				overflow: hidden;
-			}
-
-			@media (min-width: 768px) {
-				.item-advantage:hover .item-advantage__back {
-					transform: translateY(0%);
-				}
-			}
-
+		@media (max-width: 564.98px) {
 			.item-advantage__front {
-				display: flex;
-				justify-content: center;
-				padding: 45px 0px;
-				background-color: #ffffff;
+				min-height: 265px;
 			}
+		}
 
-			@media (max-width: 564.98px) {
-				.item-advantage__front {
-					min-height: 265px;
-				}
-			}
+		.item-advantage__icon {
+			width: 80px;
+			height: auto;
+		}
 
+		@media (max-width: 564.98px) {
 			.item-advantage__icon {
-				width: 80px;
-				height: auto;
+				margin: 0px 0px 16px 0px;
 			}
+		}
 
-			@media (max-width: 564.98px) {
-				.item-advantage__icon {
-					margin: 0px 0px 16px 0px;
-				}
-			}
+		.item-advantage__back {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: #fafafa;
+			background-color: #007a65;
+			transform: translateY(100%);
+			transition: all 0.3s ease 0s;
+		}
 
+		@media (min-width: 768px) {
 			.item-advantage__back {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				color: #fafafa;
-				background-color: #007a65;
-				transform: translateY(100%);
-				transition: all 0.3s ease 0s;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
 			}
+		}
 
-			@media (min-width: 768px) {
-				.item-advantage__back {
-					position: absolute;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					right: 0;
-				}
-			}
+		.item-advantage__text {
+			padding: 16px 28px;
+			flex: 1 1 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-			.item-advantage__text {
-				padding: 16px 28px;
-				flex: 1 1 auto;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
+		/* Цитаты */
+		.quote {
+			background-color: #00654d;
+			border-radius: 0px 0px 400px 0px;
+			display: flex;
+			position: relative;
+		}
 
-			/* Цитаты */
+		.quote__exclamation {
+			padding-top: 18px;
+			font-size: 90px;
+			color: #fbc469;
+		}
+
+		.quote__text {
+			padding: 35px 90px 35px 0px;
+			flex: 1 1 auto;
+			color: #fafafa;
+		}
+
+		.quote__icon {
+			font-size: 60px;
+			color: #fbc469;
+			transform: rotate(180deg);
+			position: absolute;
+			top: -35px;
+			right: 0;
+		}
+
+		@media (max-width: 991.98px) {
 			.quote {
-				background-color: #00654d;
-				border-radius: 0px 0px 400px 0px;
-				display: flex;
-				position: relative;
+				border-radius: 0px 0px 100px 0px;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			.quote {
+				border-radius: 0px 0px 50px 0px;
 			}
 
 			.quote__exclamation {
-				padding-top: 18px;
-				font-size: 90px;
-				color: #fbc469;
+				font-size: 50px;
 			}
+		}
 
-			.quote__text {
-				padding: 35px 90px 35px 0px;
-				flex: 1 1 auto;
-				color: #fafafa;
-			}
+		/* Платежи */
+		.payments__info {
+			width: 100%;
+			max-width: 555px;
+		}
 
-			.quote__icon {
-				font-size: 60px;
-				color: #fbc469;
-				transform: rotate(180deg);
-				position: absolute;
-				top: -35px;
-				right: 0;
-			}
+		.payments__img {
+			max-width: 335px;
+		}
 
-			@media (max-width: 991.98px) {
-				.quote {
-					border-radius: 0px 0px 100px 0px;
-				}
-			}
-
-			@media (max-width: 767.98px) {
-				.quote {
-					border-radius: 0px 0px 50px 0px;
-				}
-
-				.quote__exclamation {
-					font-size: 50px;
-				}
-			}
-
-			/* Платежи */
-			.payments__info {
-				width: 100%;
-				max-width: 555px;
-			}
-
+		@media (max-width: 767.98px) {
 			.payments__img {
-				max-width: 335px;
+				display: none;
 			}
+		}
 
-			@media (max-width: 767.98px) {
-				.payments__img {
-					display: none;
-				}
-			}
+		/* Налоговые ставки */
+		.item-tax-rates {
+			height: 100%;
+			padding: 0px 24px 8px;
+			color: #fafafa;
+			background-color: #00654d;
+			border-radius: 0px 200px 0px 0px;
+		}
 
-			/* Налоговые ставки */
+		@media (max-width: 564.98px) {
 			.item-tax-rates {
-				height: 100%;
-				padding: 0px 24px 8px;
-				color: #fafafa;
-				background-color: #00654d;
-				border-radius: 0px 200px 0px 0px;
+				padding: 0px 16px 8px;
+				border-radius: 0px 100px 0px 0px;
 			}
+		}
 
-			@media (max-width: 564.98px) {
-				.item-tax-rates {
-					padding: 0px 16px 8px;
-					border-radius: 0px 100px 0px 0px;
-				}
-			}
+		.item-tax-rates__count {
+			font-size: 64px;
+			font-weight: 700;
+		}
 
-			.item-tax-rates__count {
-				font-size: 64px;
-				font-weight: 700;
-			}
+		.item-tax-rates ul {
+			padding-left: 0;
+			list-style-type: none;
+		}
 
-			.item-tax-rates ul {
-				padding-left: 0;
-				list-style-type: none;
-			}
+		.item-tax-rates ul li {
+			padding-left: 18px;
+			position: relative;
+		}
 
-			.item-tax-rates ul li {
-				padding-left: 18px;
-				position: relative;
-			}
+		.item-tax-rates ul li:before {
+			content: '';
+			width: 9px;
+			height: 2px;
+			background-color: #fafafa;
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 
-			.item-tax-rates ul li:before {
-				content: '';
-				width: 9px;
-				height: 2px;
-				background-color: #fafafa;
-				position: absolute;
-				left: 0;
-				top: 50%;
-				transform: translateY(-50%);
-			}
+		.item-tax-rates ul li:not(:last-child) {
+			margin: 0px 0px 12px 0px;
+		}
 
-			.item-tax-rates ul li:not(:last-child) {
-				margin: 0px 0px 12px 0px;
-			}
+		.item-tax-rates_yellow {
+			color: #1a1a1a;
+			background-color: #fbc469;
+		}
 
-			.item-tax-rates_yellow {
-				color: #1a1a1a;
-				background-color: #fbc469;
-			}
+		.item-tax-rates_yellow ul li:before {
+			background-color: #1a1a1a;
+		}
 
-			.item-tax-rates_yellow ul li:before {
-				background-color: #1a1a1a;
-			}
+		/* Налоговые льготы */
+		.item-tax-benefits {
+			padding: 24px 40px;
+			border: 1px solid #ebebeb;
+			border-radius: 0px 10px 10px 10px;
+		}
 
-			/* Налоговые льготы */
+		.item-tax-benefits__title {
+			position: relative;
+		}
+
+		.item-tax-benefits__title:before {
+			content: '';
+			width: 9px;
+			height: 2px;
+			background-color: #00654d;
+			position: absolute;
+			left: -20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+
+		@media (max-width: 564.98px) {
 			.item-tax-benefits {
-				padding: 24px 40px;
-				border: 1px solid #ebebeb;
-				border-radius: 0px 10px 10px 10px;
+				padding: 16px 30px;
 			}
 
 			.item-tax-benefits__title {
-				position: relative;
+				font-size: 18px;
 			}
+		}
 
-			.item-tax-benefits__title:before {
+		/* Стать плательщиком */
+		.item-become-payer {
+			position: relative;
+		}
+
+		.item-become-payer__icon {
+			margin: 0 auto;
+			width: 100px;
+			height: 100px;
+			background-color: #fbc469;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 50%;
+		}
+
+		.item-become-payer__icon img {
+			max-width: 60px;
+		}
+
+		.item-become-payer__icon svg {
+			max-width: 60px;
+		}
+
+		.item-become-payer__text {
+			font-size: 14px;
+		}
+
+		@media (min-width: 768px) {
+			.item-become-payer:before {
+				width: 167px;
+				height: 32px;
 				content: '';
-				width: 9px;
-				height: 2px;
-				background-color: #00654d;
 				position: absolute;
-				left: -20px;
-				top: 50%;
-				transform: translateY(-50%);
+				z-index: 2;
 			}
 
-			@media (max-width: 564.98px) {
-				.item-tax-benefits {
-					padding: 16px 30px;
-				}
-
-				.item-tax-benefits__title {
-					font-size: 18px;
-				}
+			.item-become-payer_first:before {
+				background: url('../img/landing-nalog/icons/ellipse-top.svg') 0 0 no-repeat;
+				top: 50px;
+				right: -83px;
 			}
 
-			/* Стать плательщиком */
-			.item-become-payer {
-				position: relative;
+			.item-become-payer_second:before {
+				background: url('../img/landing-nalog/icons/ellipse-bottom.svg') 0 0 no-repeat;
+				top: 50px;
+				right: -83px;
 			}
+		}
 
-			.item-become-payer__icon {
-				margin: 0 auto;
-				width: 100px;
-				height: 100px;
-				background-color: #fbc469;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-				border-radius: 50%;
-			}
+		/* Налоговая сумма */
+		.item-tax-amount__icon {
+			flex: 0 0 58px;
+			height: 58px;
+			border-radius: 10px 10px 10px 0px;
+		}
 
-			.item-become-payer__icon img {
-				max-width: 60px;
-			}
+		.item-tax-amount__info {
+			border: 1px solid #fbc469;
+			border-radius: 0px 10px 10px 10px;
+		}
 
-			.item-become-payer__icon svg {
-				max-width: 60px;
-			}
+		/* Вопросы лендинга */
+		.question-landing .accordion-question {
+			border-radius: 0px 10px 10px 10px;
+			background-color: #007a65;
+		}
 
-			.item-become-payer__text {
-				font-size: 14px;
-			}
+		.question-landing .accordion-question__btn,
+		.question-landing .accordion-question__row i.bi-question-circle {
+			color: #fafafa;
+		}
 
-			@media (min-width: 768px) {
-				.item-become-payer:before {
-					width: 167px;
-					height: 32px;
-					content: '';
-					position: absolute;
-					z-index: 2;
-				}
+		/* Вакансии */
+		.vacancies {
+			margin: 100px -24px -24px;
+		}
 
-				.item-become-payer_first:before {
-					background: url('../img/landing-nalog/icons/ellipse-top.svg') 0 0 no-repeat;
-					top: 50px;
-					right: -83px;
-				}
+		.vacancies__content {
+			padding: 35px 250px 35px 55px;
+			background-color: #007a65;
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+			border-radius: 0px 10px 10px 10px;
+			position: relative;
+			color: #fafafa;
+		}
 
-				.item-become-payer_second:before {
-					background: url('../img/landing-nalog/icons/ellipse-bottom.svg') 0 0 no-repeat;
-					top: 50px;
-					right: -83px;
-				}
-			}
+		.vacancies__content p {
+			color: #fafafa;
+		}
 
-			/* Налоговая сумма */
-			.item-tax-amount__icon {
-				flex: 0 0 58px;
-				height: 58px;
-				border-radius: 10px 10px 10px 0px;
-			}
+		.vacancies__content h5 {
+			color: #fafafa;
+		}
 
-			.item-tax-amount__info {
-				border: 1px solid #fbc469;
-				border-radius: 0px 10px 10px 10px;
-			}
+		.vacancies__btn {
+			padding: 10px 24px;
+			display: inline-block;
+			color: #fafafa;
+			border: 1px solid #fafafa;
+			border-radius: 10px;
+			text-decoration: none;
+			transition: all 0.3s ease 0s;
+		}
 
-			/* Вопросы лендинга */
-			.question-landing .accordion-question {
-				border-radius: 0px 10px 10px 10px;
-				background-color: #007a65;
-			}
+		.vacancies__btn:hover {
+			color: #fbc469;
+			border-color: #fbc469;
+			text-decoration: none;
+		}
 
-			.question-landing .accordion-question__btn,
-			.question-landing .accordion-question__row i.bi-question-circle {
-				color: #fafafa;
-			}
+		.vacancies__img {
+			position: absolute;
+			bottom: 0;
+			right: 75px;
+		}
 
-			/* Вакансии */
+		@media (max-width: 991.98px) {
 			.vacancies {
-				margin: 100px -24px -24px;
-			}
-
-			.vacancies__content {
-				padding: 35px 250px 35px 55px;
-				background-color: #007a65;
-				box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-				border-radius: 0px 10px 10px 10px;
-				position: relative;
-				color: #fafafa;
-			}
-
-			.vacancies__content p {
-				color: #fafafa;
-			}
-
-			.vacancies__content h5 {
-				color: #fafafa;
-			}
-
-			.vacancies__btn {
-				padding: 10px 24px;
-				display: inline-block;
-				color: #fafafa;
-				border: 1px solid #fafafa;
-				border-radius: 10px;
-				text-decoration: none;
-				transition: all 0.3s ease 0s;
-			}
-
-			.vacancies__btn:hover {
-				color: #fbc469;
-				border-color: #fbc469;
-				text-decoration: none;
+				margin: 100px -8px -8px;
 			}
 
 			.vacancies__img {
 				position: absolute;
 				bottom: 0;
-				right: 75px;
+				right: 35px;
+			}
+		}
+
+		@media (max-width: 767.98px) {
+			.vacancies {
+				margin: 70px -8px -8px;
 			}
 
-			@media (max-width: 991.98px) {
-				.vacancies {
-					margin: 100px -8px -8px;
-				}
-
-				.vacancies__img {
-					position: absolute;
-					bottom: 0;
-					right: 35px;
-				}
+			.vacancies__content {
+				padding: 20px;
 			}
 
-			@media (max-width: 767.98px) {
-				.vacancies {
-					margin: 70px -8px -8px;
-				}
-
-				.vacancies__content {
-					padding: 20px;
-				}
-
-				.vacancies__img {
-					display: none;
-				}
+			.vacancies__img {
+				display: none;
 			}
+		}
 
-			.accordion-question__btn,
-			.accordion-question__btn-tags-content {
-				width: 100%;
-				font-size: 16px;
-				color: #007a65;
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: flex;
-				-webkit-box-align: center;
-				-ms-flex-align: center;
-				align-items: center;
-				background: transparent;
-				border: none;
-				text-align: start;
+		.accordion-question__btn,
+		.accordion-question__btn-tags-content {
+			width: 100%;
+			font-size: 16px;
+			color: #007a65;
+			display: -webkit-box;
+			display: -ms-flexbox;
+			display: flex;
+			-webkit-box-align: center;
+			-ms-flex-align: center;
+			align-items: center;
+			background: transparent;
+			border: none;
+			text-align: start;
+		}
+
+		.h1 {
+			font-size: 30px;
+		}
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		.advantages-slider {
+			margin: 0 -15px;
+		}
+
+		.advantages-slider__slide {
+			padding: 0 15px;
+		}
+
+		.advantages-slider .slick-arrow {
+			font-size: 0;
+			width: 54px;
+			height: 54px;
+			border-radius: 50%;
+			background-color: #fff;
+			box-shadow: 8px 8px 24px 0px rgba(136, 136, 136, 0.4);
+			position: absolute;
+			top: calc(50% - 27px);
+			z-index: 2;
+		}
+
+		.advantages-slider .slick-arrow:before {
+			content: '';
+			width: 14px;
+			height: 14px;
+			border-top: 3px solid #fbc469;
+			border-left: 3px solid #fbc469;
+			position: absolute;
+		}
+
+		.advantages-slider .slick-arrow:hover {
+			background-color: #fbc469;
+		}
+
+		.advantages-slider .slick-arrow:hover:before {
+			border-top: 3px solid #fafafa;
+			border-left: 3px solid #fafafa;
+		}
+
+		.advantages-slider .slick-prev {
+			left: -10px;
+		}
+
+		.advantages-slider .slick-prev:before {
+			top: calc(50% - 7px);
+			left: calc(50% - 5px);
+			transform: rotate(-45deg);
+		}
+
+		.advantages-slider .slick-next {
+			right: -10px;
+		}
+
+		.advantages-slider .slick-next:before {
+			top: calc(50% - 7px);
+			left: calc(50% - 9px);
+			transform: rotate(135deg);
+		}
+
+		.item-advantage {
+			height: 100%;
+			border-radius: 10px;
+			position: relative;
+			overflow: hidden;
+		}
+
+		@media (hover: hover) {
+			.item-advantage:hover .item-advantage__back {
+				transform: translateY(0%);
 			}
+		}
 
-			.h1 {
-				font-size: 30px;
-			}
+		.item-advantage__front {
+			display: flex;
+			justify-content: center;
+			padding: 45px 0px;
+			background-color: #fff;
+		}
 
-			a {
-				color: inherit;
-				text-decoration: none;
-			}
-
-			.advantages-slider {
-				margin: 0 -15px;
-			}
-
-			.advantages-slider__slide {
-				padding: 0 15px;
-			}
-
-			.advantages-slider .slick-arrow {
-				font-size: 0;
-				width: 54px;
-				height: 54px;
-				border-radius: 50%;
-				background-color: #fff;
-				box-shadow: 8px 8px 24px 0px rgba(136, 136, 136, 0.4);
-				position: absolute;
-				top: calc(50% - 27px);
-				z-index: 2;
-			}
-
-			.advantages-slider .slick-arrow:before {
-				content: '';
-				width: 14px;
-				height: 14px;
-				border-top: 3px solid #fbc469;
-				border-left: 3px solid #fbc469;
-				position: absolute;
-			}
-
-			.advantages-slider .slick-arrow:hover {
-				background-color: #fbc469;
-			}
-
-			.advantages-slider .slick-arrow:hover:before {
-				border-top: 3px solid #fafafa;
-				border-left: 3px solid #fafafa;
-			}
-
-			.advantages-slider .slick-prev {
-				left: -10px;
-			}
-
-			.advantages-slider .slick-prev:before {
-				top: calc(50% - 7px);
-				left: calc(50% - 5px);
-				transform: rotate(-45deg);
-			}
-
-			.advantages-slider .slick-next {
-				right: -10px;
-			}
-
-			.advantages-slider .slick-next:before {
-				top: calc(50% - 7px);
-				left: calc(50% - 9px);
-				transform: rotate(135deg);
-			}
-
-			.item-advantage {
-				height: 100%;
-				border-radius: 10px;
-				position: relative;
-				overflow: hidden;
-			}
-
-			@media (hover: hover) {
-				.item-advantage:hover .item-advantage__back {
-					transform: translateY(0%);
-				}
-			}
-
+		@media (hover: hover) {
 			.item-advantage__front {
-				display: flex;
-				justify-content: center;
-				padding: 45px 0px;
-				background-color: #fff;
+				min-height: 265px;
 			}
+		}
 
-			@media (hover: hover) {
-				.item-advantage__front {
-					min-height: 265px;
-				}
-			}
+		.item-advantage__icon {
+			width: 80px;
+			height: auto;
+		}
 
+		@media (max-width: 564.98px) {
 			.item-advantage__icon {
-				width: 80px;
-				height: auto;
+				margin: 0px 0px 16px 0px;
 			}
+		}
 
-			@media (max-width: 564.98px) {
-				.item-advantage__icon {
-					margin: 0px 0px 16px 0px;
-				}
-			}
+		.item-advantage__back {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			color: #fafafa;
+			text-align: center;
+			background-color: #00654d;
+		}
 
+		@media (hover: hover) {
 			.item-advantage__back {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
-				color: #fafafa;
-				text-align: center;
-				background-color: #00654d;
+				position: absolute;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				z-index: 2;
+				transform: translateY(165px);
+				transition: all 0.6s ease 0s;
 			}
+		}
 
-			@media (hover: hover) {
-				.item-advantage__back {
-					position: absolute;
-					top: 0;
-					left: 0;
-					bottom: 0;
-					right: 0;
-					z-index: 2;
-					transform: translateY(165px);
-					transition: all 0.6s ease 0s;
-				}
-			}
+		.item-advantage__text {
+			padding: 8px 28px;
+			flex: 1 1 auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-			.item-advantage__text {
-				padding: 8px 28px;
-				flex: 1 1 auto;
-				display: flex;
-				justify-content: center;
-				align-items: center;
-			}
+		.advantages-slider .slick-arrow {
+			border: none;
+			cursor: pointer;
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
 
-			.advantages-slider .slick-arrow {
-				border: none;
-				cursor: pointer;
-			}
-		</style>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	</head>
-
-	<body>
-		<main class>
-			<div class="mt-5 container">
-				<a href class><i class="bi-chevron-left mr-3 bi"></i>
-					Lorem ipsum dol
-				</a>
-			</div>
-			<div class="mt-5">
-				<div class="container">
-					<div class="row">
-						<aside class="order-lg-2 col-lg-4">
-							<div class="top-0 position-sticky">
-								<ul class="mb-4 mb-lg-4 px-2 px-md-3 py-3 py-md-4 sidebar__list">
-									<li>
-										<a href="#1" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectetur adipisi</span>
-										</a>
-									</li>
-									<li>
-										<a href="#2" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectetur adipisici</span>
-										</a>
-									</li>
-									<li>
-										<a href="#3" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#4" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod t</span>
-										</a>
-									</li>
-									<li>
-										<a href="#5" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectetur adipi</span>
-										</a>
-									</li>
-									<li>
-										<a href="#6" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectetur adipisic</span>
-										</a>
-									</li>
-									<li>
-										<a href="#7" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod te</span>
-										</a>
-									</li>
-									<li>
-										<a href="#8" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectet</span>
-										</a>
-									</li>
-									<li>
-										<a href="#9" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tem</span>
-										</a>
-									</li>
-									<li>
-										<a href="#10" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit am</span>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="d-flex" target="_self">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum dolor sit amet consectetur adipisicing elit 
-											</span>
-										</a>
-									</li>
-									<li>
-										<a href="#11" class="d-flex">
-											<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
-											<span>Lorem ipsum </span>
-										</a>
-									</li>
-									<a href class="f"><i class="bi-chevron-left mr-3 bi"></i>
-										Lorem ipsum dol
+<body>
+	<main class="">
+		<div class="mt-5 container">
+			<a href="" class=""><i class="bi-chevron-left mr-3 bi"></i>
+				Вернуться назад
+			</a>
+		</div>
+		<div class="mt-5">
+			<div class="container">
+				<div class="row">
+					<aside class="order-lg-2 col-lg-4">
+						<div class="top-0 position-sticky">
+							<ul class="mb-4 mb-lg-4 px-2 px-md-3 py-3 py-md-4 sidebar__list">
+								<li>
+									<a href="#1" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Что такое налог на&nbsp;профессиональный доход</span>
 									</a>
+								</li>
+								<li>
+									<a href="#2" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Кто вправе применять специальный налоговый режим</span>
+									</a>
+								</li>
+								<li>
+									<a href="#3" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Перечень видов деятельности, осуществляемых физическими
+											лицами – плательщиками налога на профессиональный доход
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#4" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Какие платежи заменяет налог на&nbsp;профессиональный
+											доход</span>
+									</a>
+								</li>
+								<li>
+									<a href="#5" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Ставки налога на&nbsp;профессиональный доход</span>
+									</a>
+								</li>
+								<li>
+									<a href="#6" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Льготы по налогу на&nbsp;профессиональный доход</span>
+									</a>
+								</li>
+								<li>
+									<a href="#7" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Как стать плательщиком налога на&nbsp;профессиональный
+											доход</span>
+									</a>
+								</li>
+								<li>
+									<a href="#8" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Как рассчитать сумму налога к уплате</span>
+									</a>
+								</li>
+								<li>
+									<a href="#9" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Как прекратить применять налог на&nbsp;профессиональный
+											доход</span>
+									</a>
+								</li>
+								<li>
+									<a href="#10" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Нормативно-правовые акты</span>
+									</a>
+								</li>
+								<li>
+									<a href="#" class="d-flex" target="_self">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>О мобильном приложении «Налог на профессиональный доход»
+										</span>
+									</a>
+								</li>
+								<li>
+									<a href="#11" class="d-flex">
+										<i class="mt-1 mr-2 _icon-chevron-down-circle"></i>
+										<span>Вопрос-ответ</span>
+									</a>
+								</li>
+								<a href="" class="f"><i class="bi-chevron-left mr-3 bi"></i>
+									Вернуться назад
+								</a>
+							</ul>
+						</div>
+					</aside>
+					<div class="col-lg-8">
+						<div class="item-block px-3 px-md-4">
+							<section class="preview section-landing">
+								<div class="d-flex align-items-center justify-content-between">
+									<div class="mb-5 preview__info">
+										<h1 id="1" class="mb-4 font-weight-bold h1">
+											Что такое налог на&nbsp;профессиональный доход?
+										</h1>
+										<p class="mb-3 preview__text">
+											<span class="h5 color-green">Налог на&nbsp;профессиональный доход</span>
+											- это специальный налоговый режим для физических лиц,
+											который вводится с&nbsp;1&nbsp;января 2023 года.
+										</p>
+										<p class="mb-3 preview__text">
+											Переход на специальный налоговый режим осуществляется
+											<span class="h5 color-green"> добровольно.</span>
+										</p>
+										<p class="mb-3 preview__text">
+											Для применения налога на&nbsp;профессиональный доход
+											физическое лицо обязано использовать цифровую платформу —
+											<span class="h5 color-green">приложение «Налог на&nbsp;профессиональный
+												доход».</span>
+										</p>
+									</div>
+									<div class="preview__img">
+										<img src="./img/landing-nalog/preview-img.png" alt="Картинка"
+											class="img-fluid" />
+									</div>
+								</div>
+								<h3 class="mb-4 h3">Преимущества нового налогового режима</h3>
+								<div class="advantages-slider">
+									<div class="advantages-slider__slide">
+										<div class="item-advantage">
+											<div class="item-advantage__front">
+												<div class="item-advantage__icon">
+													<img src="./img/landing-nalog/icons/icon-advantage-01.svg"
+														alt="Иконка" />
+												</div>
+											</div>
+											<div class="item-advantage__back">
+												<div class="p-3 h6 h5_white">
+													Выгодные налоговые ставки
+												</div>
+												<div class="item-advantage__text">
+													10 % и 20 %, а для получателей пенсии – фактически
+													4 % и 8 %
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="advantages-slider__slide">
+										<div class="item-advantage">
+											<div class="item-advantage__front">
+												<div class="item-advantage__icon">
+													<img src="./img/landing-nalog/icons/icon-advantage-02.svg"
+														alt="Иконка" />
+												</div>
+											</div>
+											<div class="item-advantage__back">
+												<div class="p-3 h6 h5_white">
+													Совмещение с работой по&nbsp;трудовому договору
+												</div>
+												<div class="item-advantage__text">
+													Возможность совмещения с&nbsp;основной работой
+													по&nbsp;трудовому договору
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="advantages-slider__slide">
+										<div class="item-advantage">
+											<div class="item-advantage__front">
+												<div class="item-advantage__icon">
+													<img src="./img/landing-nalog/icons/icon-advantage-03.svg"
+														alt="Иконка" />
+												</div>
+											</div>
+											<div class="item-advantage__back">
+												<div class="p-3 h6 h5_white">
+													Предоставляется налоговый вычет
+												</div>
+												<div class="item-advantage__text">
+													Предоставляется налоговый вычет в сумме 2 000
+													белорусских рублей
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="advantages-slider__slide">
+										<div class="item-advantage">
+											<div class="item-advantage__front">
+												<div class="item-advantage__icon">
+													<img src="./img/landing-nalog/icons/icon-advantage-04.svg"
+														alt="Иконка" />
+												</div>
+											</div>
+											<div class="item-advantage__back">
+												<div class="p-3 h6 h5_white">
+													Не нужно приобретать и&nbsp;использовать ККО
+												</div>
+												<div class="item-advantage__text">
+													Не нужно приобретать и&nbsp;использовать
+													контрольно-кассовое оборудование
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="advantages-slider__slide">
+										<div class="item-advantage">
+											<div class="item-advantage__front">
+												<div class="item-advantage__icon">
+													<img src="./img/landing-nalog/icons/icon-advantage-05.svg"
+														alt="Иконка" />
+												</div>
+											</div>
+											<div class="item-advantage__back">
+												<div class="p-3 h6 h5_white">
+													Простота начала применения режима
+												</div>
+												<div class="item-advantage__text">
+													Достаточно установить и&nbsp;зарегистрироваться
+													в&nbsp;приложении «Налог на&nbsp;профессиональный
+													доход»
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="advantages-slider__slide">
+										<div class="item-advantage">
+											<div class="item-advantage__front">
+												<div class="item-advantage__icon">
+													<img src="./img/landing-nalog/icons/icon-advantage-06.svg"
+														alt="Иконка" />
+												</div>
+											</div>
+											<div class="item-advantage__back">
+												<div class="p-3 h6 h5_white">
+													Не нужно представлять отчеты и&nbsp;декларации
+												</div>
+												<div class="item-advantage__text">
+													Учет полученных доходов ведется посредством
+													формируемых чеков в&nbsp;приложении
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="advantages-slider__slide">
+										<div class="item-advantage">
+											<div class="item-advantage__front">
+												<div class="item-advantage__icon">
+													<img src="./img/landing-nalog/icons/icon-advantage-07.svg"
+														alt="Иконка" />
+												</div>
+											</div>
+											<div class="item-advantage__back">
+												<div class="p-3 h6 h5_white">
+													Налог начисляется налоговым органом
+												</div>
+												<div class="item-advantage__text">
+													Предварительная его сумма рассчитывается
+													автоматически в&nbsp;приложении
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section id="2" class="section-landing">
+								<h2 class="mb-4 font-weight-bold h2">
+									Кто вправе применять специальный налоговый режим
+								</h2>
+								<div class="mb-4">
+									Применять специальный налоговый режим «Налог на&nbsp;профессиональный
+									доход» вправе физические лица, получающие профессиональный доход от:
+								</div>
+								<ul class="mb-4 pl-0 list-check-icon">
+									<li class="d-flex mb-3">
+										<i class="mr-3 bi bi-check2-circle"></i>
+										<span class="pt-2">деятельности, при ведении которой они не имеют
+											<strong class="color-green"
+												title="К работодателям относятся: - юридические лица, их представительства и филиалы, имеющие отдельный баланс; - представительства иностранных организаций; иностранные организации, осуществляющие деятельность в Республике Беларусь через постоянное представительство, соответствующие признакам, определенным Налоговым кодексом Республики Беларусь; - индивидуальные предприниматели, нотариусы, осуществляющие нотариальную деятельность в нотариальных бюро, предоставляющие работу гражданам по трудовым и (или) гражданско-правовым договорам; - физические лица, предоставляющие работу гражданам по трудовым договорам.">работодателя
+											</strong><span class="tooltips-btn"
+												title="К работодателям относятся: - юридические лица, их представительства и филиалы, имеющие отдельный баланс; - представительства иностранных организаций; иностранные организации, осуществляющие деятельность в Республике Беларусь через постоянное представительство, соответствующие признакам, определенным Налоговым кодексом Республики Беларусь; - индивидуальные предприниматели, нотариусы, осуществляющие нотариальную деятельность в нотариальных бюро, предоставляющие работу гражданам по трудовым и (или) гражданско-правовым договорам; - физические лица, предоставляющие работу гражданам по трудовым договорам.">
+												<i class="bi bi-info-circle-fill"></i>
+											</span>
+											и не привлекают физических лиц по трудовым договорам и (или)
+											по гражданско-правовым договорам;</span>
+									</li>
+									<li class="d-flex mb-3">
+										<i class="mr-3 bi bi-check2-circle"></i>
+										<span class="pt-2">использования имущества.</span>
+									</li>
 								</ul>
-							</div>
-						</aside>
-						<div class="col-lg-8">
-							<div class="item-block px-3 px-md-4">
-								<section class="preview section-landing">
-									<div class="d-flex align-items-center justify-content-between">
-										<div class="mb-5 preview__info">
-											<h1 id="1" class="mb-4 font-weight-bold h1">
-												Lorem ipsum dolor sit amet consectetur adipisic
-											</h1>
-											<p class="mb-3 preview__text">
-												<span class="h5 color-green">Lorem ipsum dolor sit amet consectet</span>
-												Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna 
-											</p>
-											<p class="mb-3 preview__text">
-												Lorem ipsum dolor sit amet consectetur adipisicing el
-												<span class="h5 color-green"> Lorem ipsum </span>
-											</p>
-											<p class="mb-3 preview__text">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua U
-												<span class="h5 color-green">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do e</span>
-											</p>
-										</div>
-										<div class="preview__img">
-											<img src="./img/landing-nalog/preview-img.png" alt="Картинка" class="img-fluid">
-										</div>
-									</div>
-									<h3 class="mb-4 h3">Lorem ipsum dolor sit amet consectetu</h3>
-									<div class="advantages-slider">
-										<div class="advantages-slider__slide">
-											<div class="item-advantage">
-												<div class="item-advantage__front">
-													<div class="item-advantage__icon">
-														<img src="./img/landing-nalog/icons/icon-advantage-01.svg" alt="Иконка">
-													</div>
-												</div>
-												<div class="item-advantage__back">
-													<div class="p-3 h6 h5_white">
-														Lorem ipsum dolor sit ame
-													</div>
-													<div class="item-advantage__text">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="advantages-slider__slide">
-											<div class="item-advantage">
-												<div class="item-advantage__front">
-													<div class="item-advantage__icon">
-														<img src="./img/landing-nalog/icons/icon-advantage-02.svg" alt="Иконка">
-													</div>
-												</div>
-												<div class="item-advantage__back">
-													<div class="p-3 h6 h5_white">
-														Lorem ipsum dolor sit amet consectetur adipisic
-													</div>
-													<div class="item-advantage__text">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="advantages-slider__slide">
-											<div class="item-advantage">
-												<div class="item-advantage__front">
-													<div class="item-advantage__icon">
-														<img src="./img/landing-nalog/icons/icon-advantage-03.svg" alt="Иконка">
-													</div>
-												</div>
-												<div class="item-advantage__back">
-													<div class="p-3 h6 h5_white">
-														Lorem ipsum dolor sit amet cons
-													</div>
-													<div class="item-advantage__text">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor i
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="advantages-slider__slide">
-											<div class="item-advantage">
-												<div class="item-advantage__front">
-													<div class="item-advantage__icon">
-														<img src="./img/landing-nalog/icons/icon-advantage-04.svg" alt="Иконка">
-													</div>
-												</div>
-												<div class="item-advantage__back">
-													<div class="p-3 h6 h5_white">
-														Lorem ipsum dolor sit amet consectetur adipi
-													</div>
-													<div class="item-advantage__text">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="advantages-slider__slide">
-											<div class="item-advantage">
-												<div class="item-advantage__front">
-													<div class="item-advantage__icon">
-														<img src="./img/landing-nalog/icons/icon-advantage-05.svg" alt="Иконка">
-													</div>
-												</div>
-												<div class="item-advantage__back">
-													<div class="p-3 h6 h5_white">
-														Lorem ipsum dolor sit amet consec
-													</div>
-													<div class="item-advantage__text">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad m
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="advantages-slider__slide">
-											<div class="item-advantage">
-												<div class="item-advantage__front">
-													<div class="item-advantage__icon">
-														<img src="./img/landing-nalog/icons/icon-advantage-06.svg" alt="Иконка">
-													</div>
-												</div>
-												<div class="item-advantage__back">
-													<div class="p-3 h6 h5_white">
-														Lorem ipsum dolor sit amet consectetur adipisi
-													</div>
-													<div class="item-advantage__text">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut la
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="advantages-slider__slide">
-											<div class="item-advantage">
-												<div class="item-advantage__front">
-													<div class="item-advantage__icon">
-														<img src="./img/landing-nalog/icons/icon-advantage-07.svg" alt="Иконка">
-													</div>
-												</div>
-												<div class="item-advantage__back">
-													<div class="p-3 h6 h5_white">
-														Lorem ipsum dolor sit amet consecte
-													</div>
-													<div class="item-advantage__text">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididun
-													</div>
-												</div>
-											</div>
-										</div>
-									</div>
-								</section>
-								<section id="2" class="section-landing">
-									<h2 class="mb-4 font-weight-bold h2">
-										Lorem ipsum dolor sit amet consectetur adipisici
-									</h2>
-									<div class="mb-4">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam qui
-									</div>
-									<ul class="mb-4 pl-0 list-check-icon">
-										<li class="d-flex mb-3">
-											<i class="mr-3 bi bi-check2-circle"></i>
-											<span class="pt-2">Lorem ipsum dolor sit amet consectetur adipisi
-												<strong class="color-green" title="К работодателям относятся: - юридические лица, их представительства и филиалы, имеющие отдельный баланс; - представительства иностранных организаций; иностранные организации, осуществляющие деятельность в Республике Беларусь через постоянное представительство, соответствующие признакам, определенным Налоговым кодексом Республики Беларусь; - индивидуальные предприниматели, нотариусы, осуществляющие нотариальную деятельность в нотариальных бюро, предоставляющие работу гражданам по трудовым и (или) гражданско-правовым договорам; - физические лица, предоставляющие работу гражданам по трудовым договорам.">Lorem ipsum  </strong><span class="tooltips-btn" title="К работодателям относятся: - юридические лица, их представительства и филиалы, имеющие отдельный баланс; - представительства иностранных организаций; иностранные организации, осуществляющие деятельность в Республике Беларусь через постоянное представительство, соответствующие признакам, определенным Налоговым кодексом Республики Беларусь; - индивидуальные предприниматели, нотариусы, осуществляющие нотариальную деятельность в нотариальных бюро, предоставляющие работу гражданам по трудовым и (или) гражданско-правовым договорам; - физические лица, предоставляющие работу гражданам по трудовым договорам.">
-													<i class="bi bi-info-circle-fill"></i>
-												</span>
-												Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolor</span>
-										</li>
-										<li class="d-flex mb-3">
-											<i class="mr-3 bi bi-check2-circle"></i>
-											<span class="pt-2">Lorem ipsum dolor sit am</span>
-										</li>
-									</ul>
 
-									<div class="mb-4 quote">
-										<i class="quote__exclamation bi bi-exclamation-lg"></i>
-										<div class="quote__text">
-											Lorem ipsum dolor sit amet co
-											<strong class="color-yellow">Lorem ipsum dol</strong>
-											Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exer
+								<div class="mb-4 quote">
+									<i class="quote__exclamation bi bi-exclamation-lg"></i>
+									<div class="quote__text">
+										Наличие места основной работы
+										<strong class="color-yellow">не препятствует</strong>
+										уплате налога на профессиональный доход в отношении доходов,
+										признаваемых объектом налогообложения данным налогом и полученных
+										от иных лиц.
+									</div>
+									<i class="quote__icon bi bi-quote"></i>
+								</div>
+							</section>
+							<section id="3" class="section-landing">
+								<h2 class="mb-4 font-weight-bold h2">
+									Перечень видов деятельности, осуществляемых физическими лицами –
+									плательщиками налога на профессиональный доход
+								</h2>
+								<div class="mb-4">
+									Перечень видов деятельности, осуществляемых плательщиками налога на
+									профессиональный доход, согласно статье 378 Налогового кодекса
+									Республики Беларусь, будет определен Советом Министров Республики
+									Беларусь.
+								</div>
+							</section>
+							<section id="4" class="section-landing">
+								<h2 class="mb-4 font-weight-bold h2">
+									Какие платежи заменяет налог на&nbsp;профессиональный доход
+								</h2>
+								<div class="d-flex align-items-center justify-content-between payments">
+									<div class="payments__info">
+										<div class="mb-4">
+											Уплата налога на&nbsp;профессиональный доход
+											<strong class="color-green">заменяет уплату:</strong>
 										</div>
-										<i class="quote__icon bi bi-quote"></i>
+										<ul class="mb-4 pl-0 list-check-icon">
+											<li class="d-flex mb-3">
+												<i class="mr-3 bi bi-check2-circle"></i>
+												<span class="pt-2">подоходного налога с&nbsp;физических лиц;</span>
+											</li>
+											<li class="d-flex mb-3">
+												<i class="mr-3 bi bi-check2-circle"></i>
+												<span class="pt-2">сбора за осуществление ремесленной
+													деятельности;</span>
+											</li>
+											<li class="d-flex mb-3">
+												<i class="mr-3 bi bi-check2-circle"></i>
+												<span class="pt-2">
+													единого налога с индивидуальных предпринимателей и
+													иных физических лиц;
+												</span>
+											</li>
+											<li class="d-flex mb-3">
+												<i class="mr-3 bi bi-check2-circle"></i>
+												<span class="pt-2">обязательных страховых взносов в бюджет
+													государственного внебюджетного фонда социальной
+													защиты населения Республики Беларусь.</span>
+											</li>
+										</ul>
 									</div>
-								</section>
-								<section id="3" class="section-landing">
-									<h2 class="mb-4 font-weight-bold h2">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua 
-									</h2>
-									<div class="mb-4">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute i
+									<div class="payments__img">
+										<img src="./img/landing-nalog/payments-img.png" alt="Картинка"
+											class="img-fluid" />
 									</div>
-								</section>
-								<section id="4" class="section-landing">
-									<h2 class="mb-4 font-weight-bold h2">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit sed
-									</h2>
-									<div class="d-flex align-items-center justify-content-between payments">
-										<div class="payments__info">
-											<div class="mb-4">
-												Lorem ipsum dolor sit amet consectetur adipi
-												<strong class="color-green">Lorem ipsum dolo</strong>
+								</div>
+							</section>
+							<section id="5" class="section-landing">
+								<h2 class="mb-4 font-weight-bold h2">
+									Ставки налога на&nbsp;профессиональный доход
+								</h2>
+								<div class="row">
+									<div class="px-2 pt-3 col-md-6">
+										<div class="item-tax-rates">
+											<div class="item-tax-rates__count">10%</div>
+											<div class="mb-3 pr-4 font-weight-bold">
+												в отношении профессионального дохода, полученного от:
 											</div>
-											<ul class="mb-4 pl-0 list-check-icon">
-												<li class="d-flex mb-3">
-													<i class="mr-3 bi bi-check2-circle"></i>
-													<span class="pt-2">Lorem ipsum dolor sit amet consectetur ad</span>
+											<ul>
+												<li>физических лиц (независимо от его размера);</li>
+												<li>
+													иностранных организаций и иностранных
+													индивидуальных предпринимателей (независимо от его
+													размера);
 												</li>
-												<li class="d-flex mb-3">
-													<i class="mr-3 bi bi-check2-circle"></i>
-													<span class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do </span>
-												</li>
-												<li class="d-flex mb-3">
-													<i class="mr-3 bi bi-check2-circle"></i>
-													<span class="pt-2">
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididu
-													</span>
-												</li>
-												<li class="d-flex mb-3">
-													<i class="mr-3 bi bi-check2-circle"></i>
-													<span class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nost</span>
+												<li>
+													белорусских организаций и белорусских
+													индивидуальных предпринимателей в&nbsp;размере,
+													<strong class="color-yellow">не превышающем 60 000 белорусских
+														рублей в
+														целом за год.</strong>
 												</li>
 											</ul>
 										</div>
-										<div class="payments__img">
-											<img src="./img/landing-nalog/payments-img.png" alt="Картинка" class="img-fluid">
+									</div>
+									<div class="px-2 pt-3 col-md-6">
+										<div class="item-tax-rates item-tax-rates_yellow">
+											<div class="item-tax-rates__count">20%</div>
+											<div class="mb-3 pr-4 font-weight-bold">
+												в отношении профессионального дохода, полученного от:
+											</div>
+											<ul>
+												<li>
+													белорусских организаций и белорусских
+													индивидуальных предпринимателей, в&nbsp;размере,
+													<strong class="color-green">превысившем 60 000 белорусских рублей в
+														целом за год.</strong>
+												</li>
+											</ul>
 										</div>
 									</div>
-								</section>
-								<section id="5" class="section-landing">
-									<h2 class="mb-4 font-weight-bold h2">
-										Lorem ipsum dolor sit amet consectetur adipi
-									</h2>
-									<div class="row">
-										<div class="px-2 pt-3 col-md-6">
-											<div class="item-tax-rates">
-												<div class="item-tax-rates__count">Lor</div>
-												<div class="mb-3 pr-4 font-weight-bold">
-													Lorem ipsum dolor sit amet consectetur adipisicing el
-												</div>
-												<ul>
-													<li>Lorem ipsum dolor sit amet consectetur adip</li>
-													<li>
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut eni
-													</li>
-													<li>
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore e
-														<strong class="color-yellow">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod t</strong>
-													</li>
-												</ul>
+								</div>
+							</section>
+							<section id="6" class="section-landing">
+								<h2 class="mb-4 font-weight-bold h2">
+									Льготы по налогу на&nbsp;профессиональный доход
+								</h2>
+								<div class="mb-4 item-tax-benefits">
+									<div class="mb-4 h4 color-green item-tax-benefits__title">
+										Для физических лиц, впервые зарегистрированных в качестве
+										плательщика налога на&nbsp;профессиональный доход
+									</div>
+									<div class="mb-3">
+										Предусмотрена льгота в виде налогового вычета в размере
+										<strong>2 000 белорусских рублей.</strong>
+									</div>
+									<div class="mb-3">
+										То есть при исчислении налога размер налоговой базы (сумма
+										полученного физическим лицом профессионального дохода)
+										уменьшается на <strong>2 000 белорусских рублей.</strong>
+									</div>
+									<div>
+										Остаток неиспользованного вычета можно применять и в последующие
+										календарные годы при условии, что физическое лицо не прекращало
+										применение налога на&nbsp;профессиональный доход.
+									</div>
+								</div>
+								<div class="item-tax-benefits">
+									<div class="mb-4 h4 color-green item-tax-benefits__title">
+										Для плательщика, являющегося получателем пенсии
+									</div>
+									<div>
+										Ставка налога с 10 % (20 %) фактически уменьшается до
+										<strong>4 % (8 %)</strong>, за счет освобождения от уплаты
+										обязательных страховых взносов в бюджет государственного
+										внебюджетного фонда социальной защиты населения Республики
+										Беларусь.
+									</div>
+								</div>
+							</section>
+							<section id="7" class="section-landing">
+								<h2 class="mb-4 font-weight-bold h2">
+									Как стать плательщиком налога на&nbsp;профессиональный доход
+								</h2>
+								<div class="mb-4 quote">
+									<i class="quote__exclamation bi bi-exclamation-lg"></i>
+									<div class="quote__text">
+										ДЛЯ ПРИМЕНЕНИЯ НАЛОГА на&nbsp;профессиональный доход физическое
+										лицо ОБЯЗАНО ИСПОЛЬЗОВАТЬ цифровую платформу –
+										<strong class="color-yellow">ПРИЛОЖЕНИЕ «Налог на&nbsp;профессиональный
+											доход»</strong>
+										(программное обеспечение Министерства по налогам и сборам)
+										с&nbsp;использованием смартфона или компьютера (включая
+										планшетный), подключенного к&nbsp;сети Интернет.
+									</div>
+									<i class="quote__icon bi bi-quote"></i>
+								</div>
+								<div class="mx-md-5 mb-4 mb-md-5 text-center">
+									Физическое лицо, изъявившее желание перейти на применение налога
+									на&nbsp;профессиональный доход,
+									<string class="font-weight-bold color-green">ОБЯЗАНО</string> до
+									начала осуществления деятельности:
+								</div>
+								<div class="row">
+									<div class="px-2 pt-4 col-md-4">
+										<div class="text-center item-become-payer item-become-payer_first">
+											<div class="mb-3 item-become-payer__icon">
+												<img src="./img/landing-nalog/icons/become-payer-01.svg" alt="Иконка" />
 											</div>
-										</div>
-										<div class="px-2 pt-3 col-md-6">
-											<div class="item-tax-rates item-tax-rates_yellow">
-												<div class="item-tax-rates__count">Lor</div>
-												<div class="mb-3 pr-4 font-weight-bold">
-													Lorem ipsum dolor sit amet consectetur adipisicing el
-												</div>
-												<ul>
-													<li>
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et
-														<strong class="color-green">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmo</strong>
-													</li>
-												</ul>
+											<h6 class="mb-2 h6 color-green">
+												1. Установить приложение
+											</h6>
+											<div class="item-become-payer__text">
+												Установить на свой смартфон или компьютер приложение
+												«Налог на&nbsp;профессиональный доход»
 											</div>
 										</div>
 									</div>
-								</section>
-								<section id="6" class="section-landing">
-									<h2 class="mb-4 font-weight-bold h2">
-										Lorem ipsum dolor sit amet consectetur adipisic
-									</h2>
-									<div class="mb-4 item-tax-benefits">
-										<div class="mb-4 h4 color-green item-tax-benefits__title">
-											Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliq
+									<div class="px-2 pt-4 col-md-4">
+										<div class="text-center item-become-payer item-become-payer_second">
+											<div class="mb-3 item-become-payer__icon">
+												<img src="./img/landing-nalog/icons/become-payer-02.svg" alt="Иконка" />
+											</div>
+											<h6 class="mb-2 h6 color-green">
+												2. Проинформировать налоговый орган
+											</h6>
+											<div class="item-become-payer__text">
+												Проинформировать налоговый орган через приложение
+												«Налог&nbsp;на&nbsp;профессиональный доход»
+												о&nbsp;применении налога на профессиональный доход
+											</div>
 										</div>
-										<div class="mb-3">
-											Lorem ipsum dolor sit amet consectetur adipisicing elit
-											<strong>Lorem ipsum dolor sit ame</strong>
+									</div>
+									<div class="px-2 pt-4 col-md-4">
+										<div class="text-center item-become-payer">
+											<div class="mb-3 item-become-payer__icon">
+												<img src="./img/landing-nalog/icons/become-payer-03.svg" alt="Иконка" />
+											</div>
+											<h6 class="mb-2 h6 color-green">3. Все готово!</h6>
+											<div class="item-become-payer__text">
+												Вы вправе применять налог на&nbsp;профессиональный
+												доход
+											</div>
 										</div>
+									</div>
+								</div>
+							</section>
+							<section id="8" class="section-landing">
+								<h2 class="mb-4 font-weight-bold h2">
+									Как рассчитать сумму налога к&nbsp;уплате?
+								</h2>
+								<div class="mb-4 quote">
+									<i class="quote__exclamation bi bi-exclamation-lg"></i>
+									<div class="quote__text">
 										<div class="mb-3">
-											Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis n <strong>Lorem ipsum dolor sit ame</strong>
+											Самостоятельно рассчитывать налог на&nbsp;профессиональный
+											доход плательщикам
+											<strong class="color-yellow">не нужно.</strong> Применение
+											налогового вычета, размер ставки и другие особенности
+											расчета полностью автоматизированы. Также не требуется
+											представление налоговых деклараций.
 										</div>
 										<div>
-											Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliqui
+											Для того чтобы узнать сумму налога к уплате от плательщика
+											требуется только формирование в приложении «Налог
+											на&nbsp;профессиональный доход» чека по каждому доходу,
+											полученному от осуществления деятельности с применением
+											налога на&nbsp;профессиональный доход.
 										</div>
 									</div>
-									<div class="item-tax-benefits">
-										<div class="mb-4 h4 color-green item-tax-benefits__title">
-											Lorem ipsum dolor sit amet consectetur adipisic
-										</div>
-										<div>
-											Lorem ipsum dolor sit amet consectetur adipisicing el
-											<strong>Lorem ips</strong>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi u
-										</div>
-									</div>
-								</section>
-								<section id="7" class="section-landing">
-									<h2 class="mb-4 font-weight-bold h2">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit sed 
-									</h2>
-									<div class="mb-4 quote">
-										<i class="quote__exclamation bi bi-exclamation-lg"></i>
-										<div class="quote__text">
-											Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua 
-											<strong class="color-yellow">Lorem ipsum dolor sit amet consectetur adipisicin</strong>
-											Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
-										</div>
-										<i class="quote__icon bi bi-quote"></i>
-									</div>
-									<div class="mx-md-5 mb-4 mb-md-5 text-center">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolor
-										<string class="font-weight-bold color-green">Lorem i</string> Lorem ipsum dolor sit amet consectetur adipisici
-									</div>
-									<div class="row">
-										<div class="px-2 pt-4 col-md-4">
-											<div class="text-center item-become-payer item-become-payer_first">
-												<div class="mb-3 item-become-payer__icon">
-													<img src="./img/landing-nalog/icons/become-payer-01.svg" alt="Иконка">
+									<i class="quote__icon bi bi-quote"></i>
+								</div>
+								<div class="row">
+									<div class="px-2 pt-4 col-md-6">
+										<div class="d-flex flex-column h-100 item-tax-amount">
+											<div class="d-flex justify-content-start mb-3">
+												<div
+													class="d-flex align-items-center justify-content-center bg-yellow mr-3 item-tax-amount__icon">
+													<i class="bi bi-bell h1 color-white"></i>
 												</div>
-												<h6 class="mb-2 h6 color-green">
-													Lorem ipsum dolor sit am
-												</h6>
-												<div class="item-become-payer__text">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dol
+												<div class="">
+													<div class="h6">
+														Уведомление налоговым органом:
+													</div>
+													<div class="h2 color-green">
+														не позднее 10 числа
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="px-2 pt-4 col-md-4">
-											<div class="text-center item-become-payer item-become-payer_second">
-												<div class="mb-3 item-become-payer__icon">
-													<img src="./img/landing-nalog/icons/become-payer-02.svg" alt="Иконка">
-												</div>
-												<h6 class="mb-2 h6 color-green">
-													Lorem ipsum dolor sit amet consecte
-												</h6>
-												<div class="item-become-payer__text">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation 
-												</div>
-											</div>
-										</div>
-										<div class="px-2 pt-4 col-md-4">
-											<div class="text-center item-become-payer">
-												<div class="mb-3 item-become-payer__icon">
-													<img src="./img/landing-nalog/icons/become-payer-03.svg" alt="Иконка">
-												</div>
-												<h6 class="mb-2 h6 color-green">Lorem ipsum do</h6>
-												<div class="item-become-payer__text">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
-												</div>
+											<div class="flex-grow-1 p-4 item-tax-amount__info">
+												Налоговый орган ежемесячно исчисляет сумму налога к
+												уплате и не позднее 10 числа месяца, следующего за
+												истекшим календарным месяцем, уведомляет плательщика об
+												исчисленной сумме налога через приложение «Налог
+												напрофессиональный доход».
 											</div>
 										</div>
 									</div>
-								</section>
-								<section id="8" class="section-landing">
-									<h2 class="mb-4 font-weight-bold h2">
-										Lorem ipsum dolor sit amet consectetur adi
-									</h2>
-									<div class="mb-4 quote">
-										<i class="quote__exclamation bi bi-exclamation-lg"></i>
-										<div class="quote__text">
+									<div class="px-2 pt-4 col-md-6">
+										<div class="d-flex flex-column h-100 item-tax-amount">
+											<div class="d-flex justify-content-start mb-3">
+												<div
+													class="d-flex align-items-center justify-content-center bg-yellow mr-3 item-tax-amount__icon">
+													<i class="bi bi-calendar h1 color-white"></i>
+												</div>
+												<div class="">
+													<div class="h6">Уплата плательщиком:</div>
+													<div class="h2 color-green">
+														не позднее 22 числа
+													</div>
+												</div>
+											</div>
+											<div class="flex-grow-1 p-4 item-tax-amount__info">
+												Уплата налога на профессиональный доход осуществляется
+												плательщиком ежемесячно не позднее 22&nbsp;числа
+												месяца, следующего за истекшим календарным месяцем. При
+												этом уплату налога на&nbsp;профессиональный доход
+												плательщик производит любым удобным для него способом.
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
+							<section id="9" class="section-landing">
+								<h2 class="mb-4 font-weight-bold h2">
+									Как прекратить применять налог на&nbsp;профессиональный доход?
+								</h2>
+								<div class="row">
+									<div class="px-2 pt-3 col-md-6">
+										<div class="mb-4 h-100 item-tax-benefits">
+											<div class="mb-4 h4 color-green item-tax-benefits__title">
+												По инициативе физического лица
+											</div>
 											<div class="mb-3">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt u
-												<strong class="color-yellow">Lorem ips</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi u
+												Прекращение применения налога на&nbsp;профессиональный
+												доход осуществляется со дня принятия им решения о
+												прекращении деятельности.
 											</div>
 											<div>
-												Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fug
-											</div>
-										</div>
-										<i class="quote__icon bi bi-quote"></i>
-									</div>
-									<div class="row">
-										<div class="px-2 pt-4 col-md-6">
-											<div class="d-flex flex-column h-100 item-tax-amount">
-												<div class="d-flex justify-content-start mb-3">
-													<div class="d-flex align-items-center justify-content-center bg-yellow mr-3 item-tax-amount__icon">
-														<i class="bi bi-bell h1 color-white"></i>
-													</div>
-													<div class>
-														<div class="h6">
-															Lorem ipsum dolor sit amet con
-														</div>
-														<div class="h2 color-green">
-															Lorem ipsum dolor s
-														</div>
-													</div>
-												</div>
-												<div class="flex-grow-1 p-4 item-tax-amount__info">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse
-												</div>
-											</div>
-										</div>
-										<div class="px-2 pt-4 col-md-6">
-											<div class="d-flex flex-column h-100 item-tax-amount">
-												<div class="d-flex justify-content-start mb-3">
-													<div class="d-flex align-items-center justify-content-center bg-yellow mr-3 item-tax-amount__icon">
-														<i class="bi bi-calendar h1 color-white"></i>
-													</div>
-													<div class>
-														<div class="h6">Lorem ipsum dolor si</div>
-														<div class="h2 color-green">
-															Lorem ipsum dolor s
-														</div>
-													</div>
-												</div>
-												<div class="flex-grow-1 p-4 item-tax-amount__info">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-												</div>
+												Такое решение принимается плательщиком дистанционно
+												посредством приложения «Налог на&nbsp;профессиональный
+												доход».
 											</div>
 										</div>
 									</div>
-								</section>
-								<section id="9" class="section-landing">
-									<h2 class="mb-4 font-weight-bold h2">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
-									</h2>
-									<div class="row">
-										<div class="px-2 pt-3 col-md-6">
-											<div class="mb-4 h-100 item-tax-benefits">
-												<div class="mb-4 h4 color-green item-tax-benefits__title">
-													Lorem ipsum dolor sit amet con
-												</div>
-												<div class="mb-3">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud
-												</div>
-												<div>
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim ven
-												</div>
+									<div class="px-2 pt-3 col-md-6">
+										<div class="mb-4 h-100 item-tax-benefits">
+											<div class="mb-4 h4 color-green item-tax-benefits__title">
+												По инициативе налогового органа
 											</div>
-										</div>
-										<div class="px-2 pt-3 col-md-6">
-											<div class="mb-4 h-100 item-tax-benefits">
-												<div class="mb-4 h4 color-green item-tax-benefits__title">
-													Lorem ipsum dolor sit amet cons
-												</div>
-												<div class="mb-3">
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore e
-												</div>
-												<ul class="mb-0 pl-0 list-check-icon">
-													<li class="d-flex mb-2">
-														<i class="mr-3 bi bi-check2-circle"></i>
-														<span class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis au</span>
-													</li>
-													<li class="d-flex mb-2">
-														<i class="mr-3 bi bi-check2-circle"></i>
-														<span class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do </span>
-													</li>
-													<li class="d-flex mb-0">
-														<i class="mr-3 bi bi-check2-circle"></i>
-														<span class="pt-2">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut l</span>
-													</li>
-												</ul>
+											<div class="mb-3">
+												Прекращение применения налога на&nbsp;профессиональный
+												доход осуществляется в случаях:
 											</div>
+											<ul class="mb-0 pl-0 list-check-icon">
+												<li class="d-flex mb-2">
+													<i class="mr-3 bi bi-check2-circle"></i>
+													<span class="pt-2">несоответствия деятельности физического лица
+														видам деятельности, определяемым Советом
+														Министров Республики Беларусь для
+														плательщиков налога на&nbsp;профессиональный
+														доход;</span>
+												</li>
+												<li class="d-flex mb-2">
+													<i class="mr-3 bi bi-check2-circle"></i>
+													<span class="pt-2">смерти или объявления физического лица
+														умершим;</span>
+												</li>
+												<li class="d-flex mb-0">
+													<i class="mr-3 bi bi-check2-circle"></i>
+													<span class="pt-2">признания судом физического лица безвестно
+														отсутствующим либо недееспособным.</span>
+												</li>
+											</ul>
 										</div>
 									</div>
-								</section>
-								<section id="10" class="section-landing">
-									<h2 class="mb-4 font-weight-bold h2">Lorem ipsum dolor sit am</h2>
-									<a href="./img/ГЛАВА 40.docx" class="mb-4 link-download" download>
-										<div class="link-download__text">
-											<i class="mr-2 bi-file-earmark-text-fill bi h2"></i>
+								</div>
+							</section>
+							<section id="10" class="section-landing">
+								<h2 class="mb-4 font-weight-bold h2">Нормативно-правовые акты</h2>
+								<a href="./img/ГЛАВА 40.docx" class="mb-4 link-download" download>
+									<div class="link-download__text">
+										<i class="mr-2 bi-file-earmark-text-fill bi h2"></i>
+										<div>
 											<div>
-												<div>
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut lab
-												</div>
+												Глава 40 «Налог на профессиональный доход» Налогового
+												кодекса Республики Беларусь
 											</div>
 										</div>
-										<div class="link-download__icon">
-											<i class="mr-2 bi bi-download"></i>
-											<div>Lorem i</div>
-										</div>
-									</a>
-									<a href="./img/Об использовании мобильного приложения.RTF" class="mb-4 link-download" download>
-										<div class="link-download__text">
-											<i class="mr-2 bi-file-earmark-text-fill bi h2"></i>
+									</div>
+									<div class="link-download__icon">
+										<i class="mr-2 bi bi-download"></i>
+										<div>Скачать</div>
+									</div>
+								</a>
+								<a href="./img/Об использовании мобильного приложения.RTF" class="mb-4 link-download"
+									download>
+									<div class="link-download__text">
+										<i class="mr-2 bi-file-earmark-text-fill bi h2"></i>
+										<div>
 											<div>
+												Постановление Совета Министров Республики Беларусь
+												от 01.07.2022 № 433 «‎О порядке использования
+												приложения «Налог на профессиональный доход»
+											</div>
+										</div>
+									</div>
+									<div class="link-download__icon">
+										<i class="mr-2 bi bi-download"></i>
+										<div>Скачать</div>
+									</div>
+								</a>
+							</section>
+							<section class="section-landing">
+								<h2 class="font-weight-bold h2">
+									О мобильном приложении «Налог на профессиональный доход»
+								</h2>
+								<div class="vacancies" style="margin: 70px 0 0">
+									<div class="vacancies__content" style="box-shadow: none">
+										<h5 class="mb-4 h5 h5_white">
+											Мобильное приложение «Налог на профессиональный доход»
+										</h5>
+										<p class="mb-4" style="max-width: 630px">
+											Для применения налога на профессиональный доход физическое
+											лицо обязано использовать цифровую платформу — приложение
+											«Налог на профессиональный доход».
+										</p>
+										<a href="landing-mobile.html" class="vacancies__btn" target="_blank">Узнать
+											больше о приложении</a>
+										<div class="vacancies__img">
+											<img src="./img/landing-mobile/mobile-land-img.png" alt=""
+												style="max-width: 270px" />
+										</div>
+									</div>
+								</div>
+							</section>
+							<section id="11" class="section-landing question-landing">
+								<h2 class="mb-4 font-weight-bold h2">Вопрос-ответ</h2>
+								<div id="accordionMns">
+									<div id="heading-1" class="accordion-question">
+										<button class="accordion-question__btn" type="button" data-toggle="collapse"
+											data-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
+											<div class="accordion-question__row">
+												<i class="mr-2 mr-sm-4 bi bi-question-circle"></i>
 												<div>
-													Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitati
+													Какой срок уплаты налога на&nbsp;профессиональный
+													доход?
 												</div>
 											</div>
-										</div>
-										<div class="link-download__icon">
-											<i class="mr-2 bi bi-download"></i>
-											<div>Lorem i</div>
-										</div>
-									</a>
-								</section>
-								<section class="section-landing">
-									<h2 class="font-weight-bold h2">
-										Lorem ipsum dolor sit amet consectetur adipisicing elit 
-									</h2>
-									<div class="vacancies" style="margin: 70px 0 0">
-										<div class="vacancies__content" style="box-shadow: none">
-											<h5 class="mb-4 h5 h5_white">
-												Lorem ipsum dolor sit amet consectetur adipisicing eli
-											</h5>
-											<p class="mb-4" style="max-width: 630px">
-												Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullam
-											</p>
-											<a href="landing-mobile.html" class="vacancies__btn" target="_blank">Lorem ipsum dolor sit amet</a>
-											<div class="vacancies__img">
-												<img src="./img/landing-mobile/mobile-land-img.png" alt style="max-width: 270px">
+											<i class="ml-3 bi bi-chevron-down"></i>
+										</button>
+										<div id="collapse-1" class="collapse show" aria-labelledby="heading-1"
+											data-parent="#accordionMns">
+											<div class="accordion-question__wrapper">
+												<div class="accordion-question__body">
+													<div class="mb-2 accordion-question__row">
+														<i class="mr-2 mr-sm-4 bi bi-exclamation-circle"></i>
+														<div class="font-weight-bold">Ответ</div>
+													</div>
+													<div>
+														Уплата налога на&nbsp;профессиональный доход
+														осуществляется ежемесячно не позднее 22 числа
+														месяца, следующего за истекшим календарным
+														месяцем.
+													</div>
+												</div>
 											</div>
 										</div>
 									</div>
-								</section>
-								<section id="11" class="section-landing question-landing">
-									<h2 class="mb-4 font-weight-bold h2">Lorem ipsum </h2>
-									<div id="accordionMns">
-										<div id="heading-1" class="accordion-question">
-											<button class="accordion-question__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">
-												<div class="accordion-question__row">
-													<i class="mr-2 mr-sm-4 bi bi-question-circle"></i>
-													<div>
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod 
-													</div>
-												</div>
-												<i class="ml-3 bi bi-chevron-down"></i>
-											</button>
-											<div id="collapse-1" class="collapse show" aria-labelledby="heading-1" data-parent="#accordionMns">
-												<div class="accordion-question__wrapper">
-													<div class="accordion-question__body">
-														<div class="mb-2 accordion-question__row">
-															<i class="mr-2 mr-sm-4 bi bi-exclamation-circle"></i>
-															<div class="font-weight-bold">Lorem</div>
-														</div>
-														<div>
-															Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris ni
-														</div>
-													</div>
+									<div id="heading-2" class="accordion-question">
+										<button class="collapsed accordion-question__btn" type="button"
+											data-toggle="collapse" data-target="#collapse-2" aria-expanded="false"
+											aria-controls="collapse-2">
+											<div class="accordion-question__row">
+												<i class="mr-2 mr-sm-4 bi bi-question-circle"></i>
+												<div>
+													Кому предоставляется льгота в виде налогового
+													вычета в размере 2000 белорусских рублей?
 												</div>
 											</div>
-										</div>
-										<div id="heading-2" class="accordion-question">
-											<button class="collapsed accordion-question__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
-												<div class="accordion-question__row">
-													<i class="mr-2 mr-sm-4 bi bi-question-circle"></i>
-													<div>
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et 
+											<i class="ml-3 bi bi-chevron-down"></i>
+										</button>
+										<div id="collapse-2" class="collapse" aria-labelledby="heading2"
+											data-parent="#accordionMns">
+											<div class="accordion-question__wrapper">
+												<div class="accordion-question__body">
+													<div class="mb-2 accordion-question__row">
+														<i class="mr-2 mr-sm-4 bi bi-exclamation-circle"></i>
+														<div class="font-weight-bold">Ответ</div>
 													</div>
-												</div>
-												<i class="ml-3 bi bi-chevron-down"></i>
-											</button>
-											<div id="collapse-2" class="collapse" aria-labelledby="heading2" data-parent="#accordionMns">
-												<div class="accordion-question__wrapper">
-													<div class="accordion-question__body">
-														<div class="mb-2 accordion-question__row">
-															<i class="mr-2 mr-sm-4 bi bi-exclamation-circle"></i>
-															<div class="font-weight-bold">Lorem</div>
+													<div>
+														<div class="mb-3">
+															Льгота в виде налогового вычета
+															предоставляется физическим лиц, впервые
+															зарегистрированным в качестве
+															плательщика налога
+															на&nbsp;профессиональный доход.
 														</div>
 														<div>
-															<div class="mb-3">
-																Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co
-															</div>
-															<div>
-																Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum Lorem i
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="heading-3" class="accordion-question">
-											<button class="collapsed accordion-question__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
-												<div class="accordion-question__row">
-													<i class="mr-2 mr-sm-4 bi bi-question-circle"></i>
-													<div>
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commo
-													</div>
-												</div>
-												<i class="ml-3 bi bi-chevron-down"></i>
-											</button>
-											<div id="collapse-3" class="collapse" aria-labelledby="heading3" data-parent="#accordionMns">
-												<div class="accordion-question__wrapper">
-													<div class="accordion-question__body">
-														<div class="mb-2 accordion-question__row">
-															<i class="mr-2 mr-sm-4 bi bi-exclamation-circle"></i>
-															<div class="font-weight-bold">Lorem</div>
-														</div>
-														<div>
-															<div class="mb-3">Lore</div>
-															<div>
-																Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur Exce
-															</div>
-														</div>
-													</div>
-												</div>
-											</div>
-										</div>
-										<div id="heading-4" class="accordion-question">
-											<button class="collapsed accordion-question__btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">
-												<div class="accordion-question__row">
-													<i class="mr-2 mr-sm-4 bi bi-question-circle"></i>
-													<div>
-														Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut la
-													</div>
-												</div>
-												<i class="ml-3 bi bi-chevron-down"></i>
-											</button>
-											<div id="collapse-4" class="collapse" aria-labelledby="heading4" data-parent="#accordionMns">
-												<div class="accordion-question__wrapper">
-													<div class="accordion-question__body">
-														<div class="mb-2 accordion-question__row">
-															<i class="mr-2 mr-sm-4 bi bi-exclamation-circle"></i>
-															<div class="font-weight-bold">Lorem</div>
-														</div>
-														<div>
-															<div class="mb-3">
-																Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co
-															</div>
-															<ul>
-																<li>
-																	Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitatio
-																</li>
-																<li>
-																	Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercita
-																</li>
-																<li>
-																	Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad min
-																</li>
-																<li>
-																	Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod
-																</li>
-																<li>
-																	Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dol
-																</li>
-																<li>
-																	Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore
-																</li>
-															</ul>
+															В случае, если физическое лицо снято с
+															учета в качестве плательщика налога
+															на&nbsp;профессиональный доход, а
+															впоследствии вновь зарегистрировано в
+															качестве такого плательщика, остаток
+															неиспользованного налогового вычета не
+															восстанавливается. Налоговый вычет после
+															его использования повторно не
+															предоставляется.
 														</div>
 													</div>
 												</div>
 											</div>
 										</div>
 									</div>
-								</section>
-							</div>
+									<div id="heading-3" class="accordion-question">
+										<button class="collapsed accordion-question__btn" type="button"
+											data-toggle="collapse" data-target="#collapse-3" aria-expanded="false"
+											aria-controls="collapse-3">
+											<div class="accordion-question__row">
+												<i class="mr-2 mr-sm-4 bi bi-question-circle"></i>
+												<div>
+													Вправе ли индивидуальный предприниматель применять
+													налог на&nbsp;профессиональный доход в отношении
+													доходов, полученных от осуществления
+													предпринимательской деятельности?
+												</div>
+											</div>
+											<i class="ml-3 bi bi-chevron-down"></i>
+										</button>
+										<div id="collapse-3" class="collapse" aria-labelledby="heading3"
+											data-parent="#accordionMns">
+											<div class="accordion-question__wrapper">
+												<div class="accordion-question__body">
+													<div class="mb-2 accordion-question__row">
+														<i class="mr-2 mr-sm-4 bi bi-exclamation-circle"></i>
+														<div class="font-weight-bold">Ответ</div>
+													</div>
+													<div>
+														<div class="mb-3">Нет.</div>
+														<div>
+															Индивидуальный предприниматель в
+															отношении доходов, полученных от
+															осуществления предпринимательской
+															деятельности, исчисляет налог по
+															соответствующей системе налогообложения
+															и не вправе применять налог
+															на&nbsp;профессиональный доход.
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div id="heading-4" class="accordion-question">
+										<button class="collapsed accordion-question__btn" type="button"
+											data-toggle="collapse" data-target="#collapse-4" aria-expanded="false"
+											aria-controls="collapse-4">
+											<div class="accordion-question__row">
+												<i class="mr-2 mr-sm-4 bi bi-question-circle"></i>
+												<div>
+													Для каких целей используется приложение «Налог
+													на&nbsp;профессиональный доход»?
+												</div>
+											</div>
+											<i class="ml-3 bi bi-chevron-down"></i>
+										</button>
+										<div id="collapse-4" class="collapse" aria-labelledby="heading4"
+											data-parent="#accordionMns">
+											<div class="accordion-question__wrapper">
+												<div class="accordion-question__body">
+													<div class="mb-2 accordion-question__row">
+														<i class="mr-2 mr-sm-4 bi bi-exclamation-circle"></i>
+														<div class="font-weight-bold">Ответ</div>
+													</div>
+													<div>
+														<div class="mb-3">
+															Приложение «Налог
+															на&nbsp;профессиональный доход»
+															используется при применении специального
+															налогового режима «Налог
+															на&nbsp;профессиональный доход» для:
+														</div>
+														<ul>
+															<li>
+																постановки на учет в налоговом
+																органе физического лица в качестве
+																плательщика налога
+																на&nbsp;профессиональный доход;
+															</li>
+															<li>
+																снятия физического лица с учета в
+																налоговых органах в качестве
+																плательщика налога
+																на&nbsp;профессиональный доход;
+															</li>
+															<li>
+																передачи в налоговый орган сведений
+																о расчетах при применении налога
+																на&nbsp;профессиональный доход;
+															</li>
+															<li>
+																формирования записей (чеков) о
+																совершаемых расчетах;
+															</li>
+															<li>
+																корректировки ранее переданных
+																налоговому органу сведений о
+																расчетах;
+															</li>
+															<li>
+																уплаты сумм налога при применении
+																налога на&nbsp;профессиональный
+																доход.
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</section>
 						</div>
 					</div>
 				</div>
 			</div>
-		</main>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script>
-			$('.advantages-slider').slick({
-				infinite: true,
-				slidesToShow: 3,
-				slidesToScroll: 1,
-				arrows: true,
-				autoplay: false,
-				autoplaySpeed: 3000,
-				dots: false,
-				responsive: [
-					{
-						breakpoint: 1300,
-						settings: {
-							slidesToShow: 2,
-						},
+		</div>
+	</main>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+		integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script>
+		$('.advantages-slider').slick({
+			infinite: true,
+			slidesToShow: 3,
+			slidesToScroll: 1,
+			arrows: true,
+			autoplay: false,
+			autoplaySpeed: 3000,
+			dots: false,
+			responsive: [
+				{
+					breakpoint: 1300,
+					settings: {
+						slidesToShow: 2,
 					},
-					{
-						breakpoint: 700,
-						settings: {
-							slidesToShow: 1,
-						},
+				},
+				{
+					breakpoint: 700,
+					settings: {
+						slidesToShow: 1,
 					},
-				],
-			});
-		</script>
-	</body>
+				},
+			],
+		});
+	</script>
+</body>
+
 </html>

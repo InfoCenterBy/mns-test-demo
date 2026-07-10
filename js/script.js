@@ -5736,7 +5736,7 @@ ibg();
 				activeClass: 'active',
 				screenSize: 767,
 			},
-			options
+			options,
 		);
 
 		return this.each(function (i) {
@@ -5845,7 +5845,7 @@ $('#accordionMns').on('shown.bs.collapse', function (event) {
 		{
 			// scrollTop: $(event.target).parent().offset().top,
 		},
-		400
+		400,
 	);
 });
 $('.item-block__title, .accordion-btn, .accordion-question__btn').click(function () {
@@ -5853,7 +5853,7 @@ $('.item-block__title, .accordion-btn, .accordion-question__btn').click(function
 		{
 			// scrollTop: $(this).offset().top,
 		},
-		300
+		300,
 	);
 });
 
@@ -5987,6 +5987,80 @@ if (blockNotification) {
 
 	closeBlockNotification.addEventListener('click', function () {
 		blockNotification.classList.remove('open');
+	});
+}
+
+// =============  Survey modal (главная)   =================================
+// Cookie на 1 сутки, path: '/' — для всего сайта.
+// Сброс для теста: resetSurveyModal() в консоли
+
+const surveyModalEl = document.getElementById('surveyModal');
+const surveyModalCloseBtn = document.getElementById('surveyModalClose');
+const surveyModalStartBtn = document.getElementById('surveyModalStartBtn');
+const SURVEY_MODAL_COOKIE = 'mns_survey_modal_dismissed';
+const SURVEY_MODAL_COOKIE_OPTIONS = { expires: 1, path: '/' };
+
+function isSurveyModalDismissed() {
+	if (typeof Cookies === 'undefined') return false;
+	return Cookies.get(SURVEY_MODAL_COOKIE) === '1';
+}
+
+function shouldShowSurveyModal() {
+	return !isSurveyModalDismissed();
+}
+
+function markSurveyModalDismissed() {
+	if (typeof Cookies !== 'undefined') {
+		Cookies.set(SURVEY_MODAL_COOKIE, '1', SURVEY_MODAL_COOKIE_OPTIONS);
+	}
+}
+
+function hideSurveyModal() {
+	if (surveyModalEl && window.bootstrap) {
+		const instance =
+			bootstrap.Modal.getInstance(surveyModalEl) || bootstrap.Modal.getOrCreateInstance(surveyModalEl);
+		instance.hide();
+	}
+}
+
+window.resetSurveyModal = function () {
+	if (typeof Cookies !== 'undefined') {
+		Cookies.remove(SURVEY_MODAL_COOKIE, { path: '/' });
+	}
+};
+
+if (surveyModalEl) {
+	let surveyModalWasShown = false;
+
+	if (surveyModalCloseBtn) {
+		surveyModalCloseBtn.addEventListener('click', function (e) {
+			e.preventDefault();
+			hideSurveyModal();
+		});
+	}
+
+	if (surveyModalStartBtn) {
+		surveyModalStartBtn.addEventListener('click', function () {
+			markSurveyModalDismissed();
+		});
+	}
+
+	surveyModalEl.addEventListener('shown.bs.modal', function () {
+		surveyModalWasShown = true;
+	});
+
+	surveyModalEl.addEventListener('hidden.bs.modal', function () {
+		if (!surveyModalWasShown) return;
+		surveyModalWasShown = false;
+		markSurveyModalDismissed();
+	});
+
+	window.addEventListener('load', function () {
+		if (shouldShowSurveyModal() && window.bootstrap) {
+			setTimeout(function () {
+				bootstrap.Modal.getOrCreateInstance(surveyModalEl).show();
+			}, 800);
+		}
 	});
 }
 
@@ -6153,10 +6227,10 @@ document.querySelectorAll('#app-popup').forEach((el) => {
 	});
 });
 
-$('.popover-dismiss').popover({
-	trigger: 'focus',
-	animation: true,
-});
+// $('.popover-dismiss').popover({
+// 	trigger: 'focus',
+// 	animation: true,
+// });
 
 // $("#user-nav-tabs li").on('click', function(e) {
 //    var targetLink = $(e.currentTarget.children[0]).attr("href").slice(1);

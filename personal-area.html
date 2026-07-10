@@ -2,413 +2,805 @@
 <html lang="ru">
 	<head>
 		<title>Личный кабинет плательщика</title>
-		<meta charset="UTF-8">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+		<meta charset="UTF-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 		<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
 			integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous"> -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-		<link rel="stylesheet" href="css/style.min.css">
-		<link rel="shortcut icon" href="favicon.ico">
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+			integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+		<link rel="stylesheet" href="css/style.min.css" />
+		<link rel="shortcut icon" href="favicon.ico" />
 		<!-- <meta name="robots" content="noindex, nofollow"> -->
 		<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	</head>
+
 	<body>
 		<div class="wrapper">
 			<header>
-			  <div class="header-top py-3 position-relative">
-			    <div class="container">
-			      <div class="d-flex justify-content-between align-items-center position-relative">
-			        <div class="d-flex align-items-center">
-			          <div class="header-special">
-			            <!-- <button class="header-special__button mr-2 mr-sm-3 mr-md-5 d-flex align-items-center _btn-toggle"><i class="bi bi-collection-play h2 h2_white pr-2"></i><i class="bi bi-chevron-down"></i></button> -->
-			            <div class="header-special__wrapper container hidden-block">
-			              <div class="d-flex align-items-center mb-3">
-			                <div class="h2 mr-auto">Lorem ipsum dolor s</div>
-			                <button class="header-special__btn-close btn-accord ml-2 ml-sm-4">
-			                  <i class="bi bi-x"></i>
-			                </button>
-			              </div>
-			              <nav class="nav nav-tab header-special__nav-tab" id="nav-tab" role="tablist">
-			                <a href="#nav-tv" class="header-special__nav-link active" id="nav-tv-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-tv" aria-selected="true">Lorem ipsum</a>
-			                <a href="#nav-photo" class="header-special__nav-link" id="nav-photo-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-photo" aria-selected="false">Lore</a>
-			                <a href="#nav-advertising" class="header-special__nav-link" id="nav-advertising-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-advertising" aria-selected="false">Lorem i</a>
-			                <a href="#nav-video" class="header-special__nav-link" id="nav-video-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-video" aria-selected="false">Lorem</a>
-			                <a href="#nav-print" class="header-special__nav-link" id="nav-print-tab" data-toggle="tab" type="button" role="tab" aria-controls="nav-print" aria-selected="false">Lorem ipsum dolo</a>
-			              </nav>
-			              <div class="tab-content" id="nav-tabContent">
-			                <div class="tab-pane fade show active" id="nav-tv" role="tabpanel" aria-labelledby="nav-tv-tab">
-			                  <div class="row mt-n4">
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <iframe class="iframe-lazy-video" data-src="https://www.youtube.com/embed/YixlIfNjMso" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut</a>
-			                    </div>
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <iframe class="iframe-lazy-video" data-src="https://www.youtube.com/embed/zAdisSOre6I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipi </a>
-			                    </div>
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <iframe class="iframe-lazy-video" data-src="https://www.youtube.com/embed/bdi6BSUzjJA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation u
-			                      </a>
-			                    </div>
-			                  </div>
-			                  <div class="mt-4 text-right">
-			                    <a href="#" class="h5 link link_black">Lorem ips<i class="bi bi-arrow-right ml-2"></i></a>
-			                  </div>
-			                </div>
-			                <div class="tab-pane fade" id="nav-photo" role="tabpanel" aria-labelledby="nav-photo-tab">
-			                  <div class="row mt-n4">
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <img src="./img/photos/01.jpg" alt>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et</a>
-			                    </div>
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <img src="./img/photos/02.jpg" alt>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut</a>
-			                    </div>
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <img src="./img/photos/03.jpg" alt>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris
-			                      </a>
-			                    </div>
-			                  </div>
-			                  <div class="mt-4 text-right">
-			                    <a href="#" class="h5 link link_black">Lorem ip<i class="bi bi-arrow-right ml-2"></i></a>
-			                  </div>
-			                </div>
-			                <div class="tab-pane fade" id="nav-advertising" role="tabpanel" aria-labelledby="nav-advertising-tab">
-			                  <div class="row mt-n4">
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <iframe class="iframe-lazy-video" data-src="https://www.youtube.com/embed/MZaMFvY0tVI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetu </a>
-			                    </div>
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <iframe class="iframe-lazy-video" data-src="https://www.youtube.com/embed/ZZXVzrVpm3Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolor</a>
-			                    </div>
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <iframe class="iframe-lazy-video" data-src="https://www.youtube.com/embed/WZAXKVukkHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit  </a>
-			                    </div>
-			                  </div>
-			                  <div class="mt-4 text-right">
-			                    <a href="#" class="h5 link link_black">Lorem ips<i class="bi bi-arrow-right ml-2"></i></a>
-			                  </div>
-			                </div>
-			                <div class="tab-pane fade" id="nav-video" role="tabpanel" aria-labelledby="nav-video-tab">
-			                  <div class="row mt-n4">
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <iframe class="iframe-lazy-video" data-src="https://www.youtube.com/embed/dYbWYSb_w5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore</a>
-			                    </div>
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <iframe class="iframe-lazy-video" data-src="https://www.youtube.com/embed/qcQ9tscO13c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut</a>
-			                    </div>
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <iframe class="iframe-lazy-video" data-src="https://www.youtube.com/embed/hLoVBZex9P0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			                      </div>
-			                      <div class="mb-3">Lorem ipsu</div>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labor</a>
-			                    </div>
-			                  </div>
-			                  <div class="mt-4 text-right">
-			                    <a href="#" class="h5 link link_black">Lorem ips<i class="bi bi-arrow-right ml-2"></i></a>
-			                  </div>
-			                </div>
-			                <div class="tab-pane fade" id="nav-print" role="tabpanel" aria-labelledby="nav-print-tab">
-			                  <div class="row mt-n4">
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <img class="_ibg" src="./img/plug/01.jpg" alt>
-			                      </div>
-			                      <a href="#" class="header-special__title mb-3">Lorem ipsum dol</a>
-			                      <a href="#" class="header-special__title mb-3">Lorem ipsum dolor sit amet consectetur adipi</a>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut la</a>
-			                    </div>
-			                    <div class="col-md-4 px-sm-2 pt-4">
-			                      <div class="header-special__media mb-3">
-			                        <img class="_ibg" src="./img/plug/02.jpg" alt>
-			                      </div>
-			                      <a href="#" class="header-special__title mb-3 mb-3">Lorem ipsum dolor sit amet </a>
-			                      <a href="#" class="header-special__title mb-3 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod t</a>
-			                      <a href="#" class="header-special__title">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut la</a>
-			                    </div>
-			                  </div>
-			                  <div class="mt-4 text-right">
-			                    <a href="#" class="h5 link link_black">Lorem ip<i class="bi bi-arrow-right ml-2"></i></a>
-			                  </div>
-			                </div>
-			              </div>
-			            </div>
-			          </div>
-			          <div class="inspectorates">
-			            <button class="inspectorates__btn d-md-flex align-items-center _btn-toggle">
-			              <div class="inspectorates__title mr-auto">Lorem ipsum dolor s</div>
-			              <i class="bi bi-chevron-down d-none d-md-block"></i>
-			              <i class="bi bi-geo-alt d-block d-md-none"></i>
-			            </button>
-			            <ul class="inspectorates__list hidden-block">
-			              <li><a href="search-inspectorate.html" class="inspectorates__link">Lorem ipsum dol</a></li>
-			              <li><a href="minsk.html" class="inspectorates__link">Lorem ipsum dolor sit</a></li>
-			              <li><a href="minsk-region.html" class="inspectorates__link">Lorem ipsum dolor sit a</a></li>
-			              <li><a href="brest.html" class="inspectorates__link">Lorem ipsum dolor sit ame</a></li>
-			              <li><a href="vitebsk.html" class="inspectorates__link">Lorem ipsum dolor sit ame</a></li>
-			              <li><a href="gomel.html" class="inspectorates__link">Lorem ipsum dolor sit amet</a></li>
-			              <li><a href="hrodno.html" class="inspectorates__link">Lorem ipsum dolor sit amet </a></li>
-			              <li><a href="mogilev.html" class="inspectorates__link">Lorem ipsum dolor sit amet </a></li>
-			            </ul>
-			          </div>
-			        </div>
-			        <div class="d-flex align-items-center">
-			          <a href="#" class="map-site-header btn-accord btn-accord_white"><i class="bi-diagram-3"></i></a>
-			          <div class="dropdown phone-header">
-			            <button type="button" class="phone-header__btn btn-accord btn-accord_white" id="dropdowmPhone" data-toggle="dropdown" aria-expanded="false">
-			              <i class="bi-telephone"></i>
-			            </button>
-			            <ul class="dropdown-menu phone-header__list" aria-labelledby="dropdowmPhone">
-			              <li>
-			                <a href="tel:189"><i class="bi-telephone mr-2"></i>Lorem ipsum dolor sit a</a>
-			              </li>
-			              <li>
-			                <a href="tel:80172297979"><i class="bi-telephone mr-2"></i>Lorem ipsum dol</a>
-			              </li>
-			            </ul>
-			          </div>
-			          <a href="#" class="header-handicapped btn-accord btn-accord_white bvi-open bvi-icon bvi-eye bvi-2x" title="Версия сайта для слабовидящих"><i class="bi bi-eye"></i></a>
-			          <form class="header-search">
-			            <input type="text" placeholder="Искать здесь" class="header-search__input">
-			            <div class="header-search__button btn-accord btn-accord_white"><i class="bi bi-search position-absolute top-0 end-0"></i></div>
-			          </form>
-			          <div class="header-language">
-			            <div class="language-select">
-			              <div class="language-select__item _active" data-lang="ru">Lo</div>
-			              <div class="language-select__item" data-lang="en">Lo</div>
-			              <div class="language-select__item" data-lang="by">Lo</div>
-			            </div>
-			          </div>
-			          <div class="nav-header">
-			            <button class="nav-header__burger d-block _btn-toggle">
-			              <span></span>
-			              <span></span>
-			              <span></span>
-			            </button>
-			            <nav class="nav-header__nav hidden-block">
-			              <ul class="nav-header__list">
-			                <li class="nav-header__tablet-link"><a href="about.html" class="link-nav link-nav_black">Lorem ipsum dolor sit amet consectetur</a></li>
-			                <li class="nav-header__tablet-link">
-			                  <a href="forms-of-documents.html" class="link-nav link-nav_black">Lorem ipsum dolo</a>
-			                </li>
-			                <li class="nav-header__tablet-link">
-			                  <a href="administrative-procedures.html" class="link-nav link-nav_black">Lorem ipsum dolor sit amet consectetur adipisicing</a>
-			                </li>
-			                <li class="nav-header__tablet-link">
-			                  <a href="electronic-appeal.html" class="link-nav link-nav_black">Lorem ipsum dolor sit</a>
-			                </li>
-			                <li><a href="anti-corruption-commission.html" class="link-nav link-nav_black">Lorem ipsum dolor sit amet consectetur adipisicing elit sed d</a></li>
-			                <li><a href="404.html" class="link-nav link-nav_black">Lorem ipsum dolor sit ame</a></li>
-			                <li><a href="tax-control.html" class="link-nav link-nav_black">Lorem ipsum dolor </a></li>
-			                <li><a href="international-cooperation.html" class="link-nav link-nav_black">Lorem ipsum dolor sit amet consectetur adipisicing e</a></li>
-			                <li><a href="eurasian-economic-union.html" class="link-nav link-nav_black">Lorem ipsum dolor sit amet consectetur adipisicing eli</a></li>
-			                <li><a href="analytics.html" class="link-nav link-nav_black">Lorem ips</a></li>
-			                <li><a href="software.html" class="link-nav link-nav_black">Lorem ipsum dolor sit a</a></li>
-			                <li><a href="tax-code.html" class="link-nav link-nav_black">Lorem ipsum dolo</a></li>
-			                <li><a href="vacancies.html" class="link-nav link-nav_black">Lorem ip</a></li>
-			                <li><a href="official-publishers.html" class="link-nav link-nav_black">Lorem ipsum dolor s</a></li>
-			              </ul>
-			            </nav>
-			          </div>
-			        </div>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="header-bottom">
-			    <div class="container">
-			      <div class="d-flex justify-content-between align-items-center position-relative">
-			        <a href="index.html" class="d-flex align-items-center my-3">
-			          <img class="logo" src="./img/coat-of-arms.png" alt="Герб">
-			          <img class="logo" src="./img/heraldry.png" alt="Лого">
-			          <div class="header-bottom__name">
-			            <div class="header-bottom__subtitle">Lorem ipsum dolo</div>
-			            <div class="header-bottom__title">Lorem ipsum dolor sit amet consectetur adipisicing e</div>
-			          </div>
-			        </a>
-			        <ul class="menu mb-0 mr-n2 p-0">
-			          <li>
-			            <a href="about.html" class="menu__link h6 p-2">Lorem ipsum do</a>
-			            <div class="submenu">
-			              <div class="submenu__body row">
-			                <div class="col-4 h3 h3_white">Lorem ipsum do</div>
-			                <ul class="col-8 row">
-			                  <li class="col-6"><a href="about.html#management" class="link-nav">Lorem ipsum</a></li>
-			                  <li class="col-6"><a href="about.html#contacts" class="link-nav">Lorem ip</a></li>
-			                  <li class="col-6"><a href="general-information.html" class="link-nav">Lorem ipsum dolor sit amet consectetur adipisicing elit sed </a></li>
-			                  <li class="col-6"><a href="about.html" class="link-nav">Lorem ipsum dolor sit amet </a></li>
-			                  <li class="col-6"><a href="structura.html" class="link-nav">Lorem ipsum d</a></li>
-			                  <li class="col-6"><a href="about.html" class="link-nav">Lorem ipsum dolor sit amet c</a></li>
-			                  <li class="col-6"><a href="about.html" class="link-nav">Lorem ipsum dolor sit </a></li>
-			                  <li class="col-6"><a href="about.html#strategy" class="link-nav">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do</a></li>
-			                  <li class="col-6"><a href="about.html" class="link-nav">Lorem ipsum dolor sit</a></li>
-			                  <li class="col-6"><a href="about.html#position" class="link-nav">Lorem ipsum dol</a></li>
-			                  <li class="col-6"><a href="collegiums.html" class="link-nav">Lorem ipsum dolor sit amet consectet</a>
-			                  </li>
-			                  <li class="col-6"><a href="about.html#security" class="link-nav">Lorem ipsum </a></li>
-			                  <li class="col-6"><a href="about.html" class="link-nav">Lorem ipsum dolor sit</a></li>
-			                </ul>
-			              </div>
-			            </div>
-			          </li>
-			          <li>
-			            <a href="forms-of-documents.html" class="menu__link h6 p-2">Lorem ipsum dolo</a>
-			            <div class="submenu">
-			              <div class="submenu__body row">
-			                <div class="col-4 h3 h3_white">Lorem ipsum dolor sit amet consect</div>
-			                <ul class="col-8 row">
-			                  <li class="col-6">
-			                    <a href="forms-of-documents.html#entrepreneurs" class="link-nav">Lorem ipsum dolor sit amet consectetur adipisicing elit sed d</a>
-			                  </li>
-			                  <li class="col-6"><a href="forms-of-documents.html#organizations" class="link-nav">Lorem ipsum dol</a>
-			                  </li>
-			                  <li class="col-6"><a href="forms-of-documents.html#entrepreneurs" class="link-nav">Lorem ipsum dolor sit amet consectetur adipi</a></li>
-			                </ul>
-			              </div>
-			            </div>
-			          </li>
-			          <li>
-			            <a href="administrative-procedures.html" class="menu__link h6 p-2">Lorem ipsum dolor sit amet</a>
-			          </li>
-			          <li>
-			            <a href="electronic-appeal.html" class="menu__link h6 p-2">Lorem ipsum dolor sit</a>
-			          </li>
-			        </ul>
-			      </div>
-			    </div>
-			  </div>
-			  <div class="header-marquee">
-			    <marquee scrolldelay="15" scrollamount="2" truespeed behavior="scroll" direction="left" onmouseout="this.start();document.getElementById('scrollText').scrollDelay='15'" onmouseover="this.stop();" id="scrollText">
+				<div class="header-top py-3 position-relative">
+					<div class="container">
+						<div class="d-flex justify-content-between align-items-center position-relative">
+							<div class="d-flex align-items-center">
+								<div class="header-special">
+									<!-- <button class="header-special__button mr-2 mr-sm-3 mr-md-5 d-flex align-items-center _btn-toggle"><i class="bi bi-collection-play h2 h2_white pr-2"></i><i class="bi bi-chevron-down"></i></button> -->
+									<div class="header-special__wrapper container hidden-block">
+										<div class="d-flex align-items-center mb-3">
+											<div class="h2 mr-auto">Специальные проекты</div>
+											<button class="header-special__btn-close btn-accord ml-2 ml-sm-4">
+												<i class="bi bi-x"></i>
+											</button>
+										</div>
+										<nav class="nav nav-tab header-special__nav-tab" id="nav-tab" role="tablist">
+											<a
+												href="#nav-tv"
+												class="header-special__nav-link active"
+												id="nav-tv-tab"
+												data-toggle="tab"
+												type="button"
+												role="tab"
+												aria-controls="nav-tv"
+												aria-selected="true"
+												>Телепроекты</a
+											>
+											<a
+												href="#nav-photo"
+												class="header-special__nav-link"
+												id="nav-photo-tab"
+												data-toggle="tab"
+												type="button"
+												role="tab"
+												aria-controls="nav-photo"
+												aria-selected="false"
+												>Фото</a
+											>
+											<a
+												href="#nav-advertising"
+												class="header-special__nav-link"
+												id="nav-advertising-tab"
+												data-toggle="tab"
+												type="button"
+												role="tab"
+												aria-controls="nav-advertising"
+												aria-selected="false"
+												>Реклама</a
+											>
+											<a
+												href="#nav-video"
+												class="header-special__nav-link"
+												id="nav-video-tab"
+												data-toggle="tab"
+												type="button"
+												role="tab"
+												aria-controls="nav-video"
+												aria-selected="false"
+												>Видео</a
+											>
+											<a
+												href="#nav-print"
+												class="header-special__nav-link"
+												id="nav-print-tab"
+												data-toggle="tab"
+												type="button"
+												role="tab"
+												aria-controls="nav-print"
+												aria-selected="false"
+												>Печатные издания</a
+											>
+										</nav>
+										<div class="tab-content" id="nav-tabContent">
+											<div
+												class="tab-pane fade show active"
+												id="nav-tv"
+												role="tabpanel"
+												aria-labelledby="nav-tv-tab"
+											>
+												<div class="row mt-n4">
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<iframe
+																class="iframe-lazy-video"
+																data-src="https://www.youtube.com/embed/YixlIfNjMso"
+																title="YouTube video player"
+																frameborder="0"
+																allow="
+																	accelerometer;
+																	autoplay;
+																	clipboard-write;
+																	encrypted-media;
+																	gyroscope;
+																	picture-in-picture;
+																"
+																allowfullscreen
+															></iframe>
+														</div>
+														<div class="mb-3">13.11.2020</div>
+														<a href="#" class="header-special__title"
+															>Онлайн-выставка детских работ: "Налоги: вчера, сегодня,
+															завтра"</a
+														>
+													</div>
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<iframe
+																class="iframe-lazy-video"
+																data-src="https://www.youtube.com/embed/zAdisSOre6I"
+																title="YouTube video player"
+																frameborder="0"
+																allow="
+																	accelerometer;
+																	autoplay;
+																	clipboard-write;
+																	encrypted-media;
+																	gyroscope;
+																	picture-in-picture;
+																"
+																allowfullscreen
+															></iframe>
+														</div>
+														<div class="mb-3">10.07.2020</div>
+														<a href="#" class="header-special__title"
+															>30 лет налоговым органам Республики Беларусь
+														</a>
+													</div>
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<iframe
+																class="iframe-lazy-video"
+																data-src="https://www.youtube.com/embed/bdi6BSUzjJA"
+																title="YouTube video player"
+																frameborder="0"
+																allow="
+																	accelerometer;
+																	autoplay;
+																	clipboard-write;
+																	encrypted-media;
+																	gyroscope;
+																	picture-in-picture;
+																"
+																allowfullscreen
+															></iframe>
+														</div>
+														<div class="mb-3">13.07.2020</div>
+														<a href="#" class="header-special__title"
+															>Социальная стабильность и защита прав государства и
+															налогоплательщиков. Работники налоговых органов отмечают
+															праздник
+														</a>
+													</div>
+												</div>
+												<div class="mt-4 text-right">
+													<a href="#" class="h5 link link_black"
+														>Все видео<i class="bi bi-arrow-right ml-2"></i
+													></a>
+												</div>
+											</div>
+											<div
+												class="tab-pane fade"
+												id="nav-photo"
+												role="tabpanel"
+												aria-labelledby="nav-photo-tab"
+											>
+												<div class="row mt-n4">
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<img src="./img/photos/01.jpg" alt="" />
+														</div>
+														<div class="mb-3">12.11.2020</div>
+														<a href="#" class="header-special__title"
+															>В МНС Республики Беларусь состоялась встреча с
+															представителями ФНС России</a
+														>
+													</div>
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<img src="./img/photos/02.jpg" alt="" />
+														</div>
+														<div class="mb-3">24.08.2020</div>
+														<a href="#" class="header-special__title"
+															>Министерстве по налогам и сборам квалификационный аттестат
+															вручен 500-му налоговому консультанту</a
+														>
+													</div>
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<img src="./img/photos/03.jpg" alt="" />
+														</div>
+														<div class="mb-3">07.03.2020</div>
+														<a href="#" class="header-special__title"
+															>1 сентября 2020 года заместитель Министра по налогам и
+															сборам Шевченко Светлана Александровна посетила ГУО
+															«Гимназия № 24 г.Минска»
+														</a>
+													</div>
+												</div>
+												<div class="mt-4 text-right">
+													<a href="#" class="h5 link link_black"
+														>Все фото<i class="bi bi-arrow-right ml-2"></i
+													></a>
+												</div>
+											</div>
+											<div
+												class="tab-pane fade"
+												id="nav-advertising"
+												role="tabpanel"
+												aria-labelledby="nav-advertising-tab"
+											>
+												<div class="row mt-n4">
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<iframe
+																class="iframe-lazy-video"
+																data-src="https://www.youtube.com/embed/MZaMFvY0tVI"
+																title="YouTube video player"
+																frameborder="0"
+																allow="
+																	accelerometer;
+																	autoplay;
+																	clipboard-write;
+																	encrypted-media;
+																	gyroscope;
+																	picture-in-picture;
+																"
+																allowfullscreen
+															></iframe>
+														</div>
+														<div class="mb-3">13.11.2020</div>
+														<a href="#" class="header-special__title"
+															>Включите таксометр - получите оплату!
+														</a>
+													</div>
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<iframe
+																class="iframe-lazy-video"
+																data-src="https://www.youtube.com/embed/ZZXVzrVpm3Y"
+																title="YouTube video player"
+																frameborder="0"
+																allow="
+																	accelerometer;
+																	autoplay;
+																	clipboard-write;
+																	encrypted-media;
+																	gyroscope;
+																	picture-in-picture;
+																"
+																allowfullscreen
+															></iframe>
+														</div>
+														<div class="mb-3">24.08.2020</div>
+														<a href="#" class="header-special__title"
+															>Контрафакт. Алкогольная продукция неизвестного
+															происхождения смертельно опасна!</a
+														>
+													</div>
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<iframe
+																class="iframe-lazy-video"
+																data-src="https://www.youtube.com/embed/WZAXKVukkHw"
+																title="YouTube video player"
+																frameborder="0"
+																allow="
+																	accelerometer;
+																	autoplay;
+																	clipboard-write;
+																	encrypted-media;
+																	gyroscope;
+																	picture-in-picture;
+																"
+																allowfullscreen
+															></iframe>
+														</div>
+														<div class="mb-3">07.03.2020</div>
+														<a href="#" class="header-special__title"
+															>Возьмите кассовый чек!
+														</a>
+													</div>
+												</div>
+												<div class="mt-4 text-right">
+													<a href="#" class="h5 link link_black"
+														>Все видео<i class="bi bi-arrow-right ml-2"></i
+													></a>
+												</div>
+											</div>
+											<div
+												class="tab-pane fade"
+												id="nav-video"
+												role="tabpanel"
+												aria-labelledby="nav-video-tab"
+											>
+												<div class="row mt-n4">
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<iframe
+																class="iframe-lazy-video"
+																data-src="https://www.youtube.com/embed/dYbWYSb_w5c"
+																title="YouTube video player"
+																frameborder="0"
+																allow="
+																	accelerometer;
+																	autoplay;
+																	clipboard-write;
+																	encrypted-media;
+																	gyroscope;
+																	picture-in-picture;
+																"
+																allowfullscreen
+															></iframe>
+														</div>
+														<div class="mb-3">25.02.2021</div>
+														<a href="#" class="header-special__title"
+															>Проект "Просто о налогах". Транспортный налог для компаний:
+															платежи не за горами</a
+														>
+													</div>
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<iframe
+																class="iframe-lazy-video"
+																data-src="https://www.youtube.com/embed/qcQ9tscO13c"
+																title="YouTube video player"
+																frameborder="0"
+																allow="
+																	accelerometer;
+																	autoplay;
+																	clipboard-write;
+																	encrypted-media;
+																	gyroscope;
+																	picture-in-picture;
+																"
+																allowfullscreen
+															></iframe>
+														</div>
+														<div class="mb-3">24.02.2021</div>
+														<a href="#" class="header-special__title"
+															>Проект "Просто о налогах". Налоговые вычеты: а куда
+															обращаться?</a
+														>
+													</div>
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<iframe
+																class="iframe-lazy-video"
+																data-src="https://www.youtube.com/embed/hLoVBZex9P0"
+																title="YouTube video player"
+																frameborder="0"
+																allow="
+																	accelerometer;
+																	autoplay;
+																	clipboard-write;
+																	encrypted-media;
+																	gyroscope;
+																	picture-in-picture;
+																"
+																allowfullscreen
+															></iframe>
+														</div>
+														<div class="mb-3">19.02.2021</div>
+														<a href="#" class="header-special__title"
+															>Проект "Просто о налогах". Транспортный налог.
+															Нестандартные ситуации</a
+														>
+													</div>
+												</div>
+												<div class="mt-4 text-right">
+													<a href="#" class="h5 link link_black"
+														>Все видео<i class="bi bi-arrow-right ml-2"></i
+													></a>
+												</div>
+											</div>
+											<div
+												class="tab-pane fade"
+												id="nav-print"
+												role="tabpanel"
+												aria-labelledby="nav-print-tab"
+											>
+												<div class="row mt-n4">
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<img class="_ibg" src="./img/plug/01.jpg" alt="" />
+														</div>
+														<a href="#" class="header-special__title mb-3"
+															>Налоги Беларуси</a
+														>
+														<a href="#" class="header-special__title mb-3"
+															>Оформить подписку на 2-е полугодие 2021 года</a
+														>
+														<a href="#" class="header-special__title"
+															>Оформить подписку на 2-е полугодие 2021 года на электронный
+															журнал</a
+														>
+													</div>
+													<div class="col-md-4 px-sm-2 pt-4">
+														<div class="header-special__media mb-3">
+															<img class="_ibg" src="./img/plug/02.jpg" alt="" />
+														</div>
+														<a href="#" class="header-special__title mb-3 mb-3"
+															>Консультант предпринимателя</a
+														>
+														<a href="#" class="header-special__title mb-3 mb-3"
+															>Оформить подписку на 2-е полугодие 2021 года</a
+														>
+														<a href="#" class="header-special__title"
+															>Оформить подписку на 2-е полугодие 2021 года на электронный
+															журнал</a
+														>
+													</div>
+												</div>
+												<div class="mt-4 text-right">
+													<a href="#" class="h5 link link_black"
+														>Подписка<i class="bi bi-arrow-right ml-2"></i
+													></a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="inspectorates">
+									<button class="inspectorates__btn d-md-flex align-items-center _btn-toggle">
+										<div class="inspectorates__title mr-auto">Налоговые инспекции</div>
+										<i class="bi bi-chevron-down d-none d-md-block"></i>
+										<i class="bi bi-geo-alt d-block d-md-none"></i>
+									</button>
+									<ul class="inspectorates__list hidden-block">
+										<li>
+											<a href="search-inspectorate.html" class="inspectorates__link"
+												>Найти инспекцию</a
+											>
+										</li>
+										<li><a href="minsk.html" class="inspectorates__link">ИМНС по городу Минску</a></li>
+										<li>
+											<a href="minsk-region.html" class="inspectorates__link"
+												>ИМНС по Минской области</a
+											>
+										</li>
+										<li>
+											<a href="brest.html" class="inspectorates__link">ИМНС по Брестской области</a>
+										</li>
+										<li>
+											<a href="vitebsk.html" class="inspectorates__link">ИМНС по Витебской области</a>
+										</li>
+										<li>
+											<a href="gomel.html" class="inspectorates__link">ИМНС по Гомельской области</a>
+										</li>
+										<li>
+											<a href="hrodno.html" class="inspectorates__link"
+												>ИМНС по Гродненской области</a
+											>
+										</li>
+										<li>
+											<a href="mogilev.html" class="inspectorates__link"
+												>ИМНС по Могилёвской области</a
+											>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="d-flex align-items-center">
+								<a href="#" class="map-site-header btn-accord btn-accord_white"
+									><i class="bi-diagram-3"></i
+								></a>
+								<div class="dropdown phone-header">
+									<button
+										type="button"
+										class="phone-header__btn btn-accord btn-accord_white"
+										id="dropdowmPhone"
+										data-toggle="dropdown"
+										aria-expanded="false"
+									>
+										<i class="bi-telephone"></i>
+									</button>
+									<ul class="dropdown-menu phone-header__list" aria-labelledby="dropdowmPhone">
+										<li>
+											<a href="tel:189"><i class="bi-telephone mr-2"></i>189 (стационарная сеть)</a>
+										</li>
+										<li>
+											<a href="tel:80172297979"><i class="bi-telephone mr-2"></i>(017) 229-79-79</a>
+										</li>
+									</ul>
+								</div>
+								<a
+									href="#"
+									class="header-handicapped btn-accord btn-accord_white bvi-open bvi-icon bvi-eye bvi-2x"
+									title="Версия сайта для слабовидящих"
+									><i class="bi bi-eye"></i
+								></a>
+								<form class="header-search">
+									<input type="text" placeholder="Искать здесь" class="header-search__input" />
+									<div class="header-search__button btn-accord btn-accord_white">
+										<i class="bi bi-search position-absolute top-0 end-0"></i>
+									</div>
+								</form>
+								<div class="header-language">
+									<div class="language-select">
+										<div class="language-select__item _active" data-lang="ru">RU</div>
+										<div class="language-select__item" data-lang="en">EN</div>
+										<div class="language-select__item" data-lang="by">BY</div>
+									</div>
+								</div>
+								<div class="nav-header">
+									<button class="nav-header__burger d-block _btn-toggle">
+										<span></span>
+										<span></span>
+										<span></span>
+									</button>
+									<nav class="nav-header__nav hidden-block">
+										<ul class="nav-header__list">
+											<li class="nav-header__tablet-link">
+												<a href="about.html" class="link-nav link-nav_black">О Министерстве</a>
+											</li>
+											<li class="nav-header__tablet-link">
+												<a href="forms-of-documents.html" class="link-nav link-nav_black"
+													>Формы деклараций</a
+												>
+											</li>
+											<li class="nav-header__tablet-link">
+												<a href="administrative-procedures.html" class="link-nav link-nav_black"
+													>Административные процедуры</a
+												>
+											</li>
+											<li class="nav-header__tablet-link">
+												<a href="electronic-appeal.html" class="link-nav link-nav_black"
+													>Электронное обращение</a
+												>
+											</li>
+											<li>
+												<a href="anti-corruption-commission.html" class="link-nav link-nav_black"
+													>Комиссия по противодействию коррупции</a
+												>
+											</li>
+											<li>
+												<a href="404.html" class="link-nav link-nav_black"
+													>Обсуждение законопроектов</a
+												>
+											</li>
+											<li>
+												<a href="tax-control.html" class="link-nav link-nav_black"
+													>Налоговый контроль</a
+												>
+											</li>
+											<li>
+												<a href="international-cooperation.html" class="link-nav link-nav_black"
+													>Международное сотрудничество</a
+												>
+											</li>
+											<li>
+												<a href="eurasian-economic-union.html" class="link-nav link-nav_black"
+													>Евразийский экономический союз</a
+												>
+											</li>
+											<li><a href="analytics.html" class="link-nav link-nav_black">Аналитика</a></li>
+											<li>
+												<a href="software.html" class="link-nav link-nav_black"
+													>Программное обеспечение</a
+												>
+											</li>
+											<li>
+												<a href="tax-code.html" class="link-nav link-nav_black"
+													>Налоговый кодекс</a
+												>
+											</li>
+											<li><a href="vacancies.html" class="link-nav link-nav_black">Вакансии</a></li>
+											<li>
+												<a href="official-publishers.html" class="link-nav link-nav_black"
+													>Официальные издания</a
+												>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="header-bottom">
+					<div class="container">
+						<div class="d-flex justify-content-between align-items-center position-relative">
+							<a href="index.html" class="d-flex align-items-center my-3">
+								<img class="logo" src="./img/coat-of-arms.png" alt="Герб" />
+								<img class="logo" src="./img/heraldry.png" alt="Лого" />
+								<div class="header-bottom__name">
+									<div class="header-bottom__subtitle">Официальный сайт</div>
+									<div class="header-bottom__title">
+										Министерство по налогам и сборам Республики Беларусь
+									</div>
+								</div>
+							</a>
+							<ul class="menu mb-0 mr-n2 p-0">
+								<li>
+									<a href="about.html" class="menu__link h6 p-2">О Министерстве</a>
+									<div class="submenu">
+										<div class="submenu__body row">
+											<div class="col-4 h3 h3_white">О Министерстве</div>
+											<ul class="col-8 row">
+												<li class="col-6">
+													<a href="about.html#management" class="link-nav">Руководство</a>
+												</li>
+												<li class="col-6">
+													<a href="about.html#contacts" class="link-nav">Контакты</a>
+												</li>
+												<li class="col-6">
+													<a href="general-information.html" class="link-nav"
+														>Oбщие сведения о налоговых органах</a
+													>
+												</li>
+												<li class="col-6">
+													<a href="about.html" class="link-nav">Структура налоговых органов</a>
+												</li>
+												<li class="col-6">
+													<a href="structura.html" class="link-nav">Структура МНС</a>
+												</li>
+												<li class="col-6">
+													<a href="about.html" class="link-nav">Геральдика налоговых органов</a>
+												</li>
+												<li class="col-6">
+													<a href="about.html" class="link-nav">Стандарты обслуживания</a>
+												</li>
+												<li class="col-6">
+													<a href="about.html#strategy" class="link-nav"
+														>Стратегия развития налоговых органов</a
+													>
+												</li>
+												<li class="col-6">
+													<a href="about.html" class="link-nav">Консультативный совет</a>
+												</li>
+												<li class="col-6">
+													<a href="about.html#position" class="link-nav">Положение о МНС</a>
+												</li>
+												<li class="col-6">
+													<a href="collegiums.html" class="link-nav"
+														>Порядок проведения открытых коллегий</a
+													>
+												</li>
+												<li class="col-6">
+													<a href="about.html#security" class="link-nav">Охрана труда</a>
+												</li>
+												<li class="col-6">
+													<a href="about.html" class="link-nav">Взаимодействие со СМИ</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="forms-of-documents.html" class="menu__link h6 p-2">Формы деклараций</a>
+									<div class="submenu">
+										<div class="submenu__body row">
+											<div class="col-4 h3 h3_white">Формы деклараций и иных документов</div>
+											<ul class="col-8 row">
+												<li class="col-6">
+													<a href="forms-of-documents.html#entrepreneurs" class="link-nav"
+														>Для индивидуальных предпринимателей</a
+													>
+												</li>
+												<li class="col-6">
+													<a href="forms-of-documents.html#organizations" class="link-nav"
+														>Для организаций</a
+													>
+												</li>
+												<li class="col-6">
+													<a href="forms-of-documents.html#entrepreneurs" class="link-nav"
+														>Для физических лиц</a
+													>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li>
+									<a href="administrative-procedures.html" class="menu__link h6 p-2"
+										>Административные процедуры</a
+									>
+								</li>
+								<li>
+									<a href="electronic-appeal.html" class="menu__link h6 p-2">Электронное обращение</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="header-marquee">
+			    <marquee scrolldelay="15" scrollamount="2" truespeed behavior="scroll" direction="left"
+			      onmouseout="this.start();document.getElementById('scrollText').scrollDelay='15'" onmouseover="this.stop();"
+			      id="scrollText">
 			      <ul class="d-flex">
-			        <li><a class="link" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor </a>
+			        <li><a class="link" href="#">Налоговое консультирование индивидуальных предпринимателей и физических лиц!!!</a>
 			        </li>
-			        <li><a class="link" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tem</a></li>
-			        <li><a class="link" href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labo</a></li>
+			        <li><a class="link" href="#">О применении норм Указа Президента Республики Беларусь от 12.05.2020 № 160</a></li>
+			        <li><a class="link" href="#">Сведения для заполнения платёжных документов в республиканский и местный
+			            бюджеты</a></li>
 			      </ul>
 			    </marquee>
-			  </div>
-			  <div class="header__overlay"></div>
+			  </div> -->
+				<div class="header__overlay"></div>
 			</header>
+
 			<main class="page page__decor">
 				<div class="content">
 					<nav aria-label="breadcrumb">
-						<div class="container">
+						<div class='container'>
 							<ol class="breadcrumb">
-								<li class="breadcrumb-item mr-3"><a href="index.html">Lorem i<i class="bi-chevron-right ml-2"></i></a></li>
-								<li class="breadcrumb-item active" aria-current="page">Lorem ipsum dolor sit amet</li>
+								<li class="breadcrumb-item mr-3"><a href="index.html">Главная<i class="bi-chevron-right ml-2"></i></a></li>
+								<li class="breadcrumb-item active" aria-current="page">Личный кабинет плательщика</li>
 							</ol>
 						</div>
 					 </nav>
 					<div class="item-content">
-						<div class="container">
+						<div class='container'>
 							<div class="row mx-n2 mt-n3">
 								<aside class="col-lg-4 order-lg-2 px-2 pt-3">
 									<div class="sidebar">
 										<a href="#" class="link-entries sidebar__link-block link-entries sidebar__link-block_gray p-3 mb-3 d-flex align-items-center justify-content-between">
 											<i class="bi bi-person-fill"></i>
-											<span>Lorem ipsum dolor sit a</span>
+											<span>Вход по логину и паролю</span>
 										</a>
 										<a href="#" class="sidebar__link-block sidebar__link-block_gray p-3 mb-3 d-flex align-items-center justify-content-between">
 											<i class="bi bi-key-fill"></i>
-											<span>Lorem ipsu</span>
+											<span>Вход с ЭЦП</span>
 										</a>
 										<a href="#" class="link-entries link-entries sidebar__link-block sidebar__link-block_gray p-3 d-flex align-items-center justify-content-between">
 											<i class="bi bi-phone-fill"></i>
-											<span>Lorem ipsum dolor sit am</span>
+											<span>Вход через мобильную ЭЦП</span>
 										</a>
 									</div>
 								</aside>
 								<div class="col-lg-8 px-2 pt-3">
 									<div class="item-block px-md-4 px-2 py-4"> 
-										<h4 class="item-block__title h4">Lorem ipsum dolor sit</h4>
+										<h4 class="item-block__title h4">Вход в Личный кабинет</h4>
 										<div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="heading-1" data-parent="#accordionPersonalArea">
 											<nav class="nav nav-tab nav-tab-personal-area" id="data-tab" role="tablist">
 												<a href="#prsa-1" class="nav-tab-personal-area__link link-nav-tab col-md-4 d-md-flex flex-column justify-content-center align-items-center text-md-center active" id="insp-1-tab" data-toggle="tab" role="tab" aria-controls="insp-1" aria-selected="true">
 													<span class="nav-tab-personal-area__icon mb-2 mb-lg-3 d-md-flex justify-content-center align-items-center rounded-circle">
 														<i class="bi bi-people"></i>
 													</span>
-													<span class="h6">Lorem ipsum dol</span>
+													<span class="h6">Физические лица</span>
 												</a>
 												<a href="#prsa-2" class="nav-tab-personal-area__link link-nav-tab col-md-4 d-md-flex flex-column justify-content-center align-items-center  text-md-center" id="insp-2-tab" data-toggle="tab" role="tab" aria-controls="insp-2" aria-selected="true">
 													<span class="nav-tab-personal-area__icon mb-2 mb-lg-3 d-md-flex justify-content-center align-items-center rounded-circle">
 														<i class="bi bi-briefcase"></i>
 													</span>
-													<span class="h6">Lo</span>
+													<span class="h6">ИП</span>
 												</a>
 												<a href="#prsa-3" class="company nav-tab-personal-area__link link-nav-tab col-md-4 d-md-flex flex-column justify-content-center align-items-center  text-md-center" id="insp-3-tab" data-toggle="tab" role="tab" aria-controls="insp-3" aria-selected="true">
 													<span class="nav-tab-personal-area__icon mb-2 mb-lg-3 d-md-flex justify-content-center align-items-center rounded-circle">
 														<i class="bi bi-building"></i>
 													</span>
-													<span class="h6">Lorem ipsum</span>
+													<span class="h6">Организации</span>
 												</a>
 											</nav>
 											<div class="py-4 tab-content" id="nav-tabContent">
 												<div class="tab-pane fade show active" id="prsa-1" role="tabpanel" aria-labelledby="prsa-1">
-													<div class="personal-area__title fw-bold pb-1 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do e</div>
-													<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempo</p>
+													<div class="personal-area__title fw-bold pb-1 mb-4">Доступ к сервису «Личный кабинет плательщика» для физических лиц</div>
+													<p>Доступ к сервису для физических лиц возможен одним из существующих способов:</p>
 													<div class="personal-area-access row mb-5">
 														<div class="col-md-4">
 															<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																<i class="bi bi-person-fill mr-2 mr-xl-4"></i>
-																<a href="#">Lorem ipsum dolor sit ame</a>
+																<a href="#">C помощью логина и пароля</a>
 															</div>
 														</div>
 														<div class="col-md-4">
 															<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																<i class="bi bi-key-fill mr-2 mr-xl-4 rotate"></i>
-																<a href="#">Lorem ipsum dolor sit amet cons</a>
+																<a href="#">C использованием физической ЭЦП</a>
 															</div>
 														</div>
 														<div class="col-md-4">
 															<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																<i class="bi bi-phone-fill mr-2 mr-xl-4"></i>
-																<a href="#">Lorem ipsum dolor sit amet con</a>
+																<a href="#">C использованием мобильной ЭЦП</a>
 															</div>
 														</div>
 													</div>
@@ -416,111 +808,101 @@
 														<div id="heading-11">
 															<button class="accordion-btn collapsed h5 w-100 d-flex text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse-11" aria-expanded="true" aria-controls="collapse-11">
 																<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
-																<span>Lorem ipsum dolor sit amet consectetur adipisicing el</span>
+																<span>Функциональные возможности сервиса для физических лиц</span>
 															</button>
 															<div id="collapse-11" class="accordion-collapse collapse" aria-labelledby="heading-11" data-parent="#accordion11">
 																<div class="pt-4">
 																	<div class="function-services row mx-n2 mt-n3">
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">1</div>
 																			<div>
-																				<div class="h6 mb-3">Lorem ipsum dolor sit</div>
+																				<div class="h6 mb-3">Получение документов:</div>
 																				<ul class="m-0">
-																					<li>Lorem ipsum dolor sit amet consectetur a</li>
-																					<li>Lorem ipsum dolor sit amet con</li>
-																					<li>Lorem ipsum dolor sit amet</li>
-																					<li>Lorem ipsum dolor sit 
+																					<li>сведения о недоимках, переплатах и пене;</li>
+																					<li>справка о расчетах с бюджетом;</li>
+																					<li>выписка из лицевых счетов;</li>
+																					<li>о проведенных зачетах;
 																						<span class="tooltips-btn" data-toggle="tooltip" title="При наличии ЭЦП">
 																							<i class="bi bi-info-circle-fill"></i>
 																						</span>
 																					</li>
-																					<li>Lorem ipsum dolo</li>
-																					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do </li>
+																					<li>реестр платежей;</li>
+																					<li>извещение на уплату земельного налогами налога на недвижимость.</li>
 																				</ul>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">2</div>
 																			<div>
-																				<div class="h6 mb-3">Lorem ipsum dolor sit amet consec</div>
+																				<div class="h6 mb-3">Заполнение деклараций (расчетов):</div>
 																				<ul class="m-0">
-																					<li>Lorem ipsum dolor sit amet consectetur </li>
-																					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua </li>
+																					<li>по подоходному налогу с физических лиц;</li>
+																					<li>по подоходному налогу с физических лиц с доходов плательщиков, не признаваемых налоговыми резидентами Республики Беларусь.</li>
 																				</ul>
-																				<div>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do </div>
+																				<div>Кроме того, можно просмотреть список ранее поданных деклараций.</div>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">3</div>
 																			<div>
-																				<div class="h6 mb-3">Lorem ipsum dolor si</div>
+																				<div class="h6 mb-3">Извещения на уплату:</div>
 																				<ul class="m-0">
-																					<li>Lorem ipsum dolor sit amet consectetur a</li>
-																					<li>Lorem ipsum dolor sit amet consecte</li>
-																					<li>Lorem ipsum dolor sit amet consectet</li>
+																					<li>налога на недвижимость с физических лиц;</li>
+																					<li>земельного налога с физических лиц;</li>
+																					<li>подоходного налога с физических лиц.</li>
 																				</ul>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">4</div>
 																			<div>
-																				<div class="h6 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor i</div>
+																				<div class="h6 mb-3">Уплата налогов в «Личном кабинете» посредством использования интернет-банкинга:</div>
 																				<ul class="m-0">
-																					<li>Lorem ipsum dolo</li>
-																					<li>Lorem ipsum dolor sit</li>
-																					<li>Lorem ipsum dolor si</li>
-																					<li>Lorem ipsum dolor s</li>
-																					<li>Lorem ipsum dol</li>
-																					<li>Lorem ipsum dol</li>
+																					<li>ЗАО «Альфа-банк»</li>
+																					<li>ОАО «АСБ Беларусбанк»</li>
+																					<li>ОАО «Белгазпромбанк»</li>
+																					<li>ОАО «Белинвестбанк»</li>
+																					<li>ОАО «Технобанк»</li>
+																					<li>ОАО «Приорбанк»</li>
 																				</ul>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">5</div>
 																			<div>
-																				<div class="h6 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labo
+																				<div class="h6 mb-3">Подача заявлений на осуществление административных процедур в электронном виде в налоговый орган
 																					<span class="tooltips-btn" data-toggle="tooltip" title="При наличии ЭЦП">
 																						<i class="bi bi-info-circle-fill"></i>
 																					</span>
 																				</div>
 																				<ul class="m-0">
-																					<li>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore </li>
+																					<li>заявление о зачете (возврате) излишне уплаченных (взысканных) сумм налогов, сборов (пошлин), пеней.</li>
 																				</ul>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">6</div>
 																			<div>
-																				<div class="h6">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod temp</div>
+																				<div class="h6">Подача уведомления об осуществлении деятельности для расчета единого налога</div>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">7</div>
 																			<div>
-																				<div class="h6">Lorem ipsum dolor sit amet consectetur adipisicing</div>
+																				<div class="h6">Запись на личный прием к руководству инспекций МНС</div>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">8</div>
 																			<div>
-																				<div class="h6 mb-3">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor inci</div>
-																				<div>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et do</div>
+																				<div class="h6 mb-3">Предварительная регистрация на прием в инспекции, где внедрена электронная очередь</div>
+																				<div>просмотр информации о количестве человек в очереди и возможности информирования о качестве обслуживания.</div>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">9</div>
 																			<div>
-																				<div class="h6">Lorem ipsum dolor sit amet consectetur adipisicing e
-																					<span class="tooltips-btn" data-toggle="tooltip" title="При наличии ЭЦП">
-																						<i class="bi bi-info-circle-fill"></i>
-																					</span>
-																				</div>
-																			</div>
-																		</div>
-																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">Lo</div>
-																			<div>
-																				<div class="h6">Lorem ipsum dolor sit amet consecte
+																				<div class="h6">Просмотр сообщений, поступающих от налоговых органов
 																					<span class="tooltips-btn" data-toggle="tooltip" title="При наличии ЭЦП">
 																						<i class="bi bi-info-circle-fill"></i>
 																					</span>
@@ -528,15 +910,25 @@
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">Lo</div>
+																			<div class="function-services__number h6 mr-3">10</div>
 																			<div>
-																				<div class="h6">Lorem ipsum dolor sit amet consectetur adipisic</div>
+																				<div class="h6">Визуализация электронного документа
+																					<span class="tooltips-btn" data-toggle="tooltip" title="При наличии ЭЦП">
+																						<i class="bi bi-info-circle-fill"></i>
+																					</span>
+																				</div>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">Lo</div>
+																			<div class="function-services__number h6 mr-3">11</div>
 																			<div>
-																				<div class="h6">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididun</div>
+																				<div class="h6">Редактирование персональных данных плательщика.</div>
+																			</div>
+																		</div>
+																		<div class="col-md-6 px-2 pt-3 d-flex">
+																			<div class="function-services__number h6 mr-3">12</div>
+																			<div>
+																				<div class="h6">Возможность оценить работу налоговых органов воспользовавшись сервисом "Анкетирование".</div>
 																			</div>
 																		</div>
 																	</div>
@@ -545,10 +937,10 @@
 														</div>
 													</div>
 													<div class="wrapper-iframe mb-4">
-														<iframe title="Регистрация физического лица в сервисе Личный кабинет плательщика посредством МСИ" width="853" height="480" src="https://www.youtube.com/embed/hRnymw4AYUE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+														<iframe title="Регистрация физического лица в сервисе Личный кабинет плательщика посредством МСИ" width="853" height="480" src="https://www.youtube.com/embed/hRnymw4AYUE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 													</div>
-													<div class="personal-area__title fw-bold pb-1 mb-4">Lorem ipsum dolor sit amet consectetur ad</div>
-													<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididun
+													<div class="personal-area__title fw-bold pb-1 mb-4">Мобильное приложение (для физических лиц)</div>
+													<p>Для физических лиц, которые пользуются сервисом без ЭЦП, доступно мобильное приложение.
 														<span class="tooltips-btn" data-toggle="tooltip" title="При наличии на вашем устройстве мобильного приложения версии 1.31 и ниже, нужно вручную удалить его с вашего устройства и установить приложение заново. При наличии на вашем мобильном устройстве программного обеспечения для доступа к сети интернет через vpn-соединения (например: Psiphon) работа мобильного приложения МНС не гарантируется.">
 															<i class="bi bi-info-circle-fill"></i>
 														</span>
@@ -556,34 +948,34 @@
 													<div class="row">
 														<div class="col-md-6 d-flex align-items-center">
 															<a href="https://play.google.com/store/apps/details?id=com.mnsmobileapp"><img src="./img/google-play.png" alt="google-play"></a>
-															<div class="ml-2">Lorem ipsum dolor sit amet con</div>
+															<div class="ml-2">Для ОС Android ver. 5.0 и выше</div>
 														</div>
 														<div class="col-md-6 d-flex align-items-center mt-3 mt-md-0">
 															<a href="https://itunes.apple.com/by/app/mns-mobile/id1439459614?mt=8"><img src="./img//app-store.png" alt="app-store"></a>
-															<div class="ml-2">Lorem ipsum dolor sit am</div>
+															<div class="ml-2">Для iOS ver. 11.0 и выше</div>
 														</div>
 													</div>
 												</div>
 												<div class="tab-pane fade" id="prsa-2" role="tabpanel" aria-labelledby="prsa-2">
-													<div class="personal-area__title fw-bold pb-1 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor inc</div>
-													<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do e</p>
+													<div class="personal-area__title fw-bold pb-1 mb-4">Доступ к сервису «Личный кабинет плательщика» для индивидуальных предпринимателей</div>
+													<p>Доступ к сервису для ИП возможен одним из существующих способов:</p>
 													<div class="personal-area-access row mb-5">
 														<div class="col-md-4">
 															<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																<i class="bi bi-person-fill mr-2 mr-xl-4"></i>
-																<a href="#">Lorem ipsum dolor sit ame</a>
+																<a href="#">C помощью логина и пароля</a>
 															</div>
 														</div>
 														<div class="col-md-4">
 															<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																<i class="bi bi-key-fill mr-2 mr-xl-4 rotate"></i>
-																<a href="#">Lorem ipsum dolor sit amet cons</a>
+																<a href="#">C использованием физической ЭЦП</a>
 															</div>
 														</div>
 														<div class="col-md-4">
 															<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																<i class="bi bi-phone-fill mr-2 mr-xl-4"></i>
-																<a href="#">Lorem ipsum dolor sit amet con</a>
+																<a href="#">C использованием мобильной ЭЦП</a>
 															</div>
 														</div>
 													</div>
@@ -591,35 +983,35 @@
 														<div id="heading-22">
 															<button class="accordion-btn collapsed h5 w-100 d-flex text-start collapsed" type="button" data-toggle="collapse" data-target="#collapse-22" aria-expanded="true" aria-controls="collapse-22">
 																<i class="_icon-chevron-down-circle mt-1 mr-2"></i>
-																<span>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod</span>
+																<span>Функциональные возможности сервиса для индивидуальных предпринимателей</span>
 															</button>
 															<div id="collapse-22" class="accordion-collapse collapse" aria-labelledby="heading-22" data-parent="#accordion22">
 																<div class="pt-4">
-																	<p class="mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco labori</p>
-																	<div class="personal-area__subtitle h6 mb-3"><i class="bi bi-bookmark-fill mr-2"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor inc</div>
-																	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-																	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut eni</p>
-																	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exe</p>
-																	<div class="personal-area__subtitle h6 mb-3"><i class="bi bi-bookmark-fill mr-2"></i>Lorem ipsum dolor sit amet consec</div>
-																	<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut</p>
+																	<p class="mb-4">Для индивидуальных предпринимателей в «Личном кабинете плательщика» объединены функциональные электронные услуги, доступные как физических лиц, так и для индивидуальных предпринимателей.</p>
+																	<div class="personal-area__subtitle h6 mb-3"><i class="bi bi-bookmark-fill mr-2"></i>Доступ к сервису «Личный кабинет плательщика» для индивидуальных предпринимателей</div>
+																	<p>Если гражданин одновременно является плательщиком как физическое лицо и как ИП, то в «Личном кабинете плательщика» ему будет предлоджено выбрать категорию плательщика, в отношении которой он будет заказывать электронные услуги.</p>
+																	<p>Для этого необходимо в выпадающем списке выбрать один из его УНП: УНП физического лица либо УНП индивидуального предпринимателя.</p>
+																	<p>В зависимости от этой информации система будет показывать соответствующие доступные сервисы и автоматически заполнять реквизиты в формы предоставления информации.</p>
+																	<div class="personal-area__subtitle h6 mb-3"><i class="bi bi-bookmark-fill mr-2"></i>Аутентификация через ЭЦП или МЦЭП</div>
+																	<p>При аутентификации через ЭЦП или МЦЭП в «Личном кабинете плательщика» для ИП дополнительно будут доступны следующие разделы:</p>
 																	<div class="row mx-n2 mt-n3">
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">1</div>
 																			<div>
-																				<div class="h6">Lorem ipsum d</div>
+																				<div class="h6">Декларации ИП</div>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">2</div>
 																			<div>
-																				<div class="h6">Lorem ipsum dolor sit ame</div>
+																				<div class="h6">Работа с документами ЕАЭС</div>
 																			</div>
 																		</div>
 																		<div class="col-md-6 px-2 pt-3 d-flex">
-																			<div class="function-services__number h6 mr-3">L</div>
+																			<div class="function-services__number h6 mr-3">3</div>
 																			<div>
-																				<div class="h6 mb-3">Lorem ipsum dolo</div>
-																				<div>Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore </div>
+																				<div class="h6 mb-3">Подача заявления</div>
+																				<div>заявление о зачете (возврате) излишне уплаченных (взысканных) сумм налогов, сборов (пошлин), пеней;</div>
 																			</div>
 																		</div>
 																	</div>
@@ -629,25 +1021,25 @@
 													</div> 
 												</div>
 												<div class="tab-pane fade" id="prsa-3" role="tabpanel" aria-labelledby="prsa-3">
-													<div class="personal-area__title fw-bold pb-1 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit sed d</div>
-													<p>Lorem ipsum dolor sit amet consectetur adipisicing elit sed <b>Lorem </b> Lorem ipsum dolor sit amet consectetur adipisic</p>
+													<div class="personal-area__title fw-bold pb-1 mb-4">Доступ к сервису «Личный кабинет плательщика» для организаций</div>
+													<p>Доступ к сервису для юридических лиц (организаций) возможен <b>только</b> одним способом: с использованием физической ЭЦП</p>
 													<div class="personal-area-access row mb-5">
 														<div class="col-md-4">
 															<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center hidden">
 																<i class="bi bi-person-fill mr-2 mr-xl-4"></i>
-																<a href="#">Lorem ipsum dolor sit ame</a>
+																<a href="#">C помощью логина и пароля</a>
 															</div>
 														</div>
 														<div class="col-md-4">
 															<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center">
 																<i class="bi bi-key-fill mr-2 mr-xl-4 rotate"></i>
-																<a href="#">Lorem ipsum dolor sit amet cons</a>
+																<a href="#">C использованием физической ЭЦП</a>
 															</div>
 														</div>
 														<div class="col-md-4">
 															<div class="personal-area-access__item px-sm-3 d-flex align-items-center justify-content-center hidden">
 																<i class="bi bi-phone-fill mr-2 mr-xl-4"></i>
-																<a href="#">Lorem ipsum dolor sit amet con</a>
+																<a href="#">C использованием мобильной ЭЦП</a>
 															</div>
 														</div>
 													</div>
@@ -661,12 +1053,13 @@
 					</div>
 				</div>
 			</main>
-			<div class="modal fade alert-new-modal" id="alertNew" tabindex="-1" aria-labelledby="alertNewLabel" aria-hidden="true">
+			<div class="modal fade alert-new-modal" id="alertNew" tabindex="-1" aria-labelledby="alertNewLabel"
+				aria-hidden="true">
 				<div class="modal-dialog  modal-dialog-centered">
 					<div class="modal-content">
 						<div class="modal-header">
 							<h5 class="modal-title" id="alertNewLabel">
-								<strong>Lorem ipsum dolor sit amet </strong>
+								<strong>Сообщить об ошибке в тексте</strong>
 							</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<i class="bi bi-x-lg fw-bold"></i>
@@ -677,7 +1070,9 @@
 								<i class="bi bi-info-circle-fill mr-3 mr-sm-4"></i>
 								<div>
 									<p>
-										Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliqui
+										Сообщения, направленные через электронную форму, не попадают под сферу деятельности Закона
+										Республики Беларусь
+										от 18 июля 2011 г. № 300-З «Об обращениях граждан и юридических лиц».
 									</p>
 								</div>
 							</div>
@@ -688,30 +1083,37 @@
 									id="formGroupExampleInput" placeholder="E-mail">
 								</div> -->
 								<div class="form-group">
-									<label for="formGroupExampleInput2"><strong>Lorem ipsum dol</strong></label>
-									<textarea class="form-control" id="formGroupExampleInput2" placeholder="Пожалуйста, опишите ошибку"></textarea>
+									<label for="formGroupExampleInput2"><strong>Описание ошибки</strong></label>
+									<textarea class="form-control" id="formGroupExampleInput2"
+										placeholder="Пожалуйста, опишите ошибку"></textarea>
 								</div>
 								<div class="form-group">
 									<div class="input-file form-group files">
-										<input type="file" name="file" id="file" onchange="uploadFile(this)" class="_required">
+										<input type="file" name="file" id="file" onchange='uploadFile(this)' class="_required">
 										<label for="file">
-											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none">
-												<path d="M5.89369 8.17808L4.17899 9.89278C2.71453 11.3572 2.71453 13.7316 4.17899 15.1961C5.64346 16.6606 8.01783 16.6605 9.4823 15.1961L11.7678 12.9105C13.2323 11.4461 13.2323 9.07171 11.7678 7.60725C11.4579 7.29733 11.1072 7.05299 10.7331 6.87425L10.0001 7.60725C9.92384 7.68347 9.85952 7.76709 9.8071 7.85579C10.2014 7.96877 10.5734 8.18055 10.8839 8.49113C11.8603 9.46744 11.8603 11.0504 10.8839 12.0267L8.59841 14.3122C7.6221 15.2885 6.03919 15.2885 5.06288 14.3122C4.08657 13.3359 4.08657 11.753 5.06288 10.7767L6.05364 9.78591C5.91339 9.26076 5.86008 8.71722 5.89369 8.17808Z" fill="#1A1A1A"/>
-												<path d="M8.2323 5.83948C6.76783 7.30395 6.76783 9.67832 8.2323 11.1428C8.54222 11.4527 8.89289 11.697 9.26706 11.8758L10.2366 10.9063C9.82613 10.7967 9.43817 10.5809 9.11618 10.2589C8.13987 9.28259 8.13987 7.69968 9.11618 6.72337L11.4017 4.43783C12.378 3.46152 13.9609 3.46152 14.9372 4.43783C15.9136 5.41414 15.9136 6.99705 14.9372 7.97336L13.9465 8.96412C14.0867 9.48928 14.14 10.0328 14.1064 10.5719L15.8211 8.85725C17.2856 7.39278 17.2856 5.01841 15.8211 3.55395C14.3567 2.08948 11.9823 2.08948 10.5178 3.55395L8.2323 5.83948Z" fill="#1A1A1A"/>
+											<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"
+												fill="none">
+												<path
+													d="M5.89369 8.17808L4.17899 9.89278C2.71453 11.3572 2.71453 13.7316 4.17899 15.1961C5.64346 16.6606 8.01783 16.6605 9.4823 15.1961L11.7678 12.9105C13.2323 11.4461 13.2323 9.07171 11.7678 7.60725C11.4579 7.29733 11.1072 7.05299 10.7331 6.87425L10.0001 7.60725C9.92384 7.68347 9.85952 7.76709 9.8071 7.85579C10.2014 7.96877 10.5734 8.18055 10.8839 8.49113C11.8603 9.46744 11.8603 11.0504 10.8839 12.0267L8.59841 14.3122C7.6221 15.2885 6.03919 15.2885 5.06288 14.3122C4.08657 13.3359 4.08657 11.753 5.06288 10.7767L6.05364 9.78591C5.91339 9.26076 5.86008 8.71722 5.89369 8.17808Z"
+													fill="#1A1A1A" />
+												<path
+													d="M8.2323 5.83948C6.76783 7.30395 6.76783 9.67832 8.2323 11.1428C8.54222 11.4527 8.89289 11.697 9.26706 11.8758L10.2366 10.9063C9.82613 10.7967 9.43817 10.5809 9.11618 10.2589C8.13987 9.28259 8.13987 7.69968 9.11618 6.72337L11.4017 4.43783C12.378 3.46152 13.9609 3.46152 14.9372 4.43783C15.9136 5.41414 15.9136 6.99705 14.9372 7.97336L13.9465 8.96412C14.0867 9.48928 14.14 10.0328 14.1064 10.5719L15.8211 8.85725C17.2856 7.39278 17.2856 5.01841 15.8211 3.55395C14.3567 2.08948 11.9823 2.08948 10.5178 3.55395L8.2323 5.83948Z"
+													fill="#1A1A1A" />
 											</svg>
-											<span id="file-name">Lorem ipsum dolor s</span>
+											<span id="file-name">Прикрепите документ</span>
 										</label>
 									</div>
 								</div>
 							</form>
 							<p>
-								Lorem ipsum dolor sit amet consectetur adi <a href target="_blank" rel="noopener noreferrer" class="color-green">
-									Lorem ipsum dolor sit amet consectetur ad
+								Нажимая кнопку «Отправить» вы соглашаетесь <a href="" target="_blank" rel="noopener noreferrer"
+									class="color-green">
+									с политикой обработки персональных данных
 								</a>
 							</p>
 						</div>
 						<div class="modal-footer">
-							<a href="#" class="button" download>Lorem ips</a>
+							<a href="#" class="button" download="">Отправить</a>
 						</div>
 					</div>
 				</div>
@@ -720,59 +1122,60 @@
 				<div class="container">
 					<div class="row mt-n3 mx-n2 mb-sm-2 mb-xl-4">
 						<div class="col-sm-6 col-xl-3 px-2 pt-3 mb-4">
-							<h5 class="h5 h5_white mb-4">Lorem ipsum </h5>
+							<h5 class="h5 h5_white mb-4">Министерство</h5>
 							<nav>
 								<ul>
-									<li><a href="#">Lorem ipsum do</a></li>
-									<li><a href="#">Lorem ipsum dolor s</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet consectetu</a></li>
-									<li><a href="#">Lorem ips</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet</a></li>
-									<li><a href="#">Lorem ipsum dolor sit</a></li>
-									<li><a href="#">Lorem ip</a></li>
-									<li><a href="#">Lorem ip</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet consectetur</a></li>
+									<li><a href="#">О Министерстве</a></li>
+									<li><a href="#">Налоговые инспекции</a></li>
+									<li><a href="#">Комиссия по противодействию коррупции</a></li>
+									<li><a href="#">Аналитика</a></li>
+									<li><a href="#">Административные процедуры</a></li>
+									<li><a href="#">Электронные обращения</a></li>
+									<li><a href="#">Вакансии</a></li>
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#">Политика обработки персональных данных</a></li>
 								</ul>
 							</nav>
 						</div>
 						<div class="col-sm-6 col-xl-3 px-2 pt-3 mb-4">
-							<h5 class="h5 h5_white mb-4">Lorem ipsum dolor sit </h5>
+							<h5 class="h5 h5_white mb-4">Для налогоплательщиков</h5>
 							<nav>
 								<ul>
-									<li><a href="#">Lorem ipsum dolo</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet cons</a></li>
-									<li><a href="#">Lorem ipsum </a></li>
-									<li><a href="official-publishers.html">Lorem ipsum dolor s</a></li>
+									<li><a href="#">Физическим лицам</a></li>
+									<li><a href="#">Индивидуальным предпринимателям</a></li>
+									<li><a href="#">Организациям</a></li>
+									<li><a href="official-publishers.html">Официальные издания</a></li>
 								</ul>
 							</nav>
 						</div>
 						<div class="col-sm-6 col-xl-3 px-2 pt-3 mb-4">
-							<h5 class="h5 h5_white mb-4">Lorem ipsum dol</h5>
+							<h5 class="h5 h5_white mb-4">Полезные ссылки</h5>
 							<nav>
 								<ul>
-									<li><a href="#">Lorem ipsum dolo</a></li>
-									<li><a href="#">Lorem ipsum dolor s</a></li>
-									<li><a href="#">Lorem ipsum dolor sit a</a></li>
-									<li><a href="#">Lorem ipsum dolor </a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet c</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet con</a></li>
-									<li><a href="#">Lorem ipsum dolor sit </a></li>
-									<li><a href="#">Lorem ipsum dolor sit ame</a></li>
-									<li><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore </a></li>
+									<li><a href="#">Формы документов</a></li>
+									<li><a href="#">Налоговые инспекции</a></li>
+									<li><a href="#">Программное обеспечение</a></li>
+									<li><a href="#">Налоговый контроль</a></li>
+									<li><a href="#">Максимальные розничные цены на сигареты с фильтром</a></li>
+									<li><a href="#">Международное сотрудничество</a></li>
+									<li><a href="#">Евразийский экономический союз</a></li>
+									<li><a href="#">Налоговые консультанты</a></li>
+									<li><a href="#">Электронные счета-фактуры</a></li>
+									<li><a href="#">Представление физическими лицами налоговой декларации по подоходному налогу за
+											2021 год</a></li>
 								</ul>
 							</nav>
 						</div>
 						<div class="col-sm-6 col-xl-3 px-2 pt-3 mb-4">
-							<h5 class="h5 h5_white mb-4">Lorem ip</h5>
+							<h5 class="h5 h5_white mb-4">Контакты</h5>
 							<nav class="mb-5">
 								<ul>
-									<li>Lorem ipsum d</li>
-									<li>Lorem ipsum dolor sit amet</li>
-									<li><a href="mailto:gnk@mail.belpak.by">Lorem ipsum dolor </a> Lorem ipsum dolor</li>
+									<li>УНП 100582333</li>
+									<li>г. Минск, ул. Советская, 9</li>
+									<li><a href="mailto:gnk@mail.belpak.by">gnk@mail.belpak.by</a> (кроме обращений)</li>
 								</ul>
 							</nav>
-							<h5 class="h5 h5_white mb-4">Lorem ipsum dol</h5>
+							<h5 class="h5 h5_white mb-4">Социальные сети</h5>
 							<div class="d-flex mb-5">
 								<a href="https://www.instagram.com/mns_belarus/" class="footer__link-social">
 									<img src="./img/social-icons/instagram.svg" alt="instagram">
@@ -789,41 +1192,49 @@
 								<a href="https://telegram.me/mnsrb" class="footer__link-social">
 									<img src="./img/social-icons/telegram.svg" alt="telegram">
 								</a>
-								<a href="https://invite.viber.com/?g2=AQA4k8V8Y0TJC0k3E5iZ1T6MYxLxAnsACem0WlAqkw%2Fzkd93lG3KLC0HXseoX2XO" class="footer__link-social">
+								<a href="https://invite.viber.com/?g2=AQA4k8V8Y0TJC0k3E5iZ1T6MYxLxAnsACem0WlAqkw%2Fzkd93lG3KLC0HXseoX2XO"
+									class="footer__link-social">
 									<img src="./img/social-icons/viber.svg" alt="viber">
 								</a>
 								<a href="https://twitter.com/nalog_gov_by" class="footer__link-social">
 									<img src="./img/social-icons/twitter.svg" alt="twitter">
 								</a>
 							</div>
-							<div class="mb-4"><a href="#" class="footer__link-icon">Lorem ipsum do<i class="bi bi-arrow-up-right ml-2"></i></a></div>
-							<div><a href="#" class="footer__link-icon">Lorem ipsum<i class="bi bi-arrow-up-right ml-2"></i></a>
+							<div class="mb-4"><a href="#" class="footer__link-icon">Личный кабинет<i
+										class="bi bi-arrow-up-right ml-2"></i></a></div>
+							<div><a href="#" class="footer__link-icon">Карта сайта<i class="bi bi-arrow-up-right ml-2"></i></a>
 							</div>
 						</div>
 						<div class="col-12">
 							<div class="alert-new d-flex flex-row align-items-center">
-								<div class>
+								<div class="">
 									<i class="bi bi-info-circle-fill mr-3 mr-sm-4"></i>
 								</div>
 								<div class="alert-new__text">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod t
-									<span class="alert-new__toggle" type="button" data-toggle="modal" data-target="#alertNew">Lore</span>
-									Lorem ipsum dolor sit a
+									Если вы обнаружили на сайте опечатку или неточность, пожалуйста, нажмите
+									<span class="alert-new__toggle" type="button" data-toggle="modal"
+										data-target="#alertNew">сюда</span>
+									и сообщите нам об этом.
 								</div>
 							</div>
 						</div>
 					</div>
 					<div class="d-md-flex align-items-center justify-content-between border-top pt-3">
-						<div class="pb-3 pb-md-0 pr-md-3">Lorem ipsum dolor sit amet</div>
-						<div>Lorem ipsum dolo <a href="https://info-center.by" target="_blank">Lorem ipsum dolor sit amet consectetur adipisicing elit sed do </a></div>
+						<div class="pb-3 pb-md-0 pr-md-3">© 2022, Все права защищены</div>
+						<div>Сайт разработан: <a href="https://info-center.by" target="_blank">«Информационно-издательский центр
+								по налогам и сборам»</a></div>
 					</div>
 				</div>
 			</footer>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script> -->
-		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+		     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+		     crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+		     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+		     crossorigin="anonymous"></script>
 		<script src="js/script.js"></script>
 	</body>
 </html>
