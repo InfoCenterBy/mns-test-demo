@@ -11550,7 +11550,7 @@ table.cigarettes__table {
 }
 
 .business-entity__inputs > div > input[type=radio] {
-  accent-color: #00654D;
+  accent-color: #00654d;
 }
 
 .business-entity__label {
@@ -11559,12 +11559,52 @@ table.cigarettes__table {
 
 .business-entity__input {
   padding: 10px 15px;
-  border: 1px solid #CED4DA;
+  border: 1px solid #ced4da;
   background-color: white;
   border-radius: 10px;
   cursor: pointer;
   width: 100%;
   margin-top: 8px;
+}
+
+.form-check {
+  padding-left: 0;
+}
+
+.form-control {
+  border-radius: 10px;
+  padding-block: 10px;
+}
+
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #00654d;
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.form-check-input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  margin-right: 4px;
+}
+
+.form-check .form-check-input {
+  margin-left: 0;
+  float: none;
+}
+
+.form-check .form-check-input:checked {
+  background-color: #00654d;
+  border-color: #00654d;
+}
+
+.form-check-input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .survey {
@@ -12476,22 +12516,65 @@ body.survey-results-pdf-exporting {
   line-height: 1.3;
 }
 
-.list-style-none {
-  list-style: none;
+.publication-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-preferred-size: calc(50% - 8px);
+      flex-basis: calc(50% - 8px);
+  gap: 16px;
 }
 
-.z-10 {
-  z-index: 10 !important;
+.publication-card:hover .publication-card__img img {
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
-.hover-green-dark {
-  -webkit-transition: all ease-out 0.3s;
-  -o-transition: all ease-out 0.3s;
-  transition: all ease-out 0.3s;
+.publication-card__img {
+  border-radius: 20px;
+  overflow: hidden;
 }
 
-.hover-green-dark:hover {
-  color: #014a37;
+.publication-card__img img {
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+  height: 250px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.publication-card__label--primary {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007a65;
+  border-radius: 10px;
+  padding: 8px;
+}
+
+.publication-card__label--secondary {
+  font-size: 14px;
+  font-weight: 600;
+  color: #007a65;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 1px solid #007a65;
+  padding: 8px 12px;
+}
+
+.publication-card__date {
+  font-size: 14px;
+  color: #727270;
 }
 
 .media-card {
@@ -12554,6 +12637,24 @@ body.survey-results-pdf-exporting {
 .reels-media {
   width: 420px;
   height: 750px;
+}
+
+.list-style-none {
+  list-style: none;
+}
+
+.z-10 {
+  z-index: 10 !important;
+}
+
+.hover-green-dark {
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+}
+
+.hover-green-dark:hover {
+  color: #014a37;
 }
 
 .page {
@@ -15453,6 +15554,12 @@ figure audio {
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .publication-card__img img {
+    height: 190px;
+  }
+}
+
 @media (max-width: 1100px) {
   .e-nds-form__column {
     -webkit-box-flex: 1;
@@ -15491,6 +15598,12 @@ figure audio {
 
   .mobile-app__icon {
     margin: 0px 0px 0px 20px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .publication-card__img img {
+    height: 220px;
   }
 }
 
@@ -15662,6 +15775,17 @@ figure audio {
 
   .calc-block strong {
     max-width: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .publication-card {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+
+  .publication-card__img img {
+    height: 300px;
   }
 }
 
@@ -16140,6 +16264,10 @@ figure audio {
     white-space: normal;
     word-wrap: break-word;
     min-width: 180px;
+  }
+
+  .publication-card__img img {
+    height: 180px;
   }
 
   .reels-media {
