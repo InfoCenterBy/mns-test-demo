@@ -2535,11 +2535,12 @@ a:hover {
 .accordion.accordion-base {
   --bs-accordion-color: $color-black;
   --bs-accordion-bg: $color-white;
-  --bs-accordion-transition: color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease;
+  --bs-accordion-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out, border-radius 0.15s ease;
   --bs-accordion-border-color: transparent;
   --bs-accordion-border-width: 1px;
-  --bs-accordion-border-radius: .625rem;
-  --bs-accordion-inner-border-radius: calc(.625rem - 1px);
+  --bs-accordion-border-radius: 0.625rem;
+  --bs-accordion-inner-border-radius: calc(0.625rem - 1px);
   --bs-accordion-btn-padding-x: 1rem;
   --bs-accordion-btn-padding-y: 1rem;
   --bs-accordion-btn-color: $color-black;
@@ -2588,7 +2589,7 @@ a:hover {
   --bs-btn-hover-color: #fafafa;
   --bs-btn-hover-bg: #00654d;
   --bs-btn-hover-border-color: #00654d;
-  --bs-btn-focus-shadow-rgb: 49,132,253;
+  --bs-btn-focus-shadow-rgb: 49, 132, 253;
   --bs-btn-active-color: #fafafa;
   --bs-btn-active-bg: #00654d;
   --bs-btn-active-border-color: #00654d;
@@ -2596,6 +2597,22 @@ a:hover {
   --bs-btn-disabled-color: #1a1a1a;
   --bs-btn-disabled-bg: #727270;
   --bs-btn-disabled-border-color: #727270;
+}
+
+.publishers-img-wrapper {
+  min-width: 300px;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.publishers-img-wrapper img {
+  width: 100%;
 }
 
 input:-webkit-autofill,
@@ -11532,6 +11549,62 @@ table.cigarettes__table {
   height: auto;
 }
 
+.landing-income-tax .preview {
+  padding-top: 24px;
+}
+
+.landing-income-tax .preview__info {
+  background: transparent;
+  max-width: 520px;
+}
+
+.landing-income-tax .preview__info h1 {
+  color: #263238;
+}
+
+.landing-income-tax .preview__text {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #727270;
+}
+
+.landing-income-tax .preview__img {
+  max-width: 280px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: transparent;
+  padding: 0;
+}
+
+.landing-income-tax .income-tax-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.landing-income-tax .income-tax-card__icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  border-radius: 10px;
+  background-color: #00654d;
+  color: #fff;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 22px;
+}
+
+.landing-income-tax .attention {
+  font-style: italic;
+}
+
 .business-entity {
   padding: 24px 30px;
   background-color: #ebebeb;
@@ -12203,6 +12276,80 @@ table.cigarettes__table {
 
 body.survey-results-pdf-exporting {
   overflow: hidden;
+}
+
+.taxpayer-contacts__filter {
+  max-width: 420px;
+}
+
+.taxpayer-contacts__label {
+  display: block;
+}
+
+.taxpayer-contacts__select {
+  width: 100%;
+  background-color: #ebebeb;
+  border-color: transparent;
+}
+
+.taxpayer-contacts__select:focus {
+  background-color: #ebebeb;
+  border-color: #007a65;
+}
+
+.taxpayer-contacts__empty {
+  padding: 24px 0;
+  color: #727270;
+}
+
+.taxpayer-contacts__phone:not(:last-child) {
+  margin-bottom: 8px;
+}
+
+.taxpayer-contacts__phone a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #1a1a1a;
+  white-space: nowrap;
+}
+
+.taxpayer-contacts__phone a:hover {
+  color: #007a65;
+}
+
+.taxpayer-contacts__phone a .bi-phone {
+  margin-right: 0.5rem;
+  color: #007a65;
+}
+
+.taxpayer-contacts__table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.taxpayer-contacts__table table {
+  border-bottom: 0;
+}
+
+.taxpayer-contacts__table tbody {
+  border-bottom: 0;
+}
+
+.taxpayer-contacts__table thead th {
+  background-color: #ebebeb;
+  font-weight: 700;
+}
+
+.taxpayer-contacts__table tbody tr:nth-child(odd) {
+  background-color: #fafafa;
+}
+
+.taxpayer-contacts__table tbody tr:nth-child(even) {
+  background-color: #ebebeb;
 }
 
 .chart-container {
@@ -16175,6 +16322,10 @@ figure audio {
     display: none;
   }
 
+  .landing-income-tax .preview__img {
+    display: none;
+  }
+
   .survey-modal__body {
     padding: 24px 20px 28px;
   }
@@ -16243,6 +16394,21 @@ figure audio {
 
   .vacancies__img {
     display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .taxpayer-contacts__table table {
+    font-size: 14px;
+  }
+
+  .taxpayer-contacts__table tr,
+  .taxpayer-contacts__table td {
+    padding: 8px;
+  }
+
+  .taxpayer-contacts__table th {
+    padding: 8px;
   }
 }
 
