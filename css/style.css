@@ -2615,6 +2615,10 @@ a:hover {
   width: 100%;
 }
 
+.summary-block {
+  gap: 2rem;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -12962,8 +12966,41 @@ body.survey-results-pdf-exporting {
   background-color: #007a65;
 }
 
-.slider-clarifications__link:hover {
+.slider-clarifications__title,
+.slider-clarifications__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.slider-clarifications__title {
+  -webkit-transition: all ease-out 0.3s;
+  -o-transition: all ease-out 0.3s;
+  transition: all ease-out 0.3s;
+  -webkit-line-clamp: 4;
+}
+
+.slider-clarifications__text {
+  color: #727270;
+  -webkit-line-clamp: 3;
+}
+
+.slider-clarifications .tag-link {
+  font-size: 0.75rem;
+  padding: 0.25rem;
+  font-weight: 600;
+}
+
+.slider-clarifications__link {
+  display: block;
+}
+
+.slider-clarifications__link:hover .slider-clarifications__title {
   color: #007a65;
+}
+
+.slider-clarifications__link:hover .slider-clarifications__text {
+  color: #727270;
 }
 
 .slider-clarifications .slick-dots {
@@ -13679,7 +13716,7 @@ figure audio {
 .map-inspectorates svg {
   display: block;
   width: 100%;
-  max-width: 600px;
+  max-width: 27.5rem;
   height: auto;
   margin: 0 auto;
 }
@@ -13733,6 +13770,22 @@ figure audio {
 .map-inspectorates__tooltip.visible {
   opacity: 1;
   visibility: visible;
+}
+
+.slider-clarifications .slider-clarifications__body,
+.slider-clarifications .slick-list,
+.slider-clarifications .slick-track {
+  height: 100%;
+}
+
+.slider-clarifications .slick-track {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider-clarifications .slick-slide {
+  height: auto;
 }
 
 @media (min-width: 576px) {

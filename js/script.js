@@ -5899,7 +5899,7 @@ $('.slider-clarifications__body').slick({
 	infinite: true,
 	slidesToShow: 1,
 	arrows: true,
-	dots: true,
+	dots: false,
 });
 
 $('.slickPrev').on('click', function (e) {
