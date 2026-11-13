@@ -1543,6 +1543,143 @@
 								</div>
 							</div>
 							<!-- summary-block -->
+							<div class="mt-5"></div>
+							<!-- feedback-form -->
+							<div class="row justify-content-center">
+								<div class="col-12 col-lg-8 col-xl-7">
+									<form class="feedback-form bg-color-white p-3 p-md-4" id="feedbackForm" action="#" method="post" enctype="multipart/form-data">
+										<h2 class="h5 text-center fw-medium mb-4 fs-20">Lorem ipsum dolor si
+										</h2>
+
+										<div class="mb-4">
+											<label for="feedbackFio" class="form-label fw-semibold fs-16">
+												Lor<span class="color-red">L</span>
+											</label>
+											<input type="text" class="form-control" id="feedbackFio" name="fio" maxlength="250" autocomplete="name" required pattern="[\s,.]*[A-Za-zА-Яа-яЁёІіЎў][A-Za-zА-Яа-яЁёІіЎў\s,.]*" title="Только буквы русского, белорусского или английского алфавита, пробелы, запятые и точки">
+										</div>
+
+										<div class="mb-4">
+											<label for="feedbackEmail" class="form-label fw-semibold fs-16">
+												Lorem ipsum dolor<span class="color-red">L</span>
+											</label>
+											<input type="email" class="form-control" id="feedbackEmail" name="email" placeholder="example@mail.com" autocomplete="email" required pattern="[A-Za-z0-9._%+\-]+@[A-Za-z0-9.\-]+\.[A-Za-z]{2,}" title="Адрес электронной почты в формате example@mail.com">
+										</div>
+
+										<div class="mb-4">
+											<label for="feedbackPhone" class="form-label fw-semibold fs-16">
+												Lorem ipsum do<span class="color-red">L</span>
+											</label>
+											<input type="tel" class="form-control" id="feedbackPhone" name="phone" placeholder="+375 (__) ___-__-__" autocomplete="tel" required pattern="(?=(?:\D*\d){12}\D*$)\+375 ?\(?(?:25|29|33|44|1[5-7]\d{0,2}|2[1-3]\d{0,2})\)? ?\d{1,3}(?:[ \-]?\d{1,3}){1,3}" title="Белорусский номер (мобильный или городской), например +375 (29) 123-45-67">
+										</div>
+
+										<div class="mb-4">
+											<label for="feedbackSoftware" class="form-label fw-semibold fs-16">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam<span class="color-red">L</span>
+											</label>
+											<input type="text" class="form-control" id="feedbackSoftware" name="software" required>
+										</div>
+
+										<div class="mb-4">
+											<label for="feedbackError" class="form-label fw-semibold fs-16">
+												Lorem ipsum dolor sit amet consectetur adipisicing elit sed
+												<span class="color-red">L</span>
+											</label>
+											<textarea class="form-control" id="feedbackError" name="error" rows="3" required></textarea>
+										</div>
+
+										<div class="feedback-form__file mb-4">
+											<p class="form-label  mb-2 fw-semibold fs-16">Lorem ipsum dolor sit amet consectetur adipisicing elit sed d</p>
+											<input type="file" class="visually-hidden" id="feedbackScreenshot" name="screenshot" accept=".png,.jpg,.jpeg,.webp" data-file-input>
+											<div class="input-group">
+												<label for="feedbackScreenshot" class="button button-empty px-3 mb-0 transition-3">
+													Lorem ipsum 
+												</label>
+												<span class="form-control color-gray text-truncate" data-file-name="feedbackScreenshot">Lorem ipsum do</span>
+											</div>
+										</div>
+
+										<div class="text-center">
+											<button type="submit" class="button bg-color-green-light border-0 ">
+												Lorem ipsum dolor sit am
+											</button>
+										</div>
+									</form>
+								</div>
+							</div>
+
+							<div class="modal fade" id="feedbackSuccessModal" tabindex="-1" aria-labelledby="feedbackSuccessModalTitle" aria-hidden="true">
+								<div class="modal-dialog modal-dialog-centered">
+									<div class="modal-content border-0 rounded-4">
+										<div class="modal-header border-0 pb-0">
+											<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+										</div>
+										<div class="modal-body text-center pt-0 pb-5 px-4">
+											<i class="bi bi-check-circle color-green-light fs-48" aria-hidden="true"></i>
+											<p class="h5 mt-3 mb-0" id="feedbackSuccessModalTitle">Lorem ipsum dolor sit amet consec</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+
+
+								document.addEventListener('DOMContentLoaded', function () {
+									document.querySelectorAll('[data-file-input]').forEach(function (input) {
+										const nameEl = document.querySelector('[data-file-name="' + input.id + '"]');
+										if (!nameEl) return;
+
+										const defaultText = nameEl.textContent;
+										const allowedExt = input.accept
+											.split(',')
+											.map((ext) => ext.trim().toLowerCase())
+											.filter((ext) => ext.startsWith('.'));
+
+										input.addEventListener('change', function () {
+											const file = input.files[0];
+											nameEl.classList.remove('color-red', 'color-black');
+											nameEl.classList.add('color-gray');
+
+											if (!file) {
+												nameEl.textContent = defaultText;
+												nameEl.removeAttribute('title');
+												return;
+											}
+
+											const ext = '.' + file.name.split('.').pop().toLowerCase();
+											if (allowedExt.length && !allowedExt.includes(ext)) {
+												input.value = '';
+												nameEl.textContent = 'Недопустимый формат. Допустимы: ' + allowedExt.join(', ');
+												nameEl.classList.replace('color-gray', 'color-red');
+												nameEl.removeAttribute('title');
+												return;
+											}
+
+											nameEl.textContent = file.name;
+											nameEl.title = file.name;
+											nameEl.classList.replace('color-gray', 'color-black');
+										});
+									});
+								});
+
+
+								document.addEventListener('DOMContentLoaded', function () {
+									const form = document.getElementById('feedbackForm');
+									const modalEl = document.getElementById('feedbackSuccessModal');
+									if (!form || !modalEl) return;
+
+									const modal = bootstrap.Modal.getOrCreateInstance(modalEl);
+
+									form.addEventListener('submit', function (e) {
+										e.preventDefault();
+										modal.show();
+										form.reset();
+										form.querySelectorAll('[data-file-input]').forEach(function (input) {
+											input.dispatchEvent(new Event('change'));
+										});
+									});
+								});
+							</script>
+							<!-- feedback-form -->
 
 						</div>
 					</div>

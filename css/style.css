@@ -2619,6 +2619,44 @@ a:hover {
   gap: 2rem;
 }
 
+.feedback-form {
+  border-radius: 1.25rem;
+  border: 1px solid;
+  border-color: #007a65;
+}
+
+.feedback-form .form-label {
+  color: #1a1a1a;
+}
+
+.feedback-form textarea.form-control {
+  min-height: 90px;
+}
+
+.feedback-form .form-control:user-invalid {
+  border-color: #e31e25;
+}
+
+.feedback-form__file input:focus-visible + .input-group .button {
+  outline: 2px solid #00654d;
+  outline-offset: 2px;
+}
+
+.feedback-form__file .input-group {
+  float: none !important;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.feedback-form__file .input-group .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
